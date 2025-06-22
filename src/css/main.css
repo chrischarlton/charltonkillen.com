@@ -18,7 +18,7 @@
     }
 }
 
-/* Header
+/* Header - Homepage version
    ========================================================================== */
 
 .site-header {
@@ -46,6 +46,39 @@
     z-index: 2;
 }
 
+/* Page Header - Simplified version for inner pages
+   ========================================================================== */
+
+.page-header {
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border);
+    padding: 1.5rem 0;
+}
+
+.page-header .site-title {
+    font-size: clamp(1.8rem, 4vw, 2.2rem);
+    margin-bottom: 1.5rem;
+}
+
+.page-header .site-title-link {
+    color: var(--color-text);
+    text-decoration: none;
+}
+
+.page-header .site-title-link:hover {
+    color: var(--color-primary);
+}
+
+.page-header .nav-link {
+    color: var(--color-primary);
+}
+
+.page-header .nav-link:hover,
+.page-header .nav-link[aria-current="page"] {
+    border-bottom-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
 .header-content {
     margin-bottom: 2rem;
 }
@@ -71,7 +104,6 @@
     color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     max-width: 600px;
-    margin-bottom: 3rem;
 }
 
 /* Navigation
@@ -356,8 +388,24 @@ img {
     }
 }
 
-/* Utility Classes
+/* Page Content Styling
    ========================================================================== */
+
+.page-content {
+    max-width: 800px;
+}
+
+.page-content h1 {
+    color: var(--color-text);
+    margin-bottom: 2rem;
+}
+
+.page-content > p:first-of-type {
+    font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+    color: var(--color-secondary);
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+}
 
 .visually-hidden {
     position: absolute;
