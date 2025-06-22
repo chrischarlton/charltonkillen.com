@@ -14,8 +14,8 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
 
 <div class="grid grid-2 margin-top-large">
   <div class="card">
-    <h3>Real World Agile</h3>
-    <p>Practical insights from implementing agile methodologies in real business environments, beyond the textbook theory. How to make change work when it matters.</p>
+    <h3>Agile Made Easy</h3>
+    <p>A practical guide to setting up the most valuable in real business environments, beyond the textbook theory. How to make change work when it matters.</p>
   </div>
   
   <div class="card">
@@ -24,9 +24,15 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
   </div>
 </div>
 
+  <div class="card">
+    <h3>Transforming One+All</h3>
+    <p>A profital 100% employee-owned business growing year on year, with amazing people doing a great job for customers. Technology is holding it all back so my mission is complete transformation built with humans in mind to enable even more positive impact for people and planet.</p>
+  </div>
+</div>
+
 ## Recently
 
-**Speaking:** Recently spoke at the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of Doughnut Economics, discussing technology's role in creating sustainable business models.
+**Speaking:** Recently spoke at the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of Doughnut Economics, discussing how One+All works as a profitable business to support both the social foundations and ecological boundaries.
 
 **Reading:** Currently exploring how transport infrastructure systems can inform digital transformation approaches - there's surprising overlap between building reliable railways and building reliable technology teams.
 
