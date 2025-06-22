@@ -67,17 +67,9 @@ module.exports = function(eleventyConfig) {
   const markdownItAnchor = require("markdown-it-anchor");
   
   const markdownLibrary = markdownIt({
-    html: true,
-    breaks: true,
-    linkify: true
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: "after",
-      class: "direct-link",
-      symbol: "#",
-    }),
-    level: [1, 2, 3, 4],
-    slugify: eleventyConfig.getFilter("slug")
+  html: true,
+  breaks: true,
+  linkify: true
   });
   
   eleventyConfig.setLibrary("md", markdownLibrary);
