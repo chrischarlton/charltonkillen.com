@@ -26,7 +26,7 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
 
   <div class="card">
     <h3>Transforming One+All</h3>
-    <p>A profital 100% employee-owned business growing year on year, with amazing people doing a great job for customers. Technology is holding it all back so my mission is complete transformation built with humans in mind to enable even more positive impact for people and planet.</p>
+    <p>Profitable, 100% employee-owned and growing year on year. Amazing people doing a great job for their customers but held back by outdated technology. So I'm leading a complete human-first transformation which aims to boost our impact on people and planet.</p>
   </div>
 </div>
 
