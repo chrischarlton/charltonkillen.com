@@ -22,9 +22,28 @@
    ========================================================================== */
 
 .site-header {
-    background: var(--color-background);
-    border-bottom: 4px solid var(--color-primary);
-    padding: 2rem 0;
+    background: var(--color-primary);
+    color: white;
+    padding: 3rem 0;
+    position: relative;
+}
+
+/* Optional: Add a subtle gradient or pattern */
+.site-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #0f5a9a 100%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.site-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 .header-content {
@@ -39,17 +58,17 @@
 }
 
 .site-title-link {
-    color: var(--color-text);
+    color: white;
     text-decoration: none;
 }
 
 .site-title-link:hover {
-    color: var(--color-primary);
+    color: var(--color-accent);
 }
 
 .site-tagline {
     font-size: clamp(1.3rem, 3vw, 1.5rem);
-    color: var(--color-secondary);
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     max-width: 600px;
 }
@@ -68,17 +87,18 @@
 
 .nav-link {
     text-decoration: none;
-    color: var(--color-primary);
+    color: white;
     font-weight: 500;
     font-size: 1.2rem;
     border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
+    transition: all 0.2s ease;
     padding-bottom: 0.2rem;
 }
 
 .nav-link:hover,
 .nav-link[aria-current="page"] {
-    border-bottom-color: var(--color-primary);
+    border-bottom-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 @media (max-width: 767px) {
