@@ -20,7 +20,7 @@ async function imageShortcode(src, alt, sizes = "100vw", loading = "lazy") {
   return Image.generateHTML(metadata, imageAttributes);
 }
 
-// Gallery shortcode for multiple images
+// Gallery shortcode for multiple images  
 async function galleryShortcode(images, alt = "Gallery image") {
   let galleryHTML = '<div class="gallery">';
   
@@ -47,8 +47,8 @@ async function galleryShortcode(images, alt = "Gallery image") {
 }
 
 module.exports = function(eleventyConfig) {
-  // Set path prefix - empty works for both GitHub Pages and custom domain
-  eleventyConfig.addGlobalData("pathPrefix", "");
+  // Set path prefix for GitHub Pages subdirectory
+  eleventyConfig.addGlobalData("pathPrefix", "/charltonkillen.com");
   
   // Add image shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
@@ -91,7 +91,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter("dateFormat", function(date) {
     return new Intl.DateTimeFormat("en-GB", {
       year: "numeric",
-      month: "long",
+      month: "long", 
       day: "numeric"
     }).format(new Date(date));
   });
