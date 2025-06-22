@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description or metadata.description }}">
+    <title>{{ title }} | {{ metadata.title }}</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --color-primary: #1d70b8;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{{ pathPrefix }}/css/main.css">
+</head>
+<body>
+    <!-- Simplified header for inner pages -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="site-title">
+                    <a href="{{ pathPrefix }}/" class="site-title-link">{{ metadata.title }}</a>
+                </h1>
+                
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
+                        <li><a href="{{ pathPrefix }}/about/" class="nav-link" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+                        <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link">Thoughts</a></li>
+                        <li><a href="{{ pathPrefix }}/experience/" class="nav-link">Experience</a></li>
+                        <li><a href="{{ pathPrefix }}/contact/" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            <article class="page-content">
+                {{ content | safe }}
+            </article>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 {{ metadata.author }}. All rights reserved.</p>
+                <p class="footer-note">Built with <a href="https://11ty.dev">Eleventy</a> and hosted on <a href="https://pages.github.com">GitHub Pages</a>.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
