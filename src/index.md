@@ -1,5 +1,5 @@
 ---
-layout: _layouts/base.njk
+layout: base.njk
 title: Home
 description: Technology leadership, business transformation and learning from failure
 ---
