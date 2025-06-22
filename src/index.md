@@ -12,7 +12,7 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
 
 ## What I'm working on
 
-<div class="grid grid-2 margin-top-large">
+<div class="grid grid-3 margin-top-large">
   <div class="card">
     <h3>Agile Made Easy</h3>
     <p>A practical guide to setting up the most valuable in real business environments, beyond the textbook theory. How to make change work when it matters.</p>
@@ -22,12 +22,12 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
     <h3>Human Failure</h3>
     <p>My forthcoming book about the lessons learned from building and ultimately closing a software development agency. A story of ambition, growth, and valuable failure.</p>
   </div>
-</div>
-<div class="grid grid-2">
+  
   <div class="card">
     <h3>Transforming One+All</h3>
     <p>Profitable, 100% employee-owned and growing year on year. Amazing people doing a great job for their customers but held back by outdated technology. So I'm leading a complete human-first transformation which aims to boost our impact on people and planet.</p>
   </div>
+  
 </div>
 
 
