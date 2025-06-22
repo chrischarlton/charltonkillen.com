@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description or metadata.description }}">
+    <title>{{ title }} | {{ metadata.title }}</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS - inlined for performance -->
+    <style>
+        /* Critical styles */
+        :root {
+            --color-primary: #1d70b8;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+        
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--color-primary);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 100;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/css/main.css">
+    
+    <!-- Meta tags for social sharing -->
+    <meta property="og:title" content="{{ title }} | {{ metadata.title }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="{{ title }} | {{ metadata.title }}">
+    <meta name="twitter:description" content="{{ description or metadata.description }}">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+    
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="site-title">
+                    <a href="/" class="site-title-link">{{ metadata.title }}</a>
+                </h1>
+                <p class="site-tagline">{{ metadata.tagline }}</p>
+            </div>
+            
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+                    <li><a href="/about/" class="nav-link" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+                    <li><a href="/thoughts/" class="nav-link" {% if page.url.startsWith("/thoughts") %}aria-current="page"{% endif %}>Thoughts</a></li>
+                    <li><a href="/experience/" class="nav-link" {% if page.url == "/experience/" %}aria-current="page"{% endif %}>Experience</a></li>
+                    <li><a href="/contact/" class="nav-link" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            {{ content | safe }}
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; {{ "now" | date: "%Y" }} {{ metadata.author }}. All rights reserved.</p>
+                <p class="footer-note">Built with <a href="https://11ty.dev">Eleventy</a> and hosted on <a href="https://pages.github.com">GitHub Pages</a>.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Non-critical JavaScript -->
+    <script src="/js/main.js" defer></script>
+</body>
+</html>
