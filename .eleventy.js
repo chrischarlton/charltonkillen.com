@@ -47,6 +47,9 @@ async function galleryShortcode(images, alt = "Gallery image") {
 }
 
 module.exports = function(eleventyConfig) {
+  // Set path prefix - empty works for both GitHub Pages and custom domain
+  eleventyConfig.addGlobalData("pathPrefix", "");
+  
   // Add image shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addNunjucksAsyncShortcode("gallery", galleryShortcode);
