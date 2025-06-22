@@ -98,6 +98,8 @@ module.exports = function(eleventyConfig) {
     return excerpt;
   });
 
+  eleventyConfig.setPathPrefix("/charltonkillen.com/");
+
   return {
     dir: {
       input: "src",
