@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Home
-description: Technology leadership, business transformation and learning from failure
+description: Technology, leadership and learning
 ---
 
 <div class="lead">
@@ -33,7 +33,7 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
 
 ## Recently
 
-**Speaking:** Recently spoke at the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of Doughnut Economics, discussing how One+All works as a profitable business to support both the social foundations and ecological boundaries.
+**Speaking:** Spoke at the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of Doughnut Economics, discussing how One+All works as a profitable business to support both the social foundations and ecological boundaries.
 
 **Reading:** Currently exploring how transport infrastructure systems can inform digital transformation approaches - there's surprising overlap between building reliable railways and building reliable technology teams.
 
