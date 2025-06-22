@@ -1,6 +1,6 @@
 /* ==========================================================================
    Christopher Charlton-Killen Website Styles
-   Atkinson Hyperlegible / Institutional Design
+   Atkinson Hyperlegible / Institutional Design - Larger Text Version
    ========================================================================== */
 
 /* Container and Layout
@@ -32,7 +32,7 @@
 }
 
 .site-title {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(2.5rem, 5vw, 3rem);
     font-weight: 400;
     line-height: var(--line-height-tight);
     margin-bottom: 0.5rem;
@@ -48,7 +48,7 @@
 }
 
 .site-tagline {
-    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
     color: var(--color-secondary);
     font-weight: 400;
     max-width: 600px;
@@ -70,7 +70,7 @@
     text-decoration: none;
     color: var(--color-primary);
     font-weight: 500;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     border-bottom: 2px solid transparent;
     transition: border-color 0.2s ease;
     padding-bottom: 0.2rem;
@@ -88,7 +88,7 @@
     }
     
     .nav-link {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
 
@@ -100,7 +100,7 @@
     min-height: 60vh;
 }
 
-/* Typography
+/* Typography - All Scaled Up
    ========================================================================== */
 
 h1, h2, h3, h4, h5, h6 {
@@ -111,32 +111,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(2.5rem, 6vw, 3rem);
     margin-bottom: 1.5rem;
 }
 
 h2 {
-    font-size: clamp(1.5rem, 4vw, 1.75rem);
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
     color: var(--color-primary);
     margin-top: 2rem;
 }
 
 h3 {
-    font-size: clamp(1.25rem, 3vw, 1.4rem);
+    font-size: clamp(1.4rem, 4vw, 1.7rem);
     margin-top: 1.5rem;
 }
 
+/* Base paragraph text - now larger like the old 'lead' */
 p {
     margin-bottom: 1.5rem;
-    font-size: clamp(1rem, 2vw, 1.125rem);
+    font-size: clamp(1.25rem, 3vw, 1.4rem);
     max-width: 70ch;
+    line-height: 1.6;
 }
 
+/* Lead text - now even larger */
 .lead {
-    font-size: clamp(1.25rem, 3vw, 1.4rem);
+    font-size: clamp(1.5rem, 4vw, 1.7rem);
     color: var(--color-secondary);
     margin-bottom: 2rem;
     max-width: 60ch;
+    line-height: 1.5;
+    font-weight: 500;
 }
 
 /* Links
@@ -166,6 +171,12 @@ a:hover {
 .card h3 {
     margin-top: 0;
     margin-bottom: 1rem;
+    font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+}
+
+.card p {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    line-height: 1.5;
 }
 
 .highlight-box {
@@ -178,6 +189,7 @@ a:hover {
 .highlight-box p {
     margin-bottom: 0;
     font-weight: 500;
+    font-size: clamp(1.2rem, 3vw, 1.35rem);
 }
 
 /* Grid Layout
@@ -272,7 +284,7 @@ img {
 
 .thought-meta {
     color: var(--color-secondary);
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -287,7 +299,7 @@ img {
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 /* Footer
@@ -304,7 +316,7 @@ img {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    font-size: 0.9rem;
+    font-size: 1rem;
 }
 
 .footer-content a {
