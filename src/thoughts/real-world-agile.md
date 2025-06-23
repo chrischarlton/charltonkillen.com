@@ -1,12 +1,9 @@
 ---
-layout: page.njk
 title: Why Most Digital Transformations Fail
 description: After six years leading digital transformation at One+All, I've observed a consistent pattern - most technology initiatives fail not because of the technology itself, but because of fundamental misunderstandings about change.
 date: 2025-01-20
 color: "#2c5f3a"
 ---
-
-# Why Most Digital Transformations Fail
 
 After six years leading digital transformation at One+All and the experience of building Human, I've observed a consistent pattern: most technology initiatives fail not because of the technology itself, but because of fundamental misunderstandings about change.
 
