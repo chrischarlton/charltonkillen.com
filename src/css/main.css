@@ -666,3 +666,172 @@ img {
         border-bottom: none !important;
     }
 }
+
+/* Contact Page Styling
+   ========================================================================== */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0 3rem 0;
+}
+
+@media (min-width: 768px) {
+    .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+.service-card {
+    border: 2px solid var(--color-primary);
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+}
+
+.service-card h3 {
+    color: var(--color-primary);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+}
+
+.service-card p {
+    margin-bottom: 0;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+}
+
+/* Contact Form Styling
+   ========================================================================== */
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem 0;
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 4px;
+    border-left: 4px solid var(--color-primary);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    font-size: 1rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: var(--font-family);
+    transition: border-color 0.2s ease;
+    background: white;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(29, 112, 184, 0.1);
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-submit {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-family);
+}
+
+.form-submit:hover {
+    background: #005a5b;
+    transform: translateY(-1px);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+/* Form validation and status
+   ========================================================================== */
+
+.form-error {
+    color: #d32f2f;
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+.form-input.error {
+    border-color: #d32f2f;
+}
+
+.form-status {
+    margin-top: 1rem;
+}
+
+.form-success {
+    background: #4caf50;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.form-success.show {
+    display: block;
+}
+
+.form-status .form-error {
+    background: #f44336;
+    color: white;
+    padding: 1rem;
+    border-radius: 4px;
+    display: none;
+}
+
+.form-status .form-error.show {
+    display: block;
+}
+
+/* Honeypot spam prevention */
+.honeypot {
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+}
+
+/* Contact note styling */
+.contact-note {
+    background: var(--color-accent);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+}
+
+.contact-note p {
+    margin-bottom: 0;
+    font-size: 1rem;
+}
