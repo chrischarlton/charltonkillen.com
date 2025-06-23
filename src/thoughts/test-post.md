@@ -1,8 +1,9 @@
 ---
 layout: page.njk
-title: Test Post
-date: 2025-01-15
-description: A simple test post to make sure the thoughts system works
+title: "Test post"
+description: "These initial occurrances were hard to understand but important to notice."
+date: 2025-06-23
+color: "#ccc"  # Optional: custom colour for the card
 ---
 
 # Test Post
