@@ -271,6 +271,49 @@
     }
 }
 
+/* Fix page header layout alignment and menu positioning */
+@media (max-width: 767px) {
+    .page-header .page-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0;
+        padding: 0 1.5rem; /* Match container padding */
+        margin: 0 -1.5rem; /* Extend to full width */
+    }
+    
+    .page-header .site-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
+        white-space: nowrap;
+        flex: 1;
+    }
+    
+    .page-header .main-nav {
+        margin-left: 1rem;
+        position: relative;
+    }
+    
+    /* Make mobile menu align right and use full width */
+    .page-header .nav-list {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: -1.5rem; /* Extend to match page padding */
+        background: var(--color-background);
+        border: 1px solid var(--color-border);
+        width: 100vw; /* Use full viewport width */
+        margin-left: calc(-50vw + 50%); /* Center relative to viewport */
+    }
+    
+    .page-header .nav-link {
+        color: var(--color-primary);
+        border-bottom: 1px solid var(--color-border);
+        padding: 1rem 1.5rem; /* More generous padding */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+}
+
 /* Main Content
    ========================================================================== */
 
