@@ -106,6 +106,116 @@
                 });
             }
         });
+        // Contact form validation and handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            if (!form) return;
+            
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            const honeypot = document.getElementById('website');
+            
+            // Form validation
+            function validateField(field, errorId) {
+                const errorElement = document.getElementById(errorId);
+                let isValid = true;
+                
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    isValid = false;
+                } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+                    showError(field, errorElement, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError(field, errorElement);
+                }
+                
+                return isValid;
+            }
+            
+            function showError(field, errorElement, message) {
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+            
+            function hideError(field, errorElement) {
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Real-time validation
+            nameField.addEventListener('blur', () => validateField(nameField, 'name-error'));
+            emailField.addEventListener('blur', () => validateField(emailField, 'email-error'));
+            messageField.addEventListener('blur', () => validateField(messageField, 'message-error'));
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for spam (honeypot)
+                if (honeypot.value) {
+                    return; // Silent fail for spam
+                }
+                
+                // Validate all fields
+                const nameValid = validateField(nameField, 'name-error');
+                const emailValid = validateField(emailField, 'email-error');
+                const messageValid = validateField(messageField, 'message-error');
+                
+                if (nameValid && emailValid && messageValid) {
+                    submitForm();
+                }
+            });
+            
+            function submitForm() {
+                const submitButton = form.querySelector('.form-submit');
+                const successMessage = document.getElementById('form-success');
+                const errorMessage = document.getElementById('form-error');
+                
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Submit to Formspree (you'll need to update the action URL)
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        form.reset();
+                        successMessage.classList.add('show');
+                        errorMessage.classList.remove('show');
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    // Error
+                    errorMessage.classList.add('show');
+                    successMessage.classList.remove('show');
+                })
+                .finally(() => {
+                    // Reset button
+                    submitButton.textContent = 'Send message';
+                    submitButton.disabled = false;
+                });
+            }
+        });
     </script>
 </body>
 </html>
