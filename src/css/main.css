@@ -866,19 +866,15 @@ img {
     text-decoration: underline;
 }
 
-/* Clean Thoughts Card Styling - Two Column Layout
+/* Clean Thoughts Card Styling - Updated Design
    ========================================================================== */
-
-/* Remove or comment out the old thoughts styling:
-.thoughts-list, .thought-item, .thought-title, .thought-meta, .thought-excerpt 
-*/
 
 .thoughts-grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5rem;
     margin: 2rem 0;
-    list-style: none; /* In case you're using <ul> */
+    list-style: none;
     padding: 0;
 }
 
@@ -889,19 +885,22 @@ img {
     }
 }
 
+/* Make the whole card clickable */
 .thought-card {
     background: white;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #e5e5e5;
-    text-decoration: none; /* If the whole card is a link */
+    border: 1px solid #d1d5db; /* Clean border instead of shadow */
+    transition: transform 0.2s ease, border-color 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
 
 .thought-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border-color: var(--color-primary);
+    text-decoration: none;
 }
 
 .thought-color-block {
@@ -909,23 +908,22 @@ img {
     height: 160px;
     background: var(--color-primary);
     margin: 0;
-    flex-shrink: 0; /* Prevent the block from shrinking */
+    flex-shrink: 0;
 }
 
 .thought-content {
-    padding: 1.25rem;
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
 }
 
 .thought-date {
     font-size: 0.875rem;
     color: var(--color-secondary);
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
+    font-weight: 400;
     margin: 0;
+    text-transform: none; /* Ensure mixed case */
 }
 
 .thought-title {
@@ -933,20 +931,18 @@ img {
     font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.3;
-}
-
-.thought-title a {
     color: var(--color-text);
-    text-decoration: none;
 }
 
-.thought-title a:hover {
-    color: var(--color-primary);
+/* Remove the nested link since whole card is clickable */
+.thought-title a {
+    color: inherit;
+    text-decoration: none;
 }
 
 .thought-excerpt {
     margin: 0;
-    flex-grow: 1; /* Take up remaining space */
+    flex-grow: 1;
 }
 
 .thought-excerpt p {
@@ -956,40 +952,28 @@ img {
     color: var(--color-secondary);
 }
 
+/* Hide the read-more link since whole card is clickable */
 .read-more {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.025em;
-    align-self: flex-start; /* Don't stretch across full width */
-    border-bottom: 2px solid transparent;
-    transition: border-color 0.2s ease;
-}
-
-.read-more:hover {
-    border-bottom-color: var(--color-primary);
-    text-decoration: none;
+    display: none;
 }
 
 /* Empty state */
 .no-thoughts {
-    grid-column: 1 / -1; /* Span all columns */
+    grid-column: 1 / -1;
     text-align: center;
     padding: 3rem 1rem;
     color: var(--color-secondary);
 }
 
-/* If you need different colour blocks per post */
+/* Optional: Different colour blocks per category */
 .thought-card[data-category="web"] .thought-color-block {
-    background: #2563eb; /* Blue */
+    background: #2563eb;
 }
 
 .thought-card[data-category="design"] .thought-color-block {
-    background: #7c3aed; /* Purple */
+    background: #7c3aed;
 }
 
 .thought-card[data-category="accessibility"] .thought-color-block {
-    background: #059669; /* Green */
+    background: #059669;
 }
