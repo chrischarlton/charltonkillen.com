@@ -627,7 +627,7 @@ img {
     .site-header .main-nav {
         position: absolute !important;
         top: 0 !important;
-        right: 1.5rem !important; /* Match container padding */
+        right: 1rem !important; /* Match container padding */
         z-index: 10 !important;
     }
     
