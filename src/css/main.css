@@ -250,15 +250,24 @@
     }
 }
 
-/* Make the page header name fit on one line on mobile */
+/* Fix page header layout to put name and burger on same line */
 @media (max-width: 767px) {
-    .page-header .site-title {
-        font-size: clamp(1.2rem, 4vw, 1.6rem);
+    .page-header .page-header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         margin-bottom: 0;
-        flex: 1;
+    }
+    
+    .page-header .site-title {
+        font-size: 1.2rem;
+        margin-bottom: 0;
         white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        flex: 1;
+    }
+    
+    .page-header .main-nav {
+        margin-left: 1rem;
     }
 }
 
