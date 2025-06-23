@@ -219,6 +219,37 @@
     }
 }
 
+/* Page Header Mobile Layout Fix */
+@media (max-width: 767px) {
+    .page-header .header-content,
+    .page-header .page-header-content {
+        margin-bottom: 0;
+    }
+    
+    .page-header .site-title {
+        font-size: clamp(1.4rem, 5vw, 1.8rem);
+        margin-bottom: 0;
+        flex: 1;
+    }
+    
+    .page-header .nav-header {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .page-header .main-nav {
+        width: 100%;
+    }
+    
+    /* Make the title and burger button sit on the same line */
+    .page-header .container > * {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
 /* Main Content
    ========================================================================== */
 
@@ -511,3 +542,4 @@ img {
 .max-width-prose {
     max-width: 70ch;
 }
+
