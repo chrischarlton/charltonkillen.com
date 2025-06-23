@@ -1099,3 +1099,93 @@ img {
 .back-to-thoughts:hover {
     text-decoration: underline;
 }
+
+/* Updated Thoughts Card Styling
+   ========================================================================== */
+
+.thoughts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .thoughts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+.thought-card {
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.thought-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.thought-color-block {
+    width: 100%;
+    height: 120px;
+    background: var(--color-primary);
+    margin: 0; /* Remove any spacing above */
+}
+
+.thought-content {
+    padding: 1.25rem;
+}
+
+.thought-date {
+    font-size: 1rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.75rem;
+    /* Remove caps and letter-spacing */
+}
+
+.thought-title {
+    margin-bottom: 0.75rem;
+}
+
+.thought-title a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: clamp(1.4rem, 3vw, 1.6rem); /* Larger text */
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.thought-title a:hover {
+    color: var(--color-primary);
+}
+
+.thought-excerpt {
+    margin-bottom: 1rem;
+}
+
+.thought-excerpt p {
+    margin-bottom: 0;
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem); /* Larger text */
+    line-height: 1.5;
+}
+
+.read-more {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem; /* Larger text */
+    /* Remove caps and letter-spacing */
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.read-more:hover {
+    border-bottom-color: var(--color-primary);
+}
