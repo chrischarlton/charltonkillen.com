@@ -8,22 +8,26 @@ description: Writing on technology leadership, business transformation, and lear
 
 Writing on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.
 
-<div class="thoughts-list">
+<div class="thoughts-grid">
 {% for thought in collections.thoughts %}
-  <article class="thought-item">
-    <div class="thought-meta">
-      {{ thought.date.toDateString() }}
+  <article class="thought-card"{% if thought.data.color %} style="--card-color: {{ thought.data.color }}"{% endif %}>
+    {% if thought.data.color %}
+      <div class="thought-color-block" style="background: {{ thought.data.color }}"></div>
+    {% endif %}
+    
+    <div class="thought-content">
+      <time class="thought-date">{{ thought.date.toDateString() }}</time>
+      
+      <h2 class="thought-title">
+        <a href="{{ pathPrefix }}{{ thought.url }}">{{ thought.data.title }}</a>
+      </h2>
+      
+      <div class="thought-excerpt">
+        <p>{{ thought.data.description or "Read more..." }}</p>
+      </div>
+      
+      <a href="{{ pathPrefix }}{{ thought.url }}" class="read-more">Read full article →</a>
     </div>
-    
-    <h2 class="thought-title">
-      <a href="{{ pathPrefix }}{{ thought.url }}">{{ thought.data.title }}</a>
-    </h2>
-    
-    <div class="thought-excerpt">
-      <p>{{ thought.data.description }}</p>
-    </div>
-    
-    <a href="{{ pathPrefix }}{{ thought.url }}" class="read-more">Read full article →</a>
   </article>
 {% endfor %}
 </div>
