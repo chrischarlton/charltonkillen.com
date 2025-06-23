@@ -16,8 +16,7 @@ Writing on technology leadership, real-world agile, business transformation, and
     {% endif %}
     
     <div class="thought-content">
-      <time class="thought-date">{{ thought.date.toDateString() }}</time>
-      
+      <time class="thought-date">{{ thought.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) }}</time>      
       <h2 class="thought-title">
         <a href="{{ pathPrefix }}{{ thought.url }}">{{ thought.data.title }}</a>
       </h2>
