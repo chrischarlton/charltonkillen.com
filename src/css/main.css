@@ -885,7 +885,7 @@ img {
 }
 
 .thought-content {
-    padding: 1.5rem;
+    padding: 0.75rem;
 }
 
 .thought-date {
@@ -895,11 +895,11 @@ img {
     letter-spacing: 0.05em;
     font-weight: 500;
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
 }
 
 .thought-title {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.25rem;
 }
 
 .thought-title a {
@@ -923,7 +923,7 @@ img {
 }
 
 .thought-excerpt {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     font-size: 1rem;
     line-height: 1.6;
 }
