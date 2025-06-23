@@ -56,7 +56,7 @@
         <div class="hero-overlay">
             <div class="container">
                 <div class="hero-content">
-                    <time class="hero-date" datetime="{{ date | date: '%Y-%m-%d' }}">
+                    <time class="hero-date" datetime="{{ date.toISOString() }}">
                         {{ date | dateFormat }}
                     </time>
                     <h1 class="hero-title">{{ title }}</h1>
@@ -102,7 +102,7 @@
             <article class="thought-article">
                 {% if not image and not color %}
                 <header class="article-header">
-                    <time class="article-date" datetime="{{ date | date: '%Y-%m-%d' }}">
+                    <time class="article-date" datetime="{{ date.toISOString() }}">
                         {{ date | dateFormat }}
                     </time>
                     <h1 class="article-title">{{ title }}</h1>
