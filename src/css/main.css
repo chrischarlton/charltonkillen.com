@@ -219,98 +219,45 @@
     }
 }
 
-/* Page Header Mobile Layout Fix */
+/* Clean page header mobile layout */
 @media (max-width: 767px) {
-    .page-header .header-content,
-    .page-header .page-header-content {
-        margin-bottom: 0;
-    }
-    
-    .page-header .site-title {
-        font-size: clamp(1.4rem, 5vw, 1.8rem);
-        margin-bottom: 0;
-        flex: 1;
-    }
-    
-    .page-header .nav-header {
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-    }
-    
-    .page-header .main-nav {
-        width: 100%;
-    }
-    
-    /* Make the title and burger button sit on the same line */
-    .page-header .container > * {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-/* Fix page header layout to put name and burger on same line */
-@media (max-width: 767px) {
+    /* Remove any existing problematic styles first */
     .page-header .page-header-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 0;
+        /* Don't mess with padding/margins */
     }
     
     .page-header .site-title {
         font-size: 1.2rem;
         margin-bottom: 0;
         white-space: nowrap;
-        flex: 1;
     }
     
-    .page-header .main-nav {
-        margin-left: 1rem;
-    }
-}
-
-/* Fix page header layout alignment and menu positioning */
-@media (max-width: 767px) {
-    .page-header .page-header-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 0;
-        padding: 0 1.5rem; /* Match container padding */
-        margin: 0 -1.5rem; /* Extend to full width */
-    }
-    
-    .page-header .site-title {
-        font-size: 1.2rem;
-        margin-bottom: 0;
-        white-space: nowrap;
-        flex: 1;
-    }
-    
-    .page-header .main-nav {
-        margin-left: 1rem;
-        position: relative;
-    }
-    
-    /* Make mobile menu align right and use full width */
+    /* Simple menu positioning */
     .page-header .nav-list {
         position: absolute;
         top: 100%;
         right: 0;
-        left: -1.5rem; /* Extend to match page padding */
         background: var(--color-background);
         border: 1px solid var(--color-border);
-        width: 100vw; /* Use full viewport width */
-        margin-left: calc(-50vw + 50%); /* Center relative to viewport */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        min-width: 150px;
+        width: auto; /* Let it size to content */
     }
     
     .page-header .nav-link {
         color: var(--color-primary);
         border-bottom: 1px solid var(--color-border);
-        padding: 1rem 1.5rem; /* More generous padding */
-        white-space: nowrap; /* Prevent text wrapping */
+        padding: 0.75rem 1rem;
+        white-space: nowrap;
+        display: block;
+    }
+    
+    .page-header .nav-link:last-child {
+        border-bottom: none;
     }
 }
 
