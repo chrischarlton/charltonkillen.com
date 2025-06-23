@@ -1,5 +1,5 @@
 ---
-layout: page.njk
+layout: thought.njk
 title: "Test post"
 description: "These initial occurrances were hard to understand but important to notice."
 date: 2025-06-23
