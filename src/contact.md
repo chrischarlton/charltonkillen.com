@@ -29,7 +29,7 @@ I'm always interested in connecting with people who are thinking about technolog
 
 ## Contact form
 
-<form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+<form class="contact-form" action="https://formspree.io/f/xyzjnpyv" method="POST">
   <div class="form-group">
     <label for="name" class="form-label">Name *</label>
     <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
