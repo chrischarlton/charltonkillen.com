@@ -601,3 +601,19 @@ img {
         border-bottom: none !important;
     }
 }
+
+/* Universal mobile menu positioning for all browsers */
+@media (max-width: 767px) {
+    .page-header .nav-list {
+        position: absolute !important;
+        top: calc(100% + 5px) !important;
+        right: 0 !important;
+        left: auto !important;
+        transform: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: max-content !important;
+        max-width: 200px !important;
+        z-index: 1000 !important;
+    }
+}
