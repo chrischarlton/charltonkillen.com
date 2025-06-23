@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description or excerpt or metadata.description }}">
+    <title>{{ title }} | {{ metadata.title }}</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --color-primary: #00703c;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="{{ pathPrefix }}/css/main.css">
+</head>
+<body>
+    <!-- Hero section with image or color -->
+    {% if image or color %}
+    <div class="thought-hero" {% if color %}style="background: {{ color }}"{% endif %}>
+        {% if image %}
+          <div class="hero-image">
+            {% image image, title, "640w, 960w, 1280w, 1920w", "100vw" %}
+          </div>
+        {% endif %}
+        <div class="hero-overlay">
+            <div class="container">
+                <div class="hero-content">
+                    <time class="hero-date" datetime="{{ date | date: '%Y-%m-%d' }}">
+                        {{ date | dateFormat }}
+                    </time>
+                    <h1 class="hero-title">{{ title }}</h1>
+                    {% if subtitle %}
+                        <p class="hero-subtitle">{{ subtitle }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+    
+    <!-- Simple header for thoughts without hero images -->
+    {% if not image and not color %}
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="site-title">
+                    <a href="{{ pathPrefix }}/" class="site-title-link">{{ metadata.title }}</a>
+                </h1>
+                
+                <nav class="main-nav" aria-label="Main navigation">
+                    <div class="nav-header">
+                        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="hamburger">☰</span>
+                        </button>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
+                        <li><a href="{{ pathPrefix }}/about/" class="nav-link">About</a></li>
+                        <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link" aria-current="page">Thoughts</a></li>
+                        <li><a href="{{ pathPrefix }}/experience/" class="nav-link">Experience</a></li>
+                        <li><a href="{{ pathPrefix }}/contact/" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    {% endif %}
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            <article class="thought-article">
+                {% if not image and not color %}
+                <header class="article-header">
+                    <time class="article-date" datetime="{{ date | date: '%Y-%m-%d' }}">
+                        {{ date | dateFormat }}
+                    </time>
+                    <h1 class="article-title">{{ title }}</h1>
+                    {% if subtitle %}
+                        <p class="article-subtitle">{{ subtitle }}</p>
+                    {% endif %}
+                </header>
+                {% endif %}
+                
+                <div class="article-content">
+                    {{ content | safe }}
+                </div>
+                
+                <footer class="article-footer">
+                    <div class="article-navigation">
+                        <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; {{ metadata.author }}, 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
