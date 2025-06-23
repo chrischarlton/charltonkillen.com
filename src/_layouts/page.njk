@@ -87,5 +87,26 @@
             </div>
         </div>
     </footer>
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
