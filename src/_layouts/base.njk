@@ -55,6 +55,11 @@
             </div>
             
             <nav class="main-nav" aria-label="Main navigation">
+                <div class="nav-header">
+                    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                        <span class="hamburger">☰</span>
+                    </button>
+                </div>
                 <ul class="nav-list">
                     <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
                     <li><a href="{{ pathPrefix }}/about/" class="nav-link">About</a></li>
@@ -79,5 +84,27 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
