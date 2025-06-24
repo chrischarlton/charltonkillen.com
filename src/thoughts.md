@@ -3,6 +3,7 @@ layout: page.njk
 title: Thoughts
 description: Writing on technology leadership, business transformation, and learning from failure
 ---
+
 # Thoughts
 Writing on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.
 
