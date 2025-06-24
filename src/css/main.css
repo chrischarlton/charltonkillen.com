@@ -905,7 +905,7 @@ img {
 
 .thought-color-block {
     width: 100%;
-    aspect-ratio: 1; /* Makes it square - height matches width */
+    aspect-ratio: 1.5;
     background: var(--color-primary);
     margin: 0;
     flex-shrink: 0;
