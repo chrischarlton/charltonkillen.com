@@ -978,3 +978,84 @@ img {
 .thought-card[data-category="accessibility"] .thought-color-block {
     background: #059669;
 }
+
+/* Thought Hero Section
+   ========================================================================== */
+
+.thought-hero {
+    min-height: 60vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: white;
+    background: var(--color-primary);
+}
+
+.hero-overlay {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 3rem 0;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-content {
+    margin-top: 3rem;
+}
+
+.hero-date {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    max-width: 60ch;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Navigation in hero */
+.thought-hero .site-title-link {
+    color: white;
+    text-decoration: none;
+}
+
+.thought-hero .nav-link {
+    color: white;
+}
+
+.thought-hero .nav-link:hover,
+.thought-hero .nav-link[aria-current="page"] {
+    border-bottom-color: var(--color-accent);
+    color: var(--color-accent);
+}
