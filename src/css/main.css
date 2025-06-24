@@ -913,10 +913,10 @@ img {
 }
 
 .thought-content {
-    padding: 1.25rem; /* Tighter padding */
+    padding: 1rem; /* Reduced from 1.25rem */
     display: flex;
     flex-direction: column;
-    gap: 0.75rem; /* Reduced gap between elements */
+    gap: 0.5rem; /* Much tighter gap - reduced from 0.75rem */
 }
 
 .thought-date {
