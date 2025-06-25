@@ -983,19 +983,36 @@ img {
    ========================================================================== */
 
 .thought-hero {
-    min-height: 60vh;
+    min-height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     color: white;
     background: var(--color-primary);
+    margin: -3rem -2rem 3rem -2rem; /* Pull hero outside container margins */
+}
+
+@media (max-width: 767px) {
+    .thought-hero {
+        margin: -3rem -1.5rem 3rem -1.5rem; /* Adjust for mobile container padding */
+    }
 }
 
 .hero-overlay {
-    position: relative;
-    z-index: 2;
     width: 100%;
     padding: 3rem 0;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+@media (max-width: 767px) {
+    .hero-content {
+        padding: 0 1.5rem;
+    }
 }
 
 .hero-image {
@@ -1011,10 +1028,6 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.hero-content {
-    margin-top: 3rem;
 }
 
 .hero-date {
@@ -1042,20 +1055,4 @@ img {
     max-width: 60ch;
     line-height: 1.4;
     margin-bottom: 0;
-}
-
-/* Navigation in hero */
-.thought-hero .site-title-link {
-    color: white;
-    text-decoration: none;
-}
-
-.thought-hero .nav-link {
-    color: white;
-}
-
-.thought-hero .nav-link:hover,
-.thought-hero .nav-link[aria-current="page"] {
-    border-bottom-color: var(--color-accent);
-    color: var(--color-accent);
 }
