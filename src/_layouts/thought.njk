@@ -1,36 +1,12 @@
 ---
-layout: base.njk
+layout: page.njk
 ---
 
-<!-- Hero section with image or color -->
-{% if image or color %}
-<div class="thought-hero" {% if color %}style="background: {{ color }}"{% endif %}>
-    {% if image %}
-      <div class="hero-image">
-        {% image image, title, "640w, 960w, 1280w, 1920w", "100vw" %}
-      </div>
-    {% endif %}
+<!-- Hero section with color/image if specified -->
+{% if color %}
+<div class="thought-hero" style="background: {{ color }}">
     <div class="hero-overlay">
         <div class="container">
-            <!-- Site navigation in hero -->
-            <nav class="main-nav" aria-label="Main navigation">
-                <div class="nav-header">
-                    <h1 class="site-title">
-                        <a href="{{ pathPrefix }}/" class="site-title-link">Christopher Charlton-Killen</a>
-                    </h1>
-                    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                        <span class="hamburger">☰</span>
-                    </button>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
-                    <li><a href="{{ pathPrefix }}/about/" class="nav-link">About</a></li>
-                    <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link" aria-current="page">Thoughts</a></li>
-                    <li><a href="{{ pathPrefix }}/experience/" class="nav-link">Experience</a></li>
-                    <li><a href="{{ pathPrefix }}/contact/" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-            
             <div class="hero-content">
                 <time class="hero-date" datetime="{{ date.toISOString() }}">
                     {{ date | dateFormat }}
@@ -43,82 +19,35 @@ layout: base.njk
         </div>
     </div>
 </div>
-{% endif %}
 
-<!-- Simple header for thoughts without hero images/colors -->
-{% if not image and not color %}
-<header class="page-header">
-    <div class="container">
-        <div class="page-header-content">
-            <h1 class="site-title">
-                <a href="{{ pathPrefix }}/" class="site-title-link">Christopher Charlton-Killen</a>
-            </h1>
-            
-            <nav class="main-nav" aria-label="Main navigation">
-                <div class="nav-header">
-                    <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-                        <span class="hamburger">☰</span>
-                    </button>
-                </div>
-                <ul class="nav-list">
-                    <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
-                    <li><a href="{{ pathPrefix }}/about/" class="nav-link">About</a></li>
-                    <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link" aria-current="page">Thoughts</a></li>
-                    <li><a href="{{ pathPrefix }}/experience/" class="nav-link">Experience</a></li>
-                    <li><a href="{{ pathPrefix }}/contact/" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+<!-- Article content after hero -->
+<div class="article-content">
+    {{ content | safe }}
+</div>
+
+<footer class="article-footer">
+    <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
+</footer>
+
+{% else %}
+
+<!-- No hero - standard article layout -->
+<header class="article-header">
+    <time class="article-date" datetime="{{ date.toISOString() }}">
+        {{ date | dateFormat }}
+    </time>
+    <h1 class="article-title">{{ title }}</h1>
+    {% if description %}
+        <p class="article-subtitle">{{ description }}</p>
+    {% endif %}
 </header>
+
+<div class="article-content">
+    {{ content | safe }}
+</div>
+
+<footer class="article-footer">
+    <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
+</footer>
+
 {% endif %}
-
-<main id="main" class="main-content">
-    <div class="container">
-        <article class="thought-article">
-            {% if not image and not color %}
-            <header class="article-header">
-                <time class="article-date" datetime="{{ date.toISOString() }}">
-                    {{ date | dateFormat }}
-                </time>
-                <h1 class="article-title">{{ title }}</h1>
-                {% if description %}
-                    <p class="article-subtitle">{{ description }}</p>
-                {% endif %}
-            </header>
-            {% endif %}
-            
-            <div class="article-content">
-                {{ content | safe }}
-            </div>
-            
-            <footer class="article-footer">
-                <div class="article-navigation">
-                    <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
-                </div>
-            </footer>
-        </article>
-    </div>
-</main>
-
-<!-- Mobile navigation JavaScript -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const toggle = document.querySelector('.mobile-nav-toggle');
-        const navList = document.querySelector('.nav-list');
-        
-        if (toggle && navList) {
-            toggle.addEventListener('click', function() {
-                const isOpen = navList.classList.contains('nav-open');
-                
-                if (isOpen) {
-                    navList.classList.remove('nav-open');
-                    toggle.setAttribute('aria-expanded', 'false');
-                } else {
-                    navList.classList.add('nav-open');
-                    toggle.setAttribute('aria-expanded', 'true');
-                }
-            });
-        }
-    });
-</script>
