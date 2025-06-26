@@ -1,35 +1,30 @@
 ---
 layout: page.njk
 title: Thoughts
-description: Writing on technology leadership, business transformation, and learning from failure
+description: Notes on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.
 ---
 
-<h1>Thoughts</h1>
-<p>Notes on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.</p>
+# Thoughts
+
+Notes on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.
 
 <div class="thoughts-grid">
-{% for thought in collections.thoughts %}
-  <a href="{{ pathPrefix }}{{ thought.url }}" class="thought-card">
-    {% if thought.data.color %}
-      <div class="thought-color-block" style="background: {{ thought.data.color }}"></div>
-    {% else %}
-      <div class="thought-color-block"></div>
-    {% endif %}
-    
-    <div class="thought-content">
-      <time class="thought-date">{{ thought.date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' }) }}</time>      
-      <h2 class="thought-title">{{ thought.data.title }}</h2>
-      
-      <div class="thought-excerpt">
-        <p>{{ thought.data.description or "Read more..." }}</p>
+  {%- for thought in collections.thoughts | reverse -%}
+    <a href="{{ thought.url }}" class="thought-card">
+      <div class="thought-visual {% if thought.data.image %}has-image{% else %}colour-only{% endif %}" 
+           {% if thought.data.image %}style="background-image: url('{{ thought.data.image }}');"{% endif %}
+           {% if thought.data.color and not thought.data.image %}style="background-color: {{ thought.data.color }};"{% endif %}>
+        {% if thought.data.image %}
+          <img src="{{ thought.data.image }}" alt="{{ thought.data.title }}" loading="lazy">
+        {% endif %}
       </div>
-    </div>
-  </a>
-{% endfor %}
+      <div class="thought-content">
+        <div class="thought-date">{{ thought.date | date: "%-d %B %Y" }}</div>
+        <h2 class="thought-title">{{ thought.data.title }}</h2>
+        {% if thought.data.description %}
+          <p class="thought-excerpt">{{ thought.data.description }}</p>
+        {% endif %}
+      </div>
+    </a>
+  {%- endfor -%}
 </div>
-
-{% if collections.thoughts.length == 0 %}
-<div class="no-thoughts">
-  <p>No thoughts published yet. Check back soon!</p>
-</div>
-{% endif %}
