@@ -1,7 +1,7 @@
 ---
 layout: thought.njk
 title: I believe automation is a force for good
-description: We are living through an industrial revolution and the pace of change is accelerating. Advances in both digital and physical technologies are combining to offer new possibilities for production and consumption of products, services and experiences.
+description: 
 date: 2018-06-14
 color: "#FFC0CB"
 ---
