@@ -15,7 +15,7 @@ Currently Technology Director at [One+All](https://oneandall.org.uk), a certifie
 <div class="grid grid-3 margin-top-large">
   <div class="card">
     <h3>Agile Made Easy</h3>
-    <p>A practical guide to setting up the most valuable in real business environments, beyond the textbook theory. How to make change work when it matters.</p>
+    <p>A practical guide to setting up the minimum viable Agile in real business environments. How to make change work when it matters. Informed by years of project implementation experience.</p>
   </div>
   
   <div class="card">

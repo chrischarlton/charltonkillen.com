@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technology Director, strategist, and digital transformation leader focused on human-centred change">
+    <title>About | Christopher Charlton-Killen</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --color-primary: #1d70b8;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/charltonkillen.com/css/main.css">
+</head>
+<body>
+    <!-- Simplified header for inner pages -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="site-title">
+                    <a href="/charltonkillen.com/" class="site-title-link">Christopher Charlton-Killen</a>
+                </h1>
+                
+                <nav class="main-nav" aria-label="Main navigation">
+                    <div class="nav-header">
+                        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="hamburger">☰</span>
+                        </button>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="/charltonkillen.com/" class="nav-link">Home</a></li>
+                        <li><a href="/charltonkillen.com/about/" class="nav-link" aria-current="page">About</a></li>
+                        <li><a href="/charltonkillen.com/thoughts/" class="nav-link">Thoughts</a></li>
+                        <li><a href="/charltonkillen.com/experience/" class="nav-link">Experience</a></li>
+                        <li><a href="/charltonkillen.com/contact/" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            <article class="page-content">
+                <h1>About me</h1>
+<p>I'm a strategist and digital transformation leader driven by a desire to make things work better and a deep interest in how people find meaning in their work.</p>
+<p>Since 2019, I've been Technology Director at One+All, a certified B Corporation that's profitable, 100% employee-owned, and growing year on year in Greater Manchester. It's a company with exceptional people and values, but when I joined, its technology didn't match its ambition. Helping to close that gap has been one of the most challenging and rewarding experiences of my career, and I'm leading a complete human-first transformation aimed at boosting our impact on people and planet.</p>
+<h2>Learning from Human</h2>
+<p>Coming to One+All was also a turning point that prompted me to reflect hard on the years I spent running Human, the digital agency I founded in Manchester with four friends in 2010. Over nearly a decade, we worked on transformation and software projects for brilliant organisations. We built good things and made a real difference. But ultimately, we didn't build a business that could last.</p>
+<p>That experience taught me some difficult, necessary lessons about leadership: about the importance of structure, sustainability, and creating space for others to succeed. These lessons became the foundation for my forthcoming book, &quot;Human Failure&quot; - a story about learning from valuable mistakes.</p>
+<h2>My Approach</h2>
+<p>A student of management science, with experience in branding and communications, I've always believed that transformation depends on clear thinking, human-centred design, and technology that evolves from real needs, not wishful thinking. I try to bring just enough structure to make progress inevitable, while leaving room for the craft, care, and creativity that make it meaningful.</p>
+<p>I'm clearer than ever that digital transformation isn't about tools or trends: it's about people. And it works best when it helps them lead, care, and craft more.</p>
+<h2>Beyond Technology</h2>
+<p>My passion for well-designed systems extends far beyond software. I'm fascinated by transport infrastructure, especially railways, and how these systems can enrich communities. Time and again I'm drawn back to the work of Margaret Calvert, the clarity of <a href="http://gov.uk">gov.uk</a>'s design principles, and brands like the BBC that make complex things beautifully simple. I love it when form follows function and the designer creates a space for people to live, rather than a style for them to adhere to.</p>
+<h2>Personal</h2>
+<p>Along with my husband, I'm an adoptive parent and member of the LGBT+ community. These experiences shape my perspective on creating inclusive, supportive environments, whether that's in technology teams or the broader communities we serve.</p>
+<p>Having stepped away from social media (believing it often does more harm than good), this website is my way of sharing thoughts and connecting with people interested in ethical technology leadership, real-world agile implementation, and learning from failure.</p>
+<hr>
+<div class="highlight-box">
+  <p>Want to discuss technology transformation, share experiences about learning from failure, or explore speaking opportunities? <a href="/charltonkillen.com/contact/">I'd love to hear from you</a>.</p>
+</div>
+
+            </article>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; Christopher Charlton-Killen, 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+        // Contact form validation and handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            if (!form) return;
+            
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            const honeypot = document.getElementById('website');
+            
+            // Form validation
+            function validateField(field, errorId) {
+                const errorElement = document.getElementById(errorId);
+                let isValid = true;
+                
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    isValid = false;
+                } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+                    showError(field, errorElement, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError(field, errorElement);
+                }
+                
+                return isValid;
+            }
+            
+            function showError(field, errorElement, message) {
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+            
+            function hideError(field, errorElement) {
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Real-time validation
+            nameField.addEventListener('blur', () => validateField(nameField, 'name-error'));
+            emailField.addEventListener('blur', () => validateField(emailField, 'email-error'));
+            messageField.addEventListener('blur', () => validateField(messageField, 'message-error'));
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for spam (honeypot)
+                if (honeypot.value) {
+                    return; // Silent fail for spam
+                }
+                
+                // Validate all fields
+                const nameValid = validateField(nameField, 'name-error');
+                const emailValid = validateField(emailField, 'email-error');
+                const messageValid = validateField(messageField, 'message-error');
+                
+                if (nameValid && emailValid && messageValid) {
+                    submitForm();
+                }
+            });
+            
+            function submitForm() {
+                const submitButton = form.querySelector('.form-submit');
+                const successMessage = document.getElementById('form-success');
+                const errorMessage = document.getElementById('form-error');
+                
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Submit to Formspree (you'll need to update the action URL)
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        form.reset();
+                        successMessage.classList.add('show');
+                        errorMessage.classList.remove('show');
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    // Error
+                    errorMessage.classList.add('show');
+                    successMessage.classList.remove('show');
+                })
+                .finally(() => {
+                    // Reset button
+                    submitButton.textContent = 'Send message';
+                    submitButton.disabled = false;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

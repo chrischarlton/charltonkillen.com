@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch about technology consultancy, speaking opportunities, or to discuss ideas">
+    <title>Contact | Christopher Charlton-Killen</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --color-primary: #1d70b8;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/charltonkillen.com/css/main.css">
+</head>
+<body>
+    <!-- Simplified header for inner pages -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="site-title">
+                    <a href="/charltonkillen.com/" class="site-title-link">Christopher Charlton-Killen</a>
+                </h1>
+                
+                <nav class="main-nav" aria-label="Main navigation">
+                    <div class="nav-header">
+                        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="hamburger">☰</span>
+                        </button>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="/charltonkillen.com/" class="nav-link">Home</a></li>
+                        <li><a href="/charltonkillen.com/about/" class="nav-link" >About</a></li>
+                        <li><a href="/charltonkillen.com/thoughts/" class="nav-link">Thoughts</a></li>
+                        <li><a href="/charltonkillen.com/experience/" class="nav-link">Experience</a></li>
+                        <li><a href="/charltonkillen.com/contact/" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            <article class="page-content">
+                <h1>Get in touch</h1>
+<p>I'm always interested in connecting with people who are thinking about technology, transformation, and how to make change work in the real world.</p>
+<h2>How I can help</h2>
+<div class="services-grid">
+  <div class="service-card">
+    <h3>Technology Consultancy</h3>
+    <p>Invite me to assess your organisation's technology systems, plans, processes and people. Let's work together to make sure you have the right plan in place to support your goals and create positive impact.</p>
+  </div>
+  <div class="service-card">
+    <h3>Speaking</h3>
+    <p>Invite me to speak or present on any of the topics you've seen on this website. I'm particularly interested in ethical business, technology implementation, and learning from failure.</p>
+  </div>
+  <div class="service-card">
+    <h3>Discussion</h3>
+    <p>Reach out if you'd like to discuss anything you've read on my site in more detail. It's hard to convey every detail and there's always more to any story. Let me know who you are and what interests you so we can have a productive conversation.</p>
+  </div>
+</div>
+<h2>Contact form</h2>
+<form class="contact-form" action="https://formspree.io/f/xyzjnpyv" method="POST">
+  <div class="form-group">
+    <label for="name" class="form-label">Name *</label>
+    <input type="text" id="name" name="name" class="form-input" required aria-describedby="name-error">
+    <div class="form-error" id="name-error"></div>
+  </div>
+  <div class="form-group">
+    <label for="email" class="form-label">Email address *</label>
+    <input type="email" id="email" name="email" class="form-input" required aria-describedby="email-error">
+    <div class="form-error" id="email-error"></div>
+  </div>
+  <div class="form-group">
+    <label for="phone" class="form-label">Phone number (optional)</label>
+    <input type="tel" id="phone" name="phone" class="form-input">
+  </div>
+  <div class="form-group">
+    <label for="message" class="form-label">Message *</label>
+    <textarea id="message" name="message" rows="6" class="form-input form-textarea" required aria-describedby="message-error" placeholder="Please let me know what you're interested in discussing..."></textarea>
+    <div class="form-error" id="message-error"></div>
+  </div>
+  <!-- Honeypot field for spam prevention -->
+  <div class="honeypot">
+    <label for="website">Don't fill this out if you're human:</label>
+    <input type="text" id="website" name="website" tabindex="-1">
+  </div>
+<p><button type="submit" class="form-submit">Send message</button></p>
+  <div class="form-status">
+    <div class="form-success" id="form-success">Thank you! Your message has been sent. I'll get back to you soon.</div>
+    <div class="form-error" id="form-error">There was a problem sending your message. Please try again.</div>
+  </div>
+</form>
+<hr>
+<div class="contact-note">
+  <p><strong>Response time:</strong> I aim to respond to your messages within 2-3 working days, but if it takes longer please be patient.</p>
+</div>
+
+            </article>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; Christopher Charlton-Killen, 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+        // Contact form validation and handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            if (!form) return;
+            
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            const honeypot = document.getElementById('website');
+            
+            // Form validation
+            function validateField(field, errorId) {
+                const errorElement = document.getElementById(errorId);
+                let isValid = true;
+                
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    isValid = false;
+                } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+                    showError(field, errorElement, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError(field, errorElement);
+                }
+                
+                return isValid;
+            }
+            
+            function showError(field, errorElement, message) {
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+            
+            function hideError(field, errorElement) {
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Real-time validation
+            nameField.addEventListener('blur', () => validateField(nameField, 'name-error'));
+            emailField.addEventListener('blur', () => validateField(emailField, 'email-error'));
+            messageField.addEventListener('blur', () => validateField(messageField, 'message-error'));
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for spam (honeypot)
+                if (honeypot.value) {
+                    return; // Silent fail for spam
+                }
+                
+                // Validate all fields
+                const nameValid = validateField(nameField, 'name-error');
+                const emailValid = validateField(emailField, 'email-error');
+                const messageValid = validateField(messageField, 'message-error');
+                
+                if (nameValid && emailValid && messageValid) {
+                    submitForm();
+                }
+            });
+            
+            function submitForm() {
+                const submitButton = form.querySelector('.form-submit');
+                const successMessage = document.getElementById('form-success');
+                const errorMessage = document.getElementById('form-error');
+                
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Submit to Formspree (you'll need to update the action URL)
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        form.reset();
+                        successMessage.classList.add('show');
+                        errorMessage.classList.remove('show');
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    // Error
+                    errorMessage.classList.add('show');
+                    successMessage.classList.remove('show');
+                })
+                .finally(() => {
+                    // Reset button
+                    submitButton.textContent = 'Send message';
+                    submitButton.disabled = false;
+                });
+            }
+        });
+    </script>
+</body>
+</html>

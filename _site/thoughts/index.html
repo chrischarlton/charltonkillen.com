@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Writing on technology leadership, business transformation, and learning from failure">
+    <title>Thoughts | Christopher Charlton-Killen</title>
+    
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Atkinson Hyperlegible font -->
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --color-primary: #1d70b8;
+            --color-secondary: #505a5f;
+            --color-text: #0b0c0c;
+            --color-background: #ffffff;
+            --color-border: #b1b4b6;
+            --color-accent: #ffdd00;
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            --line-height-base: 1.6;
+            --line-height-tight: 1.2;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: var(--font-family);
+            line-height: var(--line-height-base);
+            color: var(--color-text);
+            background: var(--color-background);
+        }
+    </style>
+    
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="/charltonkillen.com/css/main.css">
+</head>
+<body>
+    <!-- Simplified header for inner pages -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <h1 class="site-title">
+                    <a href="/charltonkillen.com/" class="site-title-link">Christopher Charlton-Killen</a>
+                </h1>
+                
+                <nav class="main-nav" aria-label="Main navigation">
+                    <div class="nav-header">
+                        <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="hamburger">☰</span>
+                        </button>
+                    </div>
+                    <ul class="nav-list">
+                        <li><a href="/charltonkillen.com/" class="nav-link">Home</a></li>
+                        <li><a href="/charltonkillen.com/about/" class="nav-link" >About</a></li>
+                        <li><a href="/charltonkillen.com/thoughts/" class="nav-link">Thoughts</a></li>
+                        <li><a href="/charltonkillen.com/experience/" class="nav-link">Experience</a></li>
+                        <li><a href="/charltonkillen.com/contact/" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <main id="main" class="main-content">
+        <div class="container">
+            <article class="page-content">
+                
+<h1>Thoughts</h1>
+<p>Notes on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.</p>
+
+<div class="thoughts-grid">
+
+  <a href="/charltonkillen.com/thoughts/real-world-agile/" class="thought-card">
+    
+      <div class="thought-color-block" style="background: #2c5f3a"></div>
+    
+    
+    <div class="thought-content">
+      <time class="thought-date">20 January 2025</time>      
+      <h2 class="thought-title">Why Most Digital Transformations Fail</h2>
+      
+      <div class="thought-excerpt">
+        <p>After six years leading digital transformation at One+All, I&#39;ve observed a consistent pattern - most technology initiatives fail not because of the technology itself, but because of fundamental misunderstandings about change.</p>
+      </div>
+    </div>
+  </a>
+
+  <a href="/charltonkillen.com/thoughts/automation-is-a-force-for-good/" class="thought-card">
+    
+      <div class="thought-color-block" style="background: #FFC0CB"></div>
+    
+    
+    <div class="thought-content">
+      <time class="thought-date">14 June 2018</time>      
+      <h2 class="thought-title">I believe automation is a force for good</h2>
+      
+      <div class="thought-excerpt">
+        <p>Read more...</p>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+
+
+            </article>
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; Christopher Charlton-Killen, 2025. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile navigation JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggle = document.querySelector('.mobile-nav-toggle');
+            const navList = document.querySelector('.nav-list');
+            
+            if (toggle && navList) {
+                toggle.addEventListener('click', function() {
+                    const isOpen = navList.classList.contains('nav-open');
+                    
+                    if (isOpen) {
+                        navList.classList.remove('nav-open');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    } else {
+                        navList.classList.add('nav-open');
+                        toggle.setAttribute('aria-expanded', 'true');
+                    }
+                });
+            }
+        });
+        // Contact form validation and handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+            if (!form) return;
+            
+            const nameField = document.getElementById('name');
+            const emailField = document.getElementById('email');
+            const messageField = document.getElementById('message');
+            const honeypot = document.getElementById('website');
+            
+            // Form validation
+            function validateField(field, errorId) {
+                const errorElement = document.getElementById(errorId);
+                let isValid = true;
+                
+                if (field.hasAttribute('required') && !field.value.trim()) {
+                    showError(field, errorElement, 'This field is required');
+                    isValid = false;
+                } else if (field.type === 'email' && field.value && !isValidEmail(field.value)) {
+                    showError(field, errorElement, 'Please enter a valid email address');
+                    isValid = false;
+                } else {
+                    hideError(field, errorElement);
+                }
+                
+                return isValid;
+            }
+            
+            function showError(field, errorElement, message) {
+                field.classList.add('error');
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+            
+            function hideError(field, errorElement) {
+                field.classList.remove('error');
+                errorElement.classList.remove('show');
+            }
+            
+            function isValidEmail(email) {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailRegex.test(email);
+            }
+            
+            // Real-time validation
+            nameField.addEventListener('blur', () => validateField(nameField, 'name-error'));
+            emailField.addEventListener('blur', () => validateField(emailField, 'email-error'));
+            messageField.addEventListener('blur', () => validateField(messageField, 'message-error'));
+            
+            // Form submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Check for spam (honeypot)
+                if (honeypot.value) {
+                    return; // Silent fail for spam
+                }
+                
+                // Validate all fields
+                const nameValid = validateField(nameField, 'name-error');
+                const emailValid = validateField(emailField, 'email-error');
+                const messageValid = validateField(messageField, 'message-error');
+                
+                if (nameValid && emailValid && messageValid) {
+                    submitForm();
+                }
+            });
+            
+            function submitForm() {
+                const submitButton = form.querySelector('.form-submit');
+                const successMessage = document.getElementById('form-success');
+                const errorMessage = document.getElementById('form-error');
+                
+                // Show loading state
+                submitButton.textContent = 'Sending...';
+                submitButton.disabled = true;
+                
+                // Prepare form data
+                const formData = new FormData(form);
+                
+                // Submit to Formspree (you'll need to update the action URL)
+                fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success
+                        form.reset();
+                        successMessage.classList.add('show');
+                        errorMessage.classList.remove('show');
+                    } else {
+                        throw new Error('Network response was not ok');
+                    }
+                })
+                .catch(error => {
+                    // Error
+                    errorMessage.classList.add('show');
+                    successMessage.classList.remove('show');
+                })
+                .finally(() => {
+                    // Reset button
+                    submitButton.textContent = 'Send message';
+                    submitButton.disabled = false;
+                });
+            }
+        });
+    </script>
+</body>
+</html>
