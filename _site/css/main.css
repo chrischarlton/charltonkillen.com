@@ -878,15 +878,15 @@ img {
   display: flex;
   background: white;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--color-primary);
   overflow: hidden;
-  transition: box-shadow 0.2s ease;
+  transition: border-color 0.2s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .thought-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--color-secondary);
 }
 
 /* Image/colour block section */
@@ -896,7 +896,8 @@ img {
   min-height: 120px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px 0 0 8px; /* Rounded corners on left side only */
+  border-radius: 8px 0 0 8px; /* Match the card radius exactly */
+  margin: -1px 0 -1px -1px; /* Slight negative margins to overlap the border */
 }
 
 .thought-visual.has-image {
@@ -955,7 +956,8 @@ img {
   .thought-visual {
     width: 100%;
     min-height: 160px;
-    border-radius: 8px 8px 0 0; /* Rounded corners on top for mobile */
+    border-radius: 8px 8px 0 0; /* Match card radius */
+    margin: -1px -1px 0 -1px; /* Overlap the border on mobile */
   }
   
   .thought-content {
