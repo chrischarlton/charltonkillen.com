@@ -63,8 +63,9 @@ async function galleryShortcode(images, alt = "Gallery image") {
 }
 
 module.exports = function(eleventyConfig) {
-  // Set path prefix for GitHub Pages subdirectory
-  eleventyConfig.addGlobalData("pathPrefix", "/charltonkillen.com");
+  // Set path prefix conditionally for GitHub Pages vs local development
+  const isProduction = process.env.NODE_ENV === "production" || process.env.GITHUB_ACTIONS;
+  eleventyConfig.addGlobalData("pathPrefix", isProduction ? "/charltonkillen.com" : "");
   
   // Add image shortcodes
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
