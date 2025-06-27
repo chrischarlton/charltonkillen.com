@@ -51,3 +51,7 @@ The bigger picture shows us there is much to be done to make a better world and 
 To be able to believe that automation is a force for good we have to also expect, demand and strive for the values which underscore the positive effects. This is why I will give my support to causes that nurture human freedom, dignity and equality. This is why as a team we are interested in happiness and the quality of the lived experience. Work gives us purpose but it's not the only aspect of a life well lived.
 
 It's time to celebrate what it means to be human. It's time to automate low value activities, to enable ourselves and our brilliant colleagues to go forward, to reach for more. To lead, to care and to craft!
+
+<div class="highlight-box">
+<p><strong>Want to discuss this further?</strong> I'm always learning and I'd love to hear your thoughts and questions. <a href="/contact/">Get in touch</a> to continue the conversation.</p>
+</div>

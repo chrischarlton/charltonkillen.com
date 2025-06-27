@@ -337,58 +337,6 @@ a:hover {
     text-decoration-thickness: 3px;
 }
 
-/* Blockquote Styling
-   ========================================================================== */
-
-blockquote {
-    border-left: 4px solid var(--color-primary);
-    background: #f8f8f8;
-    padding: 1.5rem 2rem;
-    margin: 2rem 0;
-    font-size: clamp(1.2rem, 3vw, 1.35rem);
-    font-style: italic;
-    color: var(--color-text);
-    max-width: 70ch;
-}
-
-blockquote p {
-    margin-bottom: 1rem;
-    font-size: inherit; /* Use the blockquote font size */
-    line-height: 1.6;
-}
-
-blockquote p:last-child {
-    margin-bottom: 0;
-}
-
-/* Optional: Citation styling */
-blockquote cite,
-blockquote footer {
-    display: block;
-    font-style: normal;
-    font-size: clamp(1rem, 2.5vw, 1.125rem);
-    color: var(--color-secondary);
-    margin-top: 1rem;
-    font-weight: 500;
-}
-
-blockquote cite:before,
-blockquote footer:before {
-    content: "— ";
-}
-
-/* Alternative: Highlight blockquote variant */
-blockquote.highlight {
-    background: var(--color-accent);
-    border-left: 4px solid var(--color-primary);
-    font-style: normal;
-    font-weight: 500;
-}
-
-blockquote.highlight p {
-    margin-bottom: 0;
-}
-
 /* Cards and Content Blocks
    ========================================================================== */
 
@@ -930,15 +878,15 @@ img {
   display: flex;
   background: white;
   border-radius: 8px;
-  border: 2px solid var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: border-color 0.2s ease;
+  transition: box-shadow 0.2s ease;
   text-decoration: none;
   color: inherit;
 }
 
 .thought-card:hover {
-  border-color: var(--color-secondary);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* Image/colour block section */
@@ -948,8 +896,7 @@ img {
   min-height: 120px;
   position: relative;
   overflow: hidden;
-  border-radius: 8px 0 0 8px; /* Match the card radius exactly */
-  margin: -1px 0 -1px -1px; /* Slight negative margins to overlap the border */
+  border-radius: 8px 0 0 8px; /* Rounded corners on left side only */
 }
 
 .thought-visual.has-image {
@@ -1008,8 +955,7 @@ img {
   .thought-visual {
     width: 100%;
     min-height: 160px;
-    border-radius: 8px 8px 0 0; /* Match card radius */
-    margin: -1px -1px 0 -1px; /* Overlap the border on mobile */
+    border-radius: 8px 8px 0 0; /* Rounded corners on top for mobile */
   }
   
   .thought-content {
@@ -1032,10 +978,6 @@ img {
     color: white;
     background: var(--color-primary);
     margin: -3rem -2rem 3rem -2rem; /* Pull hero outside container margins */
-}
-
-.thought-hero h1 {
-    color: white;
 }
 
 @media (max-width: 767px) {
@@ -1078,14 +1020,16 @@ img {
 
 .hero-date {
     font-size: 1rem;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: 400;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
     display: block;
     margin-bottom: 1rem;
 }
 
 .hero-title {
-    font-size: clamp(5.5rem, 6vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
