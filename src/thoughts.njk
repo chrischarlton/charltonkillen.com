@@ -19,8 +19,8 @@ Notes on technology leadership, real-world agile, business transformation, and t
         {% endif %}
       </div>
       <div class="thought-content">
-        <div class="thought-date">{{ thought.date | date: "%-d %B %Y" }}</div>
-        <h2 class="thought-title">{{ thought.data.title }}</h2>
+      <div class="thought-date">{{ thought.date | dateFormat }}</div>        
+      <h2 class="thought-title">{{ thought.data.title }}</h2>
         {% if thought.data.description %}
           <p class="thought-excerpt">{{ thought.data.description }}</p>
         {% endif %}
