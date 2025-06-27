@@ -337,6 +337,56 @@ a:hover {
     text-decoration-thickness: 3px;
 }
 
+/* Blockquote Styling
+   ========================================================================== */
+
+blockquote {
+    border-left: 4px solid var(--color-primary);
+    background: #f8f8f8;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+    font-size: clamp(1.2rem, 3vw, 1.35rem);
+    font-style: italic;
+    color: var(--color-text);
+    max-width: 70ch;
+}
+
+blockquote p {
+    margin-bottom: 1rem;
+    font-size: inherit;
+    line-height: 1.6;
+}
+
+blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+blockquote cite,
+blockquote footer {
+    display: block;
+    font-style: normal;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    color: var(--color-secondary);
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+blockquote cite:before,
+blockquote footer:before {
+    content: "— ";
+}
+
+blockquote.highlight {
+    background: var(--color-accent);
+    border-left: 4px solid var(--color-primary);
+    font-style: normal;
+    font-weight: 500;
+}
+
+blockquote.highlight p {
+    margin-bottom: 0;
+}
+
 /* Cards and Content Blocks
    ========================================================================== */
 
