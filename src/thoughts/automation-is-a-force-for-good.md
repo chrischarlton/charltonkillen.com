@@ -3,7 +3,7 @@ layout: thought.njk
 title: I believe automation is a force for good
 description: 
 date: 2018-06-14
-color: "#FFC0CB"
+color: "#F05671"
 ---
 
 > First published in 2018, during my time as MD of Human.

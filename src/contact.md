@@ -69,6 +69,6 @@ I'm always interested in connecting with people who are thinking about technolog
 
 ---
 
-<div class="contact-note">
+<div class="highlight-box">
   <p><strong>Response time:</strong> I aim to respond to your messages within 2-3 working days, but if it takes longer please be patient.</p>
 </div>
