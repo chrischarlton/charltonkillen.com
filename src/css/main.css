@@ -1086,7 +1086,7 @@ img {
 
 @media (max-width: 768px) {
     .hero-title {
-        font-size: clamp(2rem, 8vw, 2.5rem);
+        font-size: clamp(3.5rem, 8vw, 2.5rem);
         line-height: 1.2;
     }
 }
