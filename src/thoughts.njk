@@ -9,6 +9,9 @@ description: Notes on technology leadership, real-world agile, business transfor
   <p>Notes on technology leadership, real-world agile, business transformation, and the valuable lessons that come from failure.</p>
 </div>
 
+<!-- Temporary debug - remove after testing -->
+<p>Debug: pathPrefix = "{{ pathPrefix }}"</p>
+
 <div class="thoughts-grid">
   {%- for thought in collections.thoughts | reverse -%}
     <a href="{{ pathPrefix }}{{ thought.url }}" class="thought-card"
