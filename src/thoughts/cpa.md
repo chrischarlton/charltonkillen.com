@@ -1,6 +1,6 @@
 ---
 layout: thought.njk
-title: Critical Path exercise
+title: Simple Critical Path exercise
 description: Understanding what needs to happen in what order
 date: 2025-06-28
 color: "#2c5aa0"
@@ -20,3 +20,11 @@ After the session, working alone and focused, you can turn this into a diagram w
 This artifact can then be shared back with the group, discussed and used as a constant point of reference as the project progresses. You should expect the later stages of the project to keep being updated as things change and new information comes to light.
 
 I find it particularly rewarding to change the colour of the tasks or add checkmarks as they are complete. This then gives a lovely graphical way to update stakeholders on project progress.
+
+![Simple critical path presentation slide for One+All My Account project]({{ pathPrefix }}/images/cpa_example.png)
+
+This is a real one I used to keep One+All colleagues updated as we progressed the initial My Account MVP project back in 2021.
+
+<div class="highlight-box">
+<p><strong>Interested to know more or have questions?</strong> Let me know! Do you use something similar in your projects? I'd love to hear more. <a href="/contact/">Get in touch</a> to continue the conversation.</p>
+</div>
