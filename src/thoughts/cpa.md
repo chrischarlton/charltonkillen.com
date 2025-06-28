@@ -9,7 +9,7 @@ image: "/images/cpa.jpg"
 
 Although as an agile practitioner I believe 'this plan is wrong', I also still think we should have one. When a group starts working together on a project of even slight complexity this exercise is a great way to flush out dependencies and differences in expected approach. This can then enable the right discussions and a good working plan.
 
-Based on the Critical Path methodology but not as prescriptive about task durations, my approach is just to try and get the shape of it layed out.
+Based on the classic [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method) but not as prescriptive about task durations, my approach is just to try and get the shape of it layed out.
 
 1. Working with the whole project group either with post-its or a tool like Miro, ask everyone to brainstorm the tasks they think the project is going to require.
 2. Get all the notes organised together in one space and then go through de-duplicating them.

@@ -895,8 +895,11 @@ img {
     padding-left: 2rem;
 }
 
-.article-content li {
+.article-content ol li,
+.article-content ul li {
     margin-bottom: 0.5rem;
+    font-size: clamp(1.25rem, 3vw, 1.4rem) !important;
+    line-height: 1.6 !important;
 }
 
 .article-footer {
