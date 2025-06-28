@@ -8,6 +8,11 @@ layout: page.njk
     <div class="hero-overlay">
         <div class="container">
             <div class="hero-content">
+                {% if image %}
+                <div class="hero-image-container">
+                    <img src="{{ pathPrefix }}{{ image }}" alt="{{ title }}" loading="lazy">
+                </div>
+                {% endif %}
                 <time class="hero-date" datetime="{{ date.toISOString() }}">
                     {{ date | dateFormat }}
                 </time>

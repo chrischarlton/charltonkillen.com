@@ -949,8 +949,10 @@ img {
 
 .thought-visual.has-image {
   background-size: cover;
-  background-position: centre;
+  background-position: center;
   background-repeat: no-repeat;
+  padding: 12px; /* Space for colour border */
+  box-sizing: border-box;
 }
 
 .thought-visual.colour-only {
@@ -961,7 +963,8 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 0; /* Remove border radius from image since container handles it */
+  border-radius: 4px; /* Rounded corners for the image */
+  display: block;
 }
 
 /* Content section */
@@ -1101,4 +1104,34 @@ h1.hero-title {
     max-width: 60ch;
     line-height: 1.4;
     margin-bottom: 0;
+}
+
+/* Hero image within colour block */
+
+.hero-image-container {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+.hero-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 4px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hero-image-container {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-image-container img {
+        max-height: 200px;
+    }
 }
