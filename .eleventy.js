@@ -24,7 +24,9 @@ module.exports = function(eleventyConfig) {
   
   // Collections
   eleventyConfig.addCollection("thoughts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/thoughts/*.md").reverse();
+    return collectionApi.getFilteredByGlob("src/thoughts/*.md").sort((a, b) => {
+      return new Date(b.date) - new Date(a.date); // Newest first
+    });
   });
   
   // Filters

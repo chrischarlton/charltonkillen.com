@@ -10,7 +10,7 @@ description: Notes on technology leadership, real-world agile, business transfor
 </div>
 
 <div class="thoughts-grid">
-  {%- for thought in collections.thoughts | reverse -%}
+  {%- for thought in collections.thoughts -%}
     <a href="{{ pathPrefix }}{{ thought.url }}" class="thought-card"
        {% if thought.data.color %}data-color="{{ thought.data.color }}" style="--story-color: {{ thought.data.color }}; border-color: {{ thought.data.color }};"{% endif %}>
       <div class="thought-visual {% if thought.data.image %}has-image{% else %}colour-only{% endif %}" 
