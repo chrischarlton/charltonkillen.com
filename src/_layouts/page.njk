@@ -62,9 +62,9 @@
                     <ul class="nav-list">
                         <li><a href="{{ pathPrefix }}/" class="nav-link">Home</a></li>
                         <li><a href="{{ pathPrefix }}/about/" class="nav-link" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
-                        <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link">Thoughts</a></li>
-                        <li><a href="{{ pathPrefix }}/experience/" class="nav-link">Experience</a></li>
-                        <li><a href="{{ pathPrefix }}/contact/" class="nav-link">Contact</a></li>
+                        <li><a href="{{ pathPrefix }}/thoughts/" class="nav-link" {% if page.url == "/thoughts/" %}aria-current="page"{% endif %}>Thoughts</a></li>
+                        <li><a href="{{ pathPrefix }}/experience/" class="nav-link" {% if page.url == "/experience/" %}aria-current="page"{% endif %}>Experience</a></li>
+                        <li><a href="{{ pathPrefix }}/contact/" class="nav-link" {% if page.url == "/contact/" %}aria-current="page"{% endif %}>Contact</a></li>
                     </ul>
                 </nav>
             </div>

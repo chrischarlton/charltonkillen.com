@@ -208,7 +208,7 @@
         position: absolute;
         top: 100%;
         right: 0;
-        left: auto; /* Override any left positioning */
+        left: auto;
         background: var(--color-background);
         border: 1px solid var(--color-border);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -231,13 +231,11 @@
 
 /* Clean page header mobile layout */
 @media (max-width: 767px) {
-    /* Remove any existing problematic styles first */
     .page-header .page-header-content {
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 0;
-        /* Don't mess with padding/margins */
     }
     
     .page-header .site-title {
@@ -246,7 +244,6 @@
         white-space: nowrap;
     }
     
-    /* Simple menu positioning */
     .page-header .nav-list {
         position: absolute;
         top: 100%;
@@ -255,7 +252,7 @@
         border: 1px solid var(--color-border);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         min-width: 150px;
-        width: auto; /* Let it size to content */
+        width: auto;
     }
     
     .page-header .nav-link {
@@ -268,6 +265,55 @@
     
     .page-header .nav-link:last-child {
         border-bottom: none;
+    }
+}
+
+/* Position homepage mobile nav with proper spacing */
+@media (max-width: 767px) {
+    .site-header .header-content {
+        position: relative;
+    }
+    
+    .site-header .main-nav {
+        position: absolute !important;
+        top: 0 !important;
+        right: 1rem !important;
+        z-index: 10 !important;
+    }
+    
+    .site-header .mobile-nav-toggle {
+        color: white !important;
+        font-size: 1.5rem !important;
+        padding: 0.5rem !important;
+        background: none !important;
+        border: none !important;
+    }
+    
+    .site-header .nav-list {
+        position: absolute !important;
+        top: calc(100% + 5px) !important;
+        right: 0 !important;
+        left: auto !important;
+        transform: none !important;
+        width: max-content !important;
+        max-width: 200px !important;
+        background: var(--color-primary) !important;
+        border: 1px solid rgba(255,255,255,0.2) !important;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
+        z-index: 1000 !important;
+        margin: 0 !important;
+    }
+    
+    .site-header .nav-link {
+        color: white !important;
+        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
+        padding: 0.75rem 1rem !important;
+        display: block !important;
+        white-space: nowrap !important;
+    }
+    
+    .site-header .nav-link:last-child {
+        border-bottom: none !important;
     }
 }
 
@@ -562,109 +608,6 @@ img {
     max-width: 70ch;
 }
 
-
-/* Page header mobile menu - right aligned */
-@media (max-width: 767px) {
-    .page-header .mobile-nav-toggle {
-        color: var(--color-text);
-    }
-    
-    .page-header .main-nav {
-        position: relative;
-    }
-    
-    .page-header .nav-list {
-        position: absolute !important;
-        top: 100% !important;
-        right: 0 !important;
-        left: auto !important;
-        background: var(--color-background) !important;
-        border: 1px solid var(--color-border) !important;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        min-width: 150px;
-        width: auto !important;
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-    
-    .page-header .nav-link {
-        color: var(--color-primary) !important;
-        border-bottom: 1px solid var(--color-border) !important;
-        padding: 0.75rem 1rem !important;
-        white-space: nowrap;
-        display: block;
-    }
-    
-    .page-header .nav-link:last-child {
-        border-bottom: none !important;
-    }
-}
-
-/* Universal mobile menu positioning for all browsers */
-@media (max-width: 767px) {
-    .page-header .nav-list {
-        position: absolute !important;
-        top: calc(100% + 5px) !important;
-        right: 0 !important;
-        left: auto !important;
-        transform: none !important;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-        width: max-content !important;
-        max-width: 200px !important;
-        z-index: 1000 !important;
-    }
-}
-
-/* Position homepage mobile nav with proper spacing */
-@media (max-width: 767px) {
-    .site-header .header-content {
-        position: relative;
-    }
-    
-    .site-header .main-nav {
-        position: absolute !important;
-        top: 0 !important;
-        right: 1rem !important; /* Match container padding */
-        z-index: 10 !important;
-    }
-    
-    .site-header .mobile-nav-toggle {
-        color: white !important;
-        font-size: 1.5rem !important;
-        padding: 0.5rem !important;
-        background: none !important;
-        border: none !important;
-    }
-    
-    .site-header .nav-list {
-        position: absolute !important;
-        top: calc(100% + 5px) !important;
-        right: 0 !important;
-        left: auto !important;
-        transform: none !important;
-        width: max-content !important;
-        max-width: 200px !important;
-        background: var(--color-primary) !important;
-        border: 1px solid rgba(255,255,255,0.2) !important;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) !important;
-        z-index: 1000 !important;
-        margin: 0 !important;
-    }
-    
-    .site-header .nav-link {
-        color: white !important;
-        border-bottom: 1px solid rgba(255,255,255,0.1) !important;
-        padding: 0.75rem 1rem !important;
-        display: block !important;
-        white-space: nowrap !important;
-    }
-    
-    .site-header .nav-link:last-child {
-        border-bottom: none !important;
-    }
-}
-
 /* Contact Page Styling
    ========================================================================== */
 
@@ -834,7 +777,8 @@ img {
     font-size: 1rem;
 }
 
-/* Article content */
+/* Article content - consistent typography for thoughts and experience
+   ========================================================================== */
 .thought-article {
     max-width: 800px;
     margin: 0 auto;
@@ -847,10 +791,8 @@ img {
 }
 
 .article-date {
-    font-size: 0.9rem;
+    font-size: 1rem;
     color: var(--color-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
     font-weight: 500;
     display: block;
     margin-bottom: 1rem;
@@ -865,7 +807,7 @@ img {
 }
 
 .article-subtitle {
-    font-size: clamp(1.1rem, 3vw, 1.3rem);
+    font-size: clamp(1.3rem, 3.5vw, 1.5rem);
     color: var(--color-secondary);
     font-style: italic;
     line-height: 1.4;
@@ -874,7 +816,7 @@ img {
 }
 
 .article-content {
-    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    font-size: clamp(1.25rem, 3vw, 1.4rem);
     line-height: 1.7;
     margin-bottom: 3rem;
 }
@@ -882,11 +824,21 @@ img {
 .article-content h2 {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
-    font-size: clamp(1.5rem, 4vw, 1.8rem);
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    border-bottom: 2px solid var(--story-color, var(--color-primary));
+    padding-bottom: 0.5rem;
+}
+
+.article-content h3 {
+    font-size: clamp(1.4rem, 4vw, 1.7rem);
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
 }
 
 .article-content p {
     max-width: 70ch;
+    font-size: clamp(1.25rem, 3vw, 1.4rem);
+    line-height: 1.6;
 }
 
 .article-content ol,
@@ -898,8 +850,8 @@ img {
 .article-content ol li,
 .article-content ul li {
     margin-bottom: 0.5rem;
-    font-size: clamp(1.25rem, 3vw, 1.4rem) !important;
-    line-height: 1.6 !important;
+    font-size: clamp(1.25rem, 3vw, 1.4rem);
+    line-height: 1.6;
 }
 
 .article-footer {
@@ -907,26 +859,31 @@ img {
     padding-top: 2rem;
 }
 
-.back-to-thoughts {
+.back-to-thoughts,
+.back-to-experience {
     color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
 }
 
-.back-to-thoughts:hover {
+.back-to-thoughts:hover,
+.back-to-experience:hover {
     text-decoration: underline;
 }
 
-/* Thoughts page layout */
-.thoughts-grid {
+/* Thoughts and Experiences grid layout - same style for both
+   ========================================================================== */
+.thoughts-grid,
+.experiences-grid {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   max-width: 100%;
 }
 
-.thought-card {
+.thought-card,
+.experience-card {
   display: flex;
   background: white;
   border-radius: 8px;
@@ -937,12 +894,14 @@ img {
   color: inherit;
 }
 
-.thought-card:hover {
+.thought-card:hover,
+.experience-card:hover {
   border-color: var(--color-secondary);
 }
 
-/* Image/colour block section */
-.thought-visual {
+/* Image/colour block section - same for both */
+.thought-visual,
+.experience-visual {
   flex-shrink: 0;
   width: 200px;
   min-height: 120px;
@@ -950,28 +909,32 @@ img {
   overflow: hidden;
 }
 
-.thought-visual.has-image {
+.thought-visual.has-image,
+.experience-visual.has-image {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 12px; /* Space for colour border */
+  padding: 12px;
   box-sizing: border-box;
 }
 
-.thought-visual.colour-only {
+.thought-visual.colour-only,
+.experience-visual.colour-only {
   background-color: var(--color-primary);
 }
 
-.thought-visual img {
+.thought-visual img,
+.experience-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 4px; /* Rounded corners for the image */
+  border-radius: 4px;
   display: block;
 }
 
-/* Content section */
-.thought-content {
+/* Content section - same for both */
+.thought-content,
+.experience-content {
   flex: 1;
   padding: 1.5rem;
   display: flex;
@@ -979,64 +942,81 @@ img {
   justify-content: centre;
 }
 
-.thought-date {
-  font-size: 0.9rem;
-  color: #505a5f;
+.thought-date,
+.experience-date {
+  font-size: 1rem;
+  color: var(--color-secondary);
   margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
-.thought-title {
-  font-size: clamp(1.3rem, 3.5vw, 1.6rem); /* Matches your card h3 sizing */
+.thought-title,
+.experience-title {
+  font-size: clamp(1.3rem, 3.5vw, 1.6rem);
   font-weight: bold;
   color: var(--color-text);
   margin: 0 0 0.75rem 0;
   line-height: 1.3;
 }
 
-.thought-excerpt {
+.experience-company {
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.thought-excerpt,
+.experience-excerpt {
   color: var(--color-secondary);
   margin: 0;
   line-height: 1.5;
-  font-size: clamp(1.1rem, 2.5vw, 1.25rem); /* Matches your card p sizing */
+  font-size: clamp(1.1rem, 2.5vw, 1.25rem);
 }
 
-/* Mobile responsive */
+/* Mobile responsive - same for both */
 @media (max-width: 768px) {
-  .thought-card {
+  .thought-card,
+  .experience-card {
     flex-direction: column;
   }
   
-  .thought-visual {
+  .thought-visual,
+  .experience-visual {
     width: 100%;
     min-height: 160px;
-    border-radius: 8px 8px 0 0; /* Rounded corners on top for mobile */
+    border-radius: 8px 8px 0 0;
   }
   
-  .thought-content {
+  .thought-content,
+  .experience-content {
     padding: 1.25rem;
   }
   
-  .thought-title {
+  .thought-title,
+  .experience-title {
     font-size: 1.25rem;
   }
 }
 
-/* Thought Hero Section
+/* Hero Section - same style for thoughts and experience
    ========================================================================== */
 
-.thought-hero {
+.thought-hero,
+.experience-hero {
     min-height: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     color: white;
     background: var(--color-primary);
-    margin: -3rem -2rem 3rem -2rem; /* Pull hero outside container margins */
+    margin: -3rem -2rem 3rem -2rem;
 }
 
 @media (max-width: 767px) {
-    .thought-hero {
-        margin: -3rem -1.5rem 3rem -1.5rem; /* Adjust for mobile container padding */
+    .thought-hero,
+    .experience-hero {
+        margin: -3rem -1.5rem 3rem -1.5rem;
     }
 }
 
@@ -1076,13 +1056,12 @@ img {
     font-size: 1rem;
     color: white;
     font-weight: 400;
-    letter-spacing: 0.05em;
     display: block;
     margin-bottom: 1rem;
 }
 
 .hero-title {
-    font-size: clamp(5.5rem, 6vw, 4rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 700;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -1101,12 +1080,19 @@ h1.hero-title {
 }
 
 .hero-subtitle {
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-size: clamp(1.3rem, 3.5vw, 1.5rem);
     color: rgba(255, 255, 255, 0.9);
     font-weight: 400;
     max-width: 60ch;
     line-height: 1.4;
     margin-bottom: 0;
+}
+
+.hero-company {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    margin-bottom: 1rem;
 }
 
 /* Hero image within colour block */

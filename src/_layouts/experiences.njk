@@ -1,0 +1,30 @@
+---
+layout: page.njk
+---
+
+<div class="page-content">
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+</div>
+
+<div class="experiences-grid">
+  {%- for experience in collections.experiences -%}
+    <a href="{{ pathPrefix }}{{ experience.url }}" class="experience-card"
+       {% if experience.data.color %}data-color="{{ experience.data.color }}" style="--story-color: {{ experience.data.color }}; border-color: {{ experience.data.color }};"{% endif %}>
+      <div class="experience-visual {% if experience.data.image %}has-image{% else %}colour-only{% endif %}" 
+           {% if experience.data.color %}style="background-color: {{ experience.data.color }};"{% endif %}>
+        {% if experience.data.image %}
+          <img src="{{ pathPrefix }}{{ experience.data.image }}" alt="{{ experience.data.title }}" loading="lazy">
+        {% endif %}
+      </div>
+      <div class="experience-content">
+        <div class="experience-date">{{ experience.data.startDate | dateFormat }}{% if experience.data.endDate %} - {{ experience.data.endDate | dateFormat }}{% else %} - Present{% endif %}</div>
+        <h2 class="experience-title">{{ experience.data.title }}</h2>
+        <div class="experience-company">{{ experience.data.company }}</div>
+        {% if experience.data.description %}
+          <p class="experience-excerpt">{{ experience.data.description }}</p>
+        {% endif %}
+      </div>
+    </a>
+  {%- endfor -%}
+</div>

@@ -1,0 +1,56 @@
+---
+layout: page.njk
+---
+
+<!-- Hero section with color if specified -->
+{% if color %}
+<div class="experience-hero" style="background: {{ color }}">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                {% if image %}
+                <div class="hero-image-container">
+                    <img src="{{ pathPrefix }}{{ image }}" alt="{{ title }}" loading="lazy">
+                </div>
+                {% endif %}
+                <time class="hero-date" datetime="{{ startDate }}">
+                    {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
+                </time>
+                <h1 class="hero-title">{{ title }}</h1>
+                <div class="hero-company">{{ company }}</div>
+                {% if description %}
+                    <p class="hero-subtitle">{{ description }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Article content after hero -->
+<div class="article-content" style="--story-color: {{ color }};">
+    {{ content | safe }}
+</div>
+
+{% else %}
+
+<!-- No hero - standard article layout -->
+<header class="article-header">
+    <time class="article-date" datetime="{{ startDate }}">
+        {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
+    </time>
+    <h1 class="article-title">{{ title }}</h1>
+    <div class="hero-company">{{ company }}</div>
+    {% if description %}
+        <p class="article-subtitle">{{ description }}</p>
+    {% endif %}
+</header>
+
+<div class="article-content">
+    {{ content | safe }}
+</div>
+
+{% endif %}
+
+<footer class="article-footer">
+    <a href="{{ pathPrefix }}/experience/" class="back-to-experience">← Back to experience</a>
+</footer>
