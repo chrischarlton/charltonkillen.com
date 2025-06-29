@@ -5,8 +5,9 @@ company: "One+All"
 type: "Leadership Role"
 startDate: "2019-07-01"
 endDate: ""
-color: "#00703c"
+color: "#fd5263"
 description: "Leading digital transformation at a certified B Corporation focused on people and planet."
+image: "/images/oneandall_logo.svg"
 ---
 
 ## Role Summary

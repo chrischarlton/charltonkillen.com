@@ -16,8 +16,8 @@ layout: page.njk
                 <time class="hero-date" datetime="{{ startDate }}">
                     {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
                 </time>
-                <h1 class="hero-title">{{ title }}</h1>
-                <div class="hero-company">{{ company }}</div>
+                <h1 class="hero-title">{{ company }}</h1>
+                <div class="hero-company">{{ title }}</div>
                 {% if description %}
                     <p class="hero-subtitle">{{ description }}</p>
                 {% endif %}
@@ -38,14 +38,14 @@ layout: page.njk
     <time class="article-date" datetime="{{ startDate }}">
         {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
     </time>
-    <h1 class="article-title">{{ title }}</h1>
-    <div class="hero-company">{{ company }}</div>
+    <h1 class="article-title">{{ company }}</h1>
+    <div class="hero-company">{{ title }}</div>
     {% if description %}
         <p class="article-subtitle">{{ description }}</p>
     {% endif %}
 </header>
 
-<div class="article-content">
+<div class="article-content" {% if color %}style="--story-color: {{ color }};"{% endif %}>
     {{ content | safe }}
 </div>
 

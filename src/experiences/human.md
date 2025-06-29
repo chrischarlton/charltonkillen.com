@@ -7,6 +7,7 @@ startDate: "2010-01-01"
 endDate: "2019-02-28"
 color: "#1f5d6a"
 description: "Founded, grew and ran a successful software development and digital transformation agency."
+image: "/images/human_logo.svg"
 ---
 
 Human was a software development agency I founded with four friends in 2010. Over almost a decade, we developed and integrated solutions for major clients whilst growing and nurturing a team of effective professionals. We learned a huge amount too - especially about how to use agile methods in an agency setting.
@@ -41,6 +42,6 @@ The final three years at Human were starting to teach me invaluable lessons abou
 
 ## The Lessons Live On
 
-The lessons from Human and the perspectives from my current role have provided a two-way leaning process which reinforces the learning. I've learned that candour, clarity and deciciveness are important ingredients in a caring culture.
+My time at Human taught me things that have informed my current work at One+All. But my years at One+All have also helped me understand what really went wrong at Human. I've learned that candour, clarity and deciciveness are important ingredients in a caring culture - and they were too short in supply.
 
 I'm massively grateful to my Human co-founders and all the colleagues we worked with along the way. It was an incredible experience which I think I'll continue to reflect on for many years to come.
