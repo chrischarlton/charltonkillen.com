@@ -11,7 +11,7 @@ image: "/images/lfc.png"
 
 During my gap year, I worked as Technical Support for LiverpoolFC.tv, a groundbreaking £20m joint venture between Liverpool Football Club and Granada Television. This role gave me the opportunity to be part of something truly innovative - bringing professional football into the digital age at a time when sport online was just beginning to find its feet.
 
-This was a very exciting moment for sport online. Professional football clubs were just beginning to understand the potential of digital platforms, and LiverpoolFC.tv was at the forefront of this revolution.
+It was an exciting moment. Professional football clubs were just beginning to understand the potential of digital platforms, and LiverpoolFC.tv was at the forefront of this revolution.
 
 ## How it started
 

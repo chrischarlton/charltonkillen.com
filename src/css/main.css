@@ -1193,3 +1193,98 @@ h1.hero-title {
 div[style*="--story-color"] h2 {
     border-bottom-color: var(--story-color) !important;
 }
+
+/* Fix invisible mobile navigation on inner pages */
+@media (max-width: 767px) {
+    .page-header .mobile-nav-toggle {
+        display: block !important;
+        color: var(--color-text) !important;
+        background: none !important;
+        border: none !important;
+        font-size: 1.5rem !important;
+        padding: 0.5rem !important;
+        cursor: pointer !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
+    
+    .page-header .nav-header {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    
+    /* Ensure the hamburger symbol is visible */
+    .page-header .hamburger {
+        color: var(--color-text) !important;
+        font-size: 1.5rem !important;
+    }
+}
+
+/* FINAL FIX: Mobile navigation z-index for inner pages */
+@media (max-width: 767px) {
+    /* Ensure page header navigation appears above hero sections */
+    .page-header {
+        position: relative !important;
+        z-index: 10000 !important;
+    }
+    
+    .page-header .main-nav {
+        position: relative !important;
+        z-index: 10001 !important;
+    }
+    
+    .page-header .nav-list {
+        position: absolute !important;
+        top: 100% !important;
+        right: 0 !important;
+        z-index: 10002 !important;
+        background: var(--color-background) !important;
+        border: 1px solid var(--color-border) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+        min-width: 150px !important;
+        width: auto !important;
+    }
+    
+    /* Lower z-index for hero sections */
+    .experience-hero,
+    .thought-hero {
+        z-index: 1 !important;
+        position: relative !important;
+    }
+}
+
+/* Contact form typography - match article content sizing */
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+    font-size: clamp(1.25rem, 3vw, 1.4rem) !important; /* Match article content */
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    font-size: clamp(1.25rem, 3vw, 1.4rem) !important; /* Match article content */
+    font-family: var(--font-family);
+    transition: border-color 0.2s ease;
+    background: white;
+    line-height: 1.6;
+}
+
+.form-submit {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: clamp(1.25rem, 3vw, 1.4rem) !important; /* Match article content */
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-family);
+}

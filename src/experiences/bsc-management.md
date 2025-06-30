@@ -30,9 +30,13 @@ University provided opportunities to explore entrepreneurial interests through v
 - Creative problem-solving
 - Understanding audience and stakeholder needs
 
-## Dissertation: Social Change and Sustainability
+## How to effect change towards sustainability?
 
-My dissertation explored the intersection of business practice and social responsibility. Crucially it explored a question which I still think is unanswered, how do we build the political will for the scale of the social change and buy in needed to stave off disaster from climate change? Some of my research examined how businesses can be forces for positive change rather than just profit extraction.
+My dissertation reviewed theories of social change in an attempt to unpack the mechanics through which we could move society in the direction of action on climate change.
+
+Ultimately I found that the inherent complexity of sustainability challenges cause us to outsource our understanding of the issue and that there could be no fixed answers better than committing to continuous thought, reflection and action on living within the ecological bounds of the planet. 
+
+It stands up well in many ways, but is naive in one crucial aspect. I thought the worst we could face was apathy. Writing this in 2025 it's apparent that even this was optimistic, as climate denial and the popularisation of anti-net-zero policies has taken hold.
 
 ## Foundations
 
