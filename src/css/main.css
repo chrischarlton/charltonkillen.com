@@ -1175,7 +1175,7 @@ h1.hero-title {
 @media (max-width: 768px) {
     .hero-image-container img {
         max-width: 140px !important;
-        max-height: 90px !important;
+        max-height: 140px !important;
     }
     
     .hero-image-container {
