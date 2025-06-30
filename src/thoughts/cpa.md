@@ -24,7 +24,7 @@ I find it particularly rewarding to change the colour of the tasks or add checkm
 
 ![Simple critical path presentation slide for One+All My Account project]({{ pathPrefix }}/images/cpa_example.png)
 
-This is a real one I used to keep One+All colleagues updated as we progressed the initial My Account MVP project back in 2021.
+This is a real one I used to keep [One+All]({{ pathPrefix }}/experiences/oneandall) colleagues updated as we progressed the initial My Account MVP project back in 2021.
 
 <div class="highlight-box">
 <p><strong>Interested to know more or have questions?</strong> Let me know! Do you use something similar in your projects? I'd love to hear more. <a href="/contact/">Get in touch</a> to continue the conversation.</p>

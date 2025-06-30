@@ -59,4 +59,4 @@ PagePlay taught me fundamental lessons about:
 
 ## Legacy and impact
 
-The insights gained from PagePlay directly influenced my later work in software development and digital transformation. The focus on user-friendly interfaces, scalable systems, and sustainable business models became core principles that guided both the founding of [Human](/experiences/human/) and my current work at [One+All](/experiences/oneandall/).
+The insights gained from PagePlay directly influenced my later work in software development and digital transformation. The focus on user-friendly interfaces, scalable systems, and sustainable business models became core principles that guided both the founding of [Human]({{ pathPrefix }}/experiences/human/) and my current work at [One+All]({{ pathPrefix }}/experiences/oneandall/).

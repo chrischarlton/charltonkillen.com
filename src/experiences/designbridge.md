@@ -40,4 +40,4 @@ This experience at Design Bridge was formative in understanding how strategic th
 
 The strategic thinking skills developed at Design Bridge became fundamental to my later work. The experience of helping brands "find and tell their stories" directly influenced my approach to business transformation and the importance of authentic organisational culture.
 
-I developed my confidence in working with diverse stakeholders and leadership teams which helped a lot in my subsequent client work at [Human](/experiences/human/).
+I developed my confidence in working with diverse stakeholders and leadership teams which helped a lot in my subsequent client work at [Human]({{ pathPrefix }}/experiences/human/).

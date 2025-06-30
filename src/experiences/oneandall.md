@@ -24,7 +24,7 @@ As Technology Director at [One+All](https://oneandall.co.uk/about-us), I am lead
 
 ## How it started
 
-I met Donald Moore (now Chair) and the team from One+All when it was still called Rowlinson. In my previous role at [Human](/experiences/human), I led a scoping project for some potential new software. I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
+I met Donald Moore (now Chair) and the team from One+All when it was still called Rowlinson. In my previous role at [Human]({{ pathPrefix }}/experiences/human), I led a scoping project for some potential new software. I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
 
 
 In all my experience of going into different businesses, I'd never found one where the values on the walls were practised so authentically. I described it to friends as 'the real deal' - a decent team of people doing right by each other, the people in the supply chain, and the planet. The fact that it's 100% employee-owned means everyone has a stake in its success with no one trying to extract cash for the sake of it.

@@ -8,7 +8,7 @@ description: Technology, leadership and learning
 Growing good businesses by using technology to <strong>improve the lives of colleagues and customers</strong>.
 </div>
 
-My main focus today is my role as Technology Director of [One+All](/experiences/oneandall/), a 100% employee-owned B Corp. I previously co-founded of [Human](/experiences/human), a software development agency where I learned invaluable lessons about leadership, failure, and the real challenges of implementing change.
+My main focus today is my role as Technology Director of [One+All]({{ pathPrefix }}/experiences/oneandall/), a 100% employee-owned B Corp. I previously co-founded of [Human]({{ pathPrefix }}/experiences/human), a software development agency where I learned invaluable lessons about leadership, failure, and the real challenges of implementing change.
 
 ## What I'm working on
 

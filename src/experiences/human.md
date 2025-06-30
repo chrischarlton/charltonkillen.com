@@ -57,6 +57,6 @@ It also showed what our team was capable of when I was honest and candid about t
 
 ## Valuable lessons
 
-My time at Human taught me things that have informed my current work at [One+All](/experiences/oneandall). But my years at One+All have also helped me understand what really went wrong at Human. I've learned that candour, clarity and deciciveness are essential ingredients in a caring culture - and in the business we had built, each of these was in short supply.
+My time at Human taught me things that have informed my current work at [One+All]({{ pathPrefix }}/experiences/oneandall). But my years at One+All have also helped me understand what really went wrong at Human. I've learned that candour, clarity and deciciveness are essential ingredients in a caring culture - and in the business we had built, each of these was in short supply.
 
 I'm massively grateful to my Human co-founders and all the colleagues we worked with along the way. It was an incredible experience and a significant chapter of my life.

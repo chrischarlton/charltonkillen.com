@@ -10,7 +10,7 @@ description: "First Class degree with dissertation on social change and sustaina
 image: "/images/uom.png"
 ---
 
-I graduated with BSc Management from Manchester Business School. My dissertation title was "How to effect social change towards sustainabilty" a theme that would prove central to my later career choices and values.
+I graduated with BSc Management from Manchester Business School. I have sometimes joked that it involved studying 'a little bit of everything and a lot of nothing.' Over the years I've realised I learned some important models and ways of thinking which have come in very useful.
 
 ## Subject focus
 
@@ -23,11 +23,12 @@ We covered a comprehensive foundation in business principles, but I was particul
 
 ## Extra curricular
 
-University provided opportunities to explore entrepreneurial interests through various startup businesses and involvement in student radio. I found these activities as formative as the academic work, providing early experience in:
+University provided opportunities to explore entrepreneurial interests through various startup businesses and involvement in student radio. I found these activities to be as important as the academic work, providing early experience in:
 
 - Team leadership and collaboration
 - Project management under pressure
 - Creative problem-solving
+- Story telling
 - Understanding audience and stakeholder needs
 
 ## How to effect change towards sustainability?
@@ -38,6 +39,8 @@ Ultimately I found that the inherent complexity of sustainability challenges cau
 
 It stands up well in many ways, but is naive in one crucial aspect. I thought the worst we could face was apathy. Writing this in 2025 it's apparent that even this was optimistic, as climate denial and the popularisation of anti-net-zero policies has taken hold.
 
-## Foundations
+## Impact
 
-The combination of academic rigour, entrepreneurial experimentation, and focus on sustainable business practices established the intellectual framework that would guide my later decisions - from founding Human with its focus on craft and care, to joining One+All with its authentic commitment to people and planet. The experience also built on the more practical perspective I'd started to develop in my [gap year job at LiverpoolFC.tv](/experiences/lfctv/).
+The experience of university built on the workplace experience I'd picked up on my [gap year job at LiverpoolFC.tv]({{ pathPrefix }}/experiences/lfctv/).
+
+It taught me useful ways of analysing situations and of organising my thoughts. I learned theories of culture, sustainability and operations. It was a chance to begin a lifelong habit of thinking deeply about our world and the impact that business has on it.
