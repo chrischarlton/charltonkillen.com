@@ -252,17 +252,17 @@ h2 a,
 }
 
 .page-header .site-title-link:hover {
-    color: var(--color-primary);
+    color: var(--color-link);
 }
 
 .page-header .nav-link {
-    color: var(--color-primary);
+    color: var(--color-link);
 }
 
 .page-header .nav-link:hover,
 .page-header .nav-link[aria-current="page"] {
-    border-bottom-color: var(--color-primary);
-    color: var(--color-primary);
+    border-bottom-color: var(--color-link);
+    color: var(--color-link);
 }
 
 /* Mobile Navigation
