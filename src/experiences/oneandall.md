@@ -24,7 +24,7 @@ As Technology Director at [One+All](https://oneandall.co.uk/about-us), I am lead
 
 ## How it started
 
-I met the team at One+All (when it was still called Rowlinson) when in my previous role at [Human](/experiences/human), I led a scoping project for some potential new software. I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
+I met Donald Moore (now Chair) and the team from One+All when it was still called Rowlinson. In my previous role at [Human](/experiences/human), I led a scoping project for some potential new software. I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
 
 
 In all my experience of going into different businesses, I'd never found one where the values on the walls were practised so authentically. I described it to friends as 'the real deal' - a decent team of people doing right by each other, the people in the supply chain, and the planet. The fact that it's 100% employee-owned means everyone has a stake in its success with no one trying to extract cash for the sake of it.
@@ -49,7 +49,7 @@ An important foundation project was getting everyone collaborating using decent 
 ### Building digital access for our customers
 For our wholesale customers, My Account is an online ordering platform providing access to product information and the ability to place and follow up on orders. Customers can buy plain, made-to-order, printed, and embroidered products as day-to-day or forward orders.
 
-We launched a bravely-light MVP in 2021, and have gradually enriched the plaform driven by customer feedback. Usage has grown consistently and in 2024, it handled £6.1m in order value. It's allowed us to get orders into production faster and has been a big help to our Customer Care team. According to the team leader: "It's like having several extra colleagues working with me."
+We launched a bravely-light MVP in 2021, and have gradually enriched the plaform driven by customer feedback. Usage has grown consistently and in 2024, it handled £6.1m of orders. It's allowed us to get orders into production faster and has been a big help to our Customer Care team. According to the team leader: "It's like having several extra colleagues working with me."
 
 ### Customer API
 We've built and launched a fully-documented RESTful API which enables customers to connect their websites and back-end systems to us for product information lookups and seamless purchase ordering. It's been live since Spring 2025 and our next step is to work with EPOS vendors to use the API to build custom integrations which could bring real-time connectivity to the majority fo our customers.
@@ -57,7 +57,7 @@ We've built and launched a fully-documented RESTful API which enables customers 
 ### The Making Of: a new website for a new brand
 In 2024, we launched a [new sales channel](https://themakingof.uk/) for a whole new market.
 
-Our complete transformation involves replacing all of the systems used for the business cycle. Such a complete change carries a degree of risk so we decided to use this new venture as a testing ground.
+Our complete transformation involves replacing <strong>all</strong> of the systems used for the business cycle. Such a complete change carries a degree of risk so we decided to use this new venture to prove the concepts we'll eventually apply to the whole business.
 
 The MVP of our entire new operational 'ecosystem' has been created for The Making Of, which starts out with fewer customers and a simpler offer than the rest of One+All. Once we have tested out all the connections we can start to add the features needed for it to take on the majority of the fulfilment. It's a real-world testing ground allowing us to iterate and launch a major change when the time is right and with a much lower level of risk.
 

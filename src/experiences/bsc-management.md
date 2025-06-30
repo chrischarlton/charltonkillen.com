@@ -36,4 +36,4 @@ My dissertation explored the intersection of business practice and social respon
 
 ## Foundations
 
-The combination of academic rigour, entrepreneurial experimentation, and focus on sustainable business practices established the intellectual framework that would guide my later decisions - from founding Human with its focus on craft and care, to joining One+All with its authentic commitment to people and planet. The experience also built on the more practical perspective I'd started to develop in my gap year job at LiverpoolFC.tv
+The combination of academic rigour, entrepreneurial experimentation, and focus on sustainable business practices established the intellectual framework that would guide my later decisions - from founding Human with its focus on craft and care, to joining One+All with its authentic commitment to people and planet. The experience also built on the more practical perspective I'd started to develop in my [gap year job at LiverpoolFC.tv](/experiences/lfctv/).

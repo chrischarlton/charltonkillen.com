@@ -53,7 +53,7 @@ In the end, it was a bit of a rollercoaster. As we got better at what we did, ou
 
 I didn't realise at the time, but the last three years at Human were teaching me valuable lessons about leadership, failure and growth. The final experience of closing the business was deeply painful and yet necessary.
 
-It also showed what our team was capable of when they experienced full honesty and candour about the situation we faced.
+It also showed what our team was capable of when I was honest and candid about the situation we faced.
 
 ## Valuable lessons
 
