@@ -43,7 +43,7 @@ The work was pretty varied. Over the years, we built dashboards synthesising dat
 
 ## Our team
 
-![Human team photo displayed on a screen at the Human offices](/images/humanteam.jpg)
+![Human team photo displayed on a screen at the Human offices]({{ pathPrefix }}/images/humanteam.jpg)
 
 One of my proudest achievements was growing and nurturing a team of effective professionals - our culture was caring and supportive. Over time we developed skills in transformation strategy, built technical expertise, and created a culture of working in partnership with our clients.
 
