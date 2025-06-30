@@ -1125,7 +1125,7 @@ h1.hero-title {
     width: auto;
     height: auto;
     max-width: 160px;
-    max-height: 100px;
+    max-height: 160px;
     object-fit: contain;
     margin: auto;
 }
@@ -1157,7 +1157,7 @@ h1.hero-title {
     width: auto !important;
     height: auto !important;
     max-width: 160px !important;
-    max-height: 100px !important;
+    max-height: 160px !important;
     object-fit: contain !important;
     margin: auto !important;
     display: block !important;

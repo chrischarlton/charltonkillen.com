@@ -6,31 +6,13 @@ type: "Leadership Role"
 startDate: "2019-07-01"
 endDate: ""
 color: "#fd5263"
-description: "Leading digital transformation at a certified B Corporation focused on people and planet."
+description: "Leading the digital transformation of a certified B Corp focused on people and planet."
 image: "/images/oneandall_logo.svg"
 ---
 
-## Role Summary
+As Technology Director at [One+All](https://oneandall.co.uk/about-us), I am leading the complete digital transformation of the business. My role combines hands-on technology leadership with board-level strategic responsibility. With my Technology hat on, I'm overseeing both the maintenance of existing systems and the work to build modern replacements that support the company's growth and values.
 
-As Technology Director at One+All, I lead the complete digital transformation of a 100% employee-owned B Corporation. My role combines hands-on technology leadership with board-level strategic responsibility, overseeing both the maintenance of existing systems and the implementation of modern replacements that support the company's growth and values.
-
-## How I Joined One+All
-
-One+All was one of Human's final clients before we closed the agency. During a scoping project to explore software solutions for buying and forecasting, I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
-
-It's hard to describe, but in all my experience of going into different businesses, I'd never found one where the values on the walls were practised so authentically. I described it to friends as 'the real deal' - a decent team of people doing right by each other, the people in the supply chain, and the planet. The fact that it's 100% employee-owned means everyone has a stake in its success with no one trying to extract cash for the sake of it.
-
-When Human closed, we reconnected. I initially supported One+All as a board advisor before taking on the Technology Director role in summer 2019.
-
-## The Challenge I Inherited
-
-The business needed serious help with technology. Here was a brilliant team doing great work for customers in spite of their systems, not aided by them. The legacy ERP had a difficult user interface, was built on a little-known framework with a small development team, and had no API connectivity, making any integration very challenging.
-
-## My Approach
-
-I started with a full audit of the technology and operations situation, writing a Technology Strategy that set out what we wanted to achieve and the principles we would work to. This strategy gets tweaked and updated as we make progress, but the essence remains the same today and continues to guide our transformation work six years later.
-
-## Key Responsibilities
+## Responsibilities
 
 **Technology Leadership:**
 - Leading the Technology Team whose responsibilities split between maintaining existing systems and building their replacements
@@ -40,28 +22,51 @@ I started with a full audit of the technology and operations situation, writing 
 - Board director responsibilities including overall business leadership, strategy, and governance
 - Continuous refinement of our technology strategy to align with business growth
 
-## Major Projects & Achievements
+## How it started
 
-### Slack and Google Workspace Implementation
-An important foundation project was getting everyone collaborating using decent real-time tools rather than disjointed MS Office files and email. We got everyone onboarded to these online tools just in time for them to facilitate the flexibility we needed during the pandemic when, for the first time ever, many colleagues needed to work from home.
+I met the team at One+All (when it was still called Rowlinson) when in my previous role at [Human](/experiences/human), I led a scoping project for some potential new software. I was deeply impressed by the company's culture and authentic commitment to doing right by people and planet. 
 
-### My Account Platform
-For our wholesale customers, My Account is an online ordering platform providing access to product information and the ability to place and follow up on orders. Customers can order plain, print, and embroidered products as day-to-day or forward orders.
 
-**Impact:** Since launching in 2021, the platform has grown consistently and now regularly accounts for 40% of order handling. This has beneficially impacted the Customer Care team whilst allowing production to be easier to plan since demand information has become more real-time.
+In all my experience of going into different businesses, I'd never found one where the values on the walls were practised so authentically. I described it to friends as 'the real deal' - a decent team of people doing right by each other, the people in the supply chain, and the planet. The fact that it's 100% employee-owned means everyone has a stake in its success with no one trying to extract cash for the sake of it.
+
+When Human closed, Neil Ward from One+All (now MD) reached out to me. I initially supported One+All as a board advisor before taking on the Technology Director role in summer 2019.
+
+## The challenge
+
+The business needed serious help with technology. Here was a brilliant team doing great work for customers in spite of their systems, not aided by them. The legacy ERP had a difficult user interface, was built on a little-known framework with a small development team, and had no API connectivity, making any integration very challenging.
+
+Customers couldn't order online and many internal processes were dependent on paper and creaking Excel spreadsheets.
+
+## My approach
+
+I started with a full audit of the technology and operations situation, writing a Technology Strategy that set out what we wanted to achieve and the principles we would work to. This strategy gets tweaked and updated as we make progress, but the essence remains the same today and continues to guide our ongoing transformation work.
+
+## Progress to date
+
+### Better tools for collaboration
+An important foundation project was getting everyone collaborating using decent real-time tools (such as Slack, Trello and Google Workspace) rather than disjointed MS Office files and email. We got everyone onboarded to these online tools just in time for them to facilitate the flexibility we needed during the pandemic when, for the first time ever, many colleagues needed to work from home.
+
+### Building digital access for our customers
+For our wholesale customers, My Account is an online ordering platform providing access to product information and the ability to place and follow up on orders. Customers can buy plain, made-to-order, printed, and embroidered products as day-to-day or forward orders.
+
+We launched a bravely-light MVP in 2021, and have gradually enriched the plaform driven by customer feedback. Usage has grown consistently and in 2024, it handled £6.1m in order value. It's allowed us to get orders into production faster and has been a big help to our Customer Care team. According to the team leader: "It's like having several extra colleagues working with me."
 
 ### Customer API
-Creating a fully documented RESTful API enables customers to connect their websites and back-end systems to us for product information lookups and seamless purchase ordering. Live since Spring 2025.
+We've built and launched a fully-documented RESTful API which enables customers to connect their websites and back-end systems to us for product information lookups and seamless purchase ordering. It's been live since Spring 2025 and our next step is to work with EPOS vendors to use the API to build custom integrations which could bring real-time connectivity to the majority fo our customers.
 
-### The Making Of - New Brand Website
-Launching a new sales channel for new customers whilst building new services to facilitate data integration as part of an 'Ecosystem' approach to replacing the legacy ERP. This project involves implementing new third-party systems and modelling the systems the rest of the business will move to once they're proven.
+### The Making Of: a new website for a new brand
+In 2024, we launched a [new sales channel](https://themakingof.uk/) for a whole new market.
 
-## Measurable Impact
+Our complete transformation involves replacing all of the systems used for the business cycle. Such a complete change carries a degree of risk so we decided to use this new venture as a testing ground.
 
-The transformation has delivered significant efficiency improvements. The My Account platform alone has allowed the same size Customer Care team to handle incoming sales that have grown by 60%. As the team leader puts it: "It's like having several extra colleagues working with me."
+The MVP of our entire new operational 'ecosystem' has been created for The Making Of, which starts out with fewer customers and a simpler offer than the rest of One+All. Once we have tested out all the connections we can start to add the features needed for it to take on the majority of the fulfilment. It's a real-world testing ground allowing us to iterate and launch a major change when the time is right and with a much lower level of risk.
 
-## What This Role Means to Me
+## Why it means so much to me
 
-Working at One+All represents the convergence of my technical expertise with my values. It's rare to find an organisation where doing the right thing for people and planet isn't just marketing speak, but genuine operational practice. Leading technology transformation in this context has taught me how powerful authentic culture can be in driving successful change.
+I've been able to put into practice theories of change and so many ambitions from client projects from when I worked in an agency. We can constantly iterate on what we're building over the course of years rather than a short project.
 
-The employee ownership model creates a unique dynamic where technology decisions are made for long-term sustainability rather than short-term extraction, allowing us to build systems that truly serve the business and its stakeholders.
+I've been able to work with a team of people who inspire me every day in their commitment to doing the right thing and to keep moving forward.
+
+The colleagues I've joined at One+All have taught me more since 2019 about leadership than I ever understood in the years before.
+
+The deep belief and confidence in the long-term means we're able to invest in people and technology, knowing that the results will be truly transformational. To be part of that is deeply satisfying.

@@ -6,16 +6,21 @@ description: Get in touch about technology consultancy, speaking opportunities, 
 
 # Get in touch
 
-I'm always interested in connecting with people who are thinking about technology, transformation, and how to make change work in the real world.
+I'm interested in connecting with people who are thinking about technology, sustainability, and how to make change work in the real world.
 
 ## How I can help
 
 <div class="services-grid">
   <div class="service-card">
-    <h3>Technology Consultancy</h3>
+    <h3>Technology Strategy</h3>
     <p>Invite me to assess your organisation's technology systems, plans, processes and people. Let's work together to make sure you have the right plan in place to support your goals and create positive impact.</p>
   </div>
   
+  <div class="service-card">
+    <h3>Agile project management</h3>
+    <p>Are you or your team(s) struggling to get things done? Let's work together to see what agile methods we could implement or improve in order to find that productive flow.</p>
+  </div>
+
   <div class="service-card">
     <h3>Speaking</h3>
     <p>Invite me to speak or present on any of the topics you've seen on this website. I'm particularly interested in ethical business, technology implementation, and learning from failure.</p>
@@ -23,7 +28,7 @@ I'm always interested in connecting with people who are thinking about technolog
   
   <div class="service-card">
     <h3>Discussion</h3>
-    <p>Reach out if you'd like to discuss anything you've read on my site in more detail. It's hard to convey every detail and there's always more to any story. Let me know who you are and what interests you so we can have a productive conversation.</p>
+    <p>Reach out if you'd like to discuss anything you've read on my site in more detail. It's hard to convey every detail and there's always more to any story. I'm interested to hear your perspective, especially if it's different to mine.</p>
   </div>
 </div>
 
