@@ -43,6 +43,13 @@ module.exports = function(eleventyConfig) {
       day: "numeric"
     }).format(new Date(date));
   });
+
+  eleventyConfig.addFilter("dateFormatMonthYear", function(date) {
+    return new Intl.DateTimeFormat("en-GB", {
+      year: "numeric",
+      month: "long"
+    }).format(new Date(date));
+  });
   
   eleventyConfig.addFilter("excerpt", function(content) {
     const excerpt = content.split("<!--more-->")[0];

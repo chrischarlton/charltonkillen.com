@@ -13,10 +13,10 @@ layout: page.njk
                     <img src="{{ pathPrefix }}{{ image }}" alt="{{ title }}" loading="lazy">
                 </div>
                 {% endif %}
-                <time class="hero-date" datetime="{{ startDate }}">
-                    {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
-                </time>
                 <h1 class="hero-title">{{ company }}</h1>
+                <time class="hero-date" datetime="{{ startDate }}">
+                    {{ startDate | dateFormatMonthYear }}{% if endDate %} - {{ endDate | dateFormatMonthYear }}{% else %} - Present{% endif %}
+                </time>
                 <div class="hero-company">{{ title }}</div>
                 {% if description %}
                     <p class="hero-subtitle">{{ description }}</p>
@@ -35,10 +35,10 @@ layout: page.njk
 
 <!-- No hero - standard article layout -->
 <header class="article-header">
-    <time class="article-date" datetime="{{ startDate }}">
-        {{ startDate | dateFormat }}{% if endDate %} - {{ endDate | dateFormat }}{% else %} - Present{% endif %}
-    </time>
     <h1 class="article-title">{{ company }}</h1>
+    <time class="article-date" datetime="{{ startDate }}">
+        {{ startDate | dateFormatMonthYear }}{% if endDate %} - {{ endDate | dateFormatMonthYear }}{% else %} - Present{% endif %}
+    </time>
     <div class="hero-company">{{ title }}</div>
     {% if description %}
         <p class="article-subtitle">{{ description }}</p>

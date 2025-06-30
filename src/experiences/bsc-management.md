@@ -10,7 +10,7 @@ description: "First Class degree with dissertation on social change and sustaina
 image: "/images/uom.png"
 ---
 
-I graduated with in BSc Management from Manchester Business School. My dissertation title was "How to effect social change towards sustainabilty" a theme that would prove central to my later career choices and values.
+I graduated with BSc Management from Manchester Business School. My dissertation title was "How to effect social change towards sustainabilty" a theme that would prove central to my later career choices and values.
 
 ## Subject focus
 
