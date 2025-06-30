@@ -8,7 +8,7 @@ color: "#2c5aa0"
 
 Although as an agile practitioner I believe 'this plan is wrong', I also still think we should have one. When a group starts working together on a project of even slight complexity this exercise is a great way to flush out dependencies and differences in expected approach. This can then enable the right discussions and a good working plan.
 
-![a critical path diagram on a computer screen with the post-its used to capture it on paper to the side](/images/cpa.jpg)
+![a critical path diagram on a computer screen with the post-its used to capture it on paper to the side]({{ pathPrefix }}/images/cpa.jpg)
 
 Based on the classic [Critical Path Method](https://en.wikipedia.org/wiki/Critical_path_method) but not as prescriptive about task durations, my approach is just to try and get the shape of it layed out.
 
