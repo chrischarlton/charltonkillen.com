@@ -38,5 +38,5 @@ My main focus today is my role as Technology Director of [One+All]({{ pathPrefix
 ---
 
 <div class="highlight-box">
-  <p>Interested in working together on technology strategy, speaking about real-world agile, or discussing lessons from business failure? <a href="/contact/">Get in touch</a>.</p>
+  <p>Interested in working together on technology strategy, speaking about real-world agile, or discussing lessons from business failure? <a href="{{ pathPrefix }}/contact/">Get in touch</a>.</p>
 </div>

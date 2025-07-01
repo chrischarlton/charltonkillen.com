@@ -31,7 +31,7 @@ University provided opportunities to explore entrepreneurial interests through v
 - Story telling
 - Understanding audience and stakeholder needs
 
-## How to effect change towards sustainability?
+## How to effect social change towards sustainability?
 
 My dissertation reviewed theories of social change in an attempt to unpack the mechanics through which we could move society in the direction of action on climate change.
 

@@ -59,5 +59,5 @@ As long as you recognised that it's never finished and final, that it's a suppor
 
 
 <div class="highlight-box">
-<p><strong>Interested to know more or have questions?</strong> Let me know! Do you use something similar in your projects? I'd love to hear more. <a href="/contact/">Get in touch</a> to continue the conversation.</p>
+<p><strong>Interested to know more or have questions?</strong> Let me know! Do you use something similar in your projects? I'd love to hear more. <a href="{{ pathPrefix }}/contact/">Get in touch</a> to continue the conversation.</p>
 </div>
