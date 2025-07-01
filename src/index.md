@@ -8,7 +8,7 @@ description: Technology, leadership and learning
 Growing good businesses by using technology to <strong>improve the lives of colleagues and customers</strong>.
 </div>
 
-My main focus today is my role as Technology Director of [One+All]({{ pathPrefix }}/experiences/oneandall/), a 100% employee-owned B Corp. I previously co-founded of [Human]({{ pathPrefix }}/experiences/human), a software development agency where I learned invaluable lessons about leadership, failure, and the real challenges of implementing change.
+My main focus today is my role as Technology Director of [One+All]({{ pathPrefix }}/experiences/oneandall/), a 100% employee-owned B Corp. I previously co-founded [Human]({{ pathPrefix }}/experiences/human), a software development agency where I learned invaluable lessons about leadership, failure, and the real challenges of implementing change.
 
 ## What I'm working on
 
@@ -31,7 +31,7 @@ My main focus today is my role as Technology Director of [One+All]({{ pathPrefix
 
 **Speaking:** At the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of the Doughnut Economics Action Lab, discussing One+All's real world achievements and challenges in relation to the theory.
 
-**Reading:** [The Righteous Mind](https://www.worldofbooks.com/en-gb/products/righteous-mind-book-jonathan-haidt-9780141039169) by Jonathan Haidt. A fascinating account of evolutionary psycology. How groups are selected for their caracteristics just like individuals and why the left is struggling to connect with voters.
+**Reading:** [The Righteous Mind](https://www.worldofbooks.com/en-gb/products/righteous-mind-book-jonathan-haidt-9780141039169) by Jonathan Haidt. A fascinating account of evolutionary psycology. How groups are selected for their characteristics just like individuals and why the left is struggling to connect with voters.
 
 **Thinking about:** How AI tools probably will change everything, just as happened with the web. But we still need to [start with why](https://www.worldofbooks.com/en-gb/products/start-with-why-book-simon-sinek-9780241958223) to make sure we know what we want for the colleagues and customers before we get carried away with the shiny new toys.
 
