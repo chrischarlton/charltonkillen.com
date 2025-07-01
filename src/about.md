@@ -8,6 +8,8 @@ description: Technology Director, strategist, and digital transformation leader 
 
 I'm a strategist and digital transformation leader driven by a desire to make things work better and a deep interest in how people find meaning in their work.
 
+![Christopher at home]({{ pathPrefix }}/images/cck.jpg)
+
 Since 2019, I've been [Technology Director at One+All]({{ pathPrefix }}/experiences/oneandall/), a certified B Corporation that's profitable, 100% employee-owned, and growing year on year in Greater Manchester. It's a company with exceptional people and values, but when I joined, its technology didn't match its ambition. Helping to close that gap has been one of the most challenging and rewarding experiences of my career, and I'm leading a complete human-first transformation aimed at boosting our impact on people and planet.
 
 ## Learning from Human
