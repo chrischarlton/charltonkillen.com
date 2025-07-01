@@ -20,7 +20,7 @@ layout: page.njk
       <div class="experience-content">
         <div class="experience-date">{{ experience.data.startDate | dateFormatMonthYear }}{% if experience.data.endDate %} - {{ experience.data.endDate | dateFormatMonthYear }}{% else %} - Present{% endif %}</div>
         <h2 class="experience-title">{{ experience.data.title }}</h2>
-        <div class="experience-company">{{ experience.data.company }}</div>
+        <div class="experience-company story-color">{{ experience.data.company }}</div>
         {% if experience.data.description %}
           <p class="experience-excerpt">{{ experience.data.description }}</p>
         {% endif %}
