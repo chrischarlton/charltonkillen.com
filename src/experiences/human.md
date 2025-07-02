@@ -12,6 +12,8 @@ image: "/images/human_logo.svg"
 
 Human was a software development agency I founded with four friends in 2010. Over almost a decade, we developed and integrated solutions for major clients whilst growing and nurturing a team of effective professionals. We learned a huge amount too - especially about how to use agile methods in an agency setting.
 
+![Human branded hoodie and brand colour mug on a desk]({{ pathPrefix }}/images/human_desk.jpg)
+
 ## The journey
 
 Human was founded when, as a team of freelancers and micro-businesses sharing space, we realised we had all of the skills in the room to be able to win work and do a good job for clients.
@@ -25,6 +27,8 @@ Over time our specialisms became:
 - complex integration challenges
 - digitising business operations
 
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/1098280073?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="What it is to be Human"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
 ## Clients & projects
 
 We scoped, developed and integrated solutions for clients including:
@@ -35,6 +39,7 @@ We scoped, developed and integrated solutions for clients including:
 - Medem UK
 - Ear To The Ground
 - Morris Hargreaves McIntyre
+- Swift Dental
 - The National Justice Museum
 - Tyne & Wear Archives & Museums
 - Impact International

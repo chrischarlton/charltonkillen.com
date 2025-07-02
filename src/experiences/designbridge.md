@@ -15,6 +15,8 @@ As a Strategist at Design Bridge, I was part of brand strategy teams in the Lond
 
 The role involved a fair bit of travel to work with clients in the UK, Netherlands, Belgium, France and Switzerland.
 
+![Christopher leading a brand workshop with notes on the board and orange post-its]({{ pathPrefix }}/images/db_workshop.jpg)
+
 ## What I did
 
 Design Bridge is renowned for its strategic approach to brand development, working with major clients to develop compelling brand narratives and visual identities. My work involved:
@@ -38,6 +40,6 @@ This experience at Design Bridge was formative in understanding how strategic th
 
 ## Foundations for the future
 
-The strategic thinking skills developed at Design Bridge became fundamental to my later work. The experience of helping brands "find and tell their stories" directly influenced my approach to business transformation and the importance of authentic organisational culture.
+The strategic thinking skills developed at Design Bridge became fundamental to my later work. The experience of helping brands 'find and tell their stories' directly influenced my approach to business transformation and the importance of authentic organisational culture.
 
 I developed my confidence in working with diverse stakeholders and leadership teams which helped a lot in my subsequent client work at [Human]({{ pathPrefix }}/experiences/human/).
