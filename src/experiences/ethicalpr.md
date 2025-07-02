@@ -39,4 +39,4 @@ I also witnessed severe dysfunction in the running of the agency itself. Too muc
 
 ## Foundation for entrepreneurship
 
-The breadth of experience at Koan - from technical web work to strategic brand thinking - provided the diverse skill set that would prove essential when later founding Human. Understanding multiple aspects of the communications landscape helped inform the integrated approach we would take to client challenges.
+The breadth of experience at the agency - from technical web work to strategic brand thinking - provided the diverse skill set that would prove essential when later founding Human. Understanding multiple aspects of the communications landscape helped inform the integrated approach we would take to client challenges.
