@@ -1,7 +1,15 @@
 module.exports = function(eleventyConfig) {
-  // Set path prefix conditionally for GitHub Pages vs local development
-  const isProduction = process.env.NODE_ENV === "production" || process.env.GITHUB_ACTIONS;
-  eleventyConfig.addGlobalData("pathPrefix", isProduction ? "/charltonkillen.com" : "");
+  // Determine environment and set pathPrefix accordingly
+  const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
+  const isMainBranch = process.env.GITHUB_REF === 'refs/heads/main';
+
+  if (isGitHubPages && !isMainBranch) {
+    // Staging on GitHub Pages subdirectory
+    eleventyConfig.addGlobalData('pathPrefix', '/charltonkillen.com');
+  } else {
+    // Production on custom domain or local development
+    eleventyConfig.addGlobalData('pathPrefix', '');
+  }
   
   // Copy static assets
   eleventyConfig.addPassthroughCopy("src/css");
