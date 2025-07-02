@@ -37,6 +37,8 @@ Working on internal communications audits provided early insight into organisati
 
 I also witnessed severe dysfunction in the running of the agency itself. Too much responsibility was placed on the young shoulders of myself and other colleagues. More than anything I learned the importance of care and support for people's mental wellbeing, things which were absent at this agency.
 
+![Christopher drinking tea at his desk in the PR agency]({{ pathPrefix }}/images/pr.jpg)
+
 ## Foundation for entrepreneurship
 
 The breadth of experience at the agency - from technical web work to strategic brand thinking - provided the diverse skill set that would prove essential when later founding Human. Understanding multiple aspects of the communications landscape helped inform the integrated approach we would take to client challenges.

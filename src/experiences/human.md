@@ -39,6 +39,7 @@ We scoped, developed and integrated solutions for clients including:
 - Medem UK
 - Ear To The Ground
 - Morris Hargreaves McIntyre
+- Swift Dental
 - The National Justice Museum
 - Tyne & Wear Archives & Museums
 - Impact International

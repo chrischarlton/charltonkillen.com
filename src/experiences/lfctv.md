@@ -13,6 +13,10 @@ During my gap year, I worked as Technical Support for LiverpoolFC.tv, a groundbr
 
 It was an exciting moment. Professional football clubs were just beginning to understand the potential of digital platforms, and LiverpoolFC.tv was at the forefront of this revolution.
 
+![The LFC.tv team in 2001]({{ pathPrefix }}/images/lfctv_team.jpg)
+
+(The website team in 2001, posing with the silverware. I'm the kid on the bottom left in the blue jumper, believe it or not.)
+
 ## How it started
 
 A friend asked if I'd like to help out in the evenings with some tech support work for his new role at the club. What started as evening work quickly morphed into a full gap year job with the brand new LiverpoolFC.tv venture. It was an incredible opportunity and I relished the chance to be useful and get rewarded for it.
