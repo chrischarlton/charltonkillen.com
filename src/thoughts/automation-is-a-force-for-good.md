@@ -6,6 +6,8 @@ date: 2018-06-14
 color: "#1f5d6a"
 ---
 
+![Lego people dressed in many different job roles]({{ pathPrefix }}/images/lego_people.jpg)
+
 > First published in 2018, during my time as [MD of Human]({{ pathPrefix }}/experiences/human/).
 
 We are living through an industrial revolution and the pace of change is accelerating. Advances in both digital and physical technologies are combining to offer new possibilities for production and consumption of products, services and experiences. There are many ways these changes might affect our lives and work but here I'll focus on automation.
