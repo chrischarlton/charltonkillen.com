@@ -54,7 +54,7 @@ I'm interested in connecting with people who are thinking about technology, sust
   
   <div class="form-group">
     <label for="message" class="form-label">Message *</label>
-    <textarea id="message" name="message" rows="6" class="form-input form-textarea" required aria-describedby="message-error" placeholder="Please let me know what you're interested in discussing..."></textarea>
+    <textarea id="message" name="message" rows="6" class="form-input form-textarea" required aria-describedby="message-error" placeholder="Comments, questions, ideas. What would you like to say?"></textarea>
     <div class="form-error" id="message-error"></div>
   </div>
   
