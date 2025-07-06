@@ -2,7 +2,7 @@
 layout: experience.njk
 title: "Technical Support"
 company: "Liverpool Football Club"
-startDate: "2001-09-01"
+startDate: "2001-07-01"
 endDate: "2002-08-01"
 color: "#C8102E"
 description: "Supporting the launch of LiverpoolFC.tv, a £20m joint venture between LFC and Granada Television."
