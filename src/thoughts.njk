@@ -11,8 +11,8 @@ description: Notes on technology leadership, real-world agile, business transfor
 
 <div class="thoughts-grid">
   {%- for thought in collections.thoughts -%}
-    <a href="{{ pathPrefix }}{{ thought.url }}" class="thought-card"
-       {% if thought.data.color %}data-color="{{ thought.data.color }}" style="--story-color: {{ thought.data.color }}; border-color: {{ thought.data.color }};"{% endif %}>
+    <a href="{{ pathPrefix }}{{ thought.url }}" class="thought-card content-card"
+   {% if thought.data.color %}data-color="{{ thought.data.color }}" style="--story-color: {{ thought.data.color }}; border-color: {{ thought.data.color }};"{% endif %}>
       <div class="thought-visual {% if thought.data.image %}has-image{% else %}colour-only{% endif %}" 
            {% if thought.data.color %}style="background-color: {{ thought.data.color }};"{% endif %}>
         {% if thought.data.image %}
@@ -25,6 +25,7 @@ description: Notes on technology leadership, real-world agile, business transfor
         {% if thought.data.description %}
           <p class="thought-excerpt">{{ thought.data.description }}</p>
         {% endif %}
+        <span class="content-read-more">Read more</span>
       </div>
     </a>
   {%- endfor -%}

@@ -899,6 +899,47 @@ img {
     font-size: clamp(1.1rem, 2.5vw, 1.25rem);
 }
 
+.content-read-more {
+    display: inline-block;
+    margin-top: 0.75rem;
+    margin-left: auto;
+    font-size: 1rem;
+    color: var(--color-link);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.2s ease;
+    align-self: flex-end;
+}
+
+.content-read-more:hover {
+    border-bottom-color: var(--color-link);
+}
+
+/* Use story color when available */
+.content-card[data-color] .content-read-more {
+    color: var(--story-color);
+}
+
+.content-card[data-color] .content-read-more:hover {
+    border-bottom-color: var(--story-color);
+}
+
+.content-info,
+.thought-content,
+.experience-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Use story color when available */
+.content-card[data-color] .content-read-more {
+    color: var(--story-color);
+}
+
+.content-card[data-color] .content-read-more:hover {
+    border-bottom-color: var(--story-color);
+}
+
 /* Experience-specific visual styling - proper logo sizing */
 .experience-visual img {
     width: auto !important;

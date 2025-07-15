@@ -9,8 +9,8 @@ layout: page.njk
 
 <div class="experiences-grid">
   {%- for experience in collections.experiences -%}
-    <a href="{{ pathPrefix }}{{ experience.url }}" class="experience-card"
-       {% if experience.data.color %}data-color="{{ experience.data.color }}" style="--story-color: {{ experience.data.color }}; border-color: {{ experience.data.color }};"{% endif %}>
+    <a href="{{ pathPrefix }}{{ experience.url }}" class="experience-card content-card"
+   {% if experience.data.color %}data-color="{{ experience.data.color }}" style="--story-color: {{ experience.data.color }}; border-color: {{ experience.data.color }};"{% endif %}>
       <div class="experience-visual {% if experience.data.image %}has-image{% else %}colour-only{% endif %}" 
            {% if experience.data.color %}style="background-color: {{ experience.data.color }};"{% endif %}>
         {% if experience.data.image %}
@@ -24,6 +24,7 @@ layout: page.njk
         {% if experience.data.description %}
           <p class="experience-excerpt">{{ experience.data.description }}</p>
         {% endif %}
+        <span class="content-read-more">Read more</span>
       </div>
     </a>
   {%- endfor -%}
