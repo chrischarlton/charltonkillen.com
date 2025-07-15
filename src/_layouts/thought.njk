@@ -30,6 +30,50 @@ layout: page.njk
     {{ content | safe }}
 </div>
 
+<!-- Navigation -->
+<div class="article-navigation">
+    {% if collections.thoughts %}
+      {% set previousPost = collections.thoughts | getPreviousCollectionItem(page) %}
+      {% set nextPost = collections.thoughts | getNextCollectionItem(page) %}
+      
+      {% if previousPost or nextPost %}
+      <div class="nav-links">
+        {% if previousPost %}
+        <a href="{{ pathPrefix }}{{ previousPost.url }}" class="nav-link nav-previous" 
+           {% if previousPost.data.color %}style="border-color: {{ previousPost.data.color }};"{% endif %}>
+          <div class="nav-visual" {% if previousPost.data.color %}style="background-color: {{ previousPost.data.color }};"{% endif %}>
+            <span>Previous</span>
+            <span class="nav-arrow">←</span>
+          </div>
+          <div class="nav-content">
+            <div class="nav-title">{{ previousPost.data.title }}</div>
+            {% if previousPost.data.description %}
+            <div class="nav-preview">{{ previousPost.data.description }}</div>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+        
+        {% if nextPost %}
+        <a href="{{ pathPrefix }}{{ nextPost.url }}" class="nav-link nav-next"
+           {% if nextPost.data.color %}style="border-color: {{ nextPost.data.color }};"{% endif %}>
+          <div class="nav-visual" {% if nextPost.data.color %}style="background-color: {{ nextPost.data.color }};"{% endif %}>
+            <span>Next</span>
+            <span class="nav-arrow">→</span>
+          </div>
+          <div class="nav-content">
+            <div class="nav-title">{{ nextPost.data.title }}</div>
+            {% if nextPost.data.description %}
+            <div class="nav-preview">{{ nextPost.data.description }}</div>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endif %}
+</div>
+
 <footer class="article-footer">
     <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
 </footer>
@@ -49,6 +93,50 @@ layout: page.njk
 
 <div class="article-content">
     {{ content | safe }}
+</div>
+
+<!-- Navigation -->
+<div class="article-navigation">
+    {% if collections.thoughts %}
+      {% set previousPost = collections.thoughts | getPreviousCollectionItem(page) %}
+      {% set nextPost = collections.thoughts | getNextCollectionItem(page) %}
+      
+      {% if previousPost or nextPost %}
+      <div class="nav-links">
+        {% if previousPost %}
+        <a href="{{ pathPrefix }}{{ previousPost.url }}" class="nav-link nav-previous" 
+           {% if previousPost.data.color %}style="border-color: {{ previousPost.data.color }};"{% endif %}>
+          <div class="nav-visual" {% if previousPost.data.color %}style="background-color: {{ previousPost.data.color }};"{% endif %}>
+            <span>Previous</span>
+            <span class="nav-arrow">←</span>
+          </div>
+          <div class="nav-content">
+            <div class="nav-title">{{ previousPost.data.title }}</div>
+            {% if previousPost.data.description %}
+            <div class="nav-preview">{{ previousPost.data.description }}</div>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+        
+        {% if nextPost %}
+        <a href="{{ pathPrefix }}{{ nextPost.url }}" class="nav-link nav-next"
+           {% if nextPost.data.color %}style="border-color: {{ nextPost.data.color }};"{% endif %}>
+          <div class="nav-visual" {% if nextPost.data.color %}style="background-color: {{ nextPost.data.color }};"{% endif %}>
+            <span>Next</span>
+            <span class="nav-arrow">→</span>
+          </div>
+          <div class="nav-content">
+            <div class="nav-title">{{ nextPost.data.title }}</div>
+            {% if nextPost.data.description %}
+            <div class="nav-preview">{{ nextPost.data.description }}</div>
+            {% endif %}
+          </div>
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endif %}
 </div>
 
 <footer class="article-footer">
