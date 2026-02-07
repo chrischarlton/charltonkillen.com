@@ -82,7 +82,7 @@
     <footer class="site-footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; {{ metadata.author }}, 2025. All rights reserved.</p>
+                <p>&copy; {{ metadata.author }}, 2026. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -216,6 +216,77 @@
                 });
             }
         });
+    </script>
+    <!-- Mobile sidebar navigation (for pages with hasSidebar) -->
+    <script>
+    (function() {
+        function initMobileSidebar() {
+            var mobileNav = document.querySelector('.mobile-sidebar-nav');
+            if (!mobileNav) return; // Exit if mobile nav doesn't exist on this page
+            
+            // Function to show/hide based on window width
+            function updateMobileNavVisibility() {
+                if (window.innerWidth > 767) {
+                    mobileNav.style.display = 'none';
+                } else {
+                    mobileNav.style.display = 'block';
+                    attachClickHandlers();
+                }
+            }
+            
+            // Attach click handlers (only needs to happen once)
+            var handlersAttached = false;
+            function attachClickHandlers() {
+                if (handlersAttached) return;
+                
+                var toggle = document.querySelector('.mobile-sidebar-toggle');
+                var links = document.querySelector('.mobile-sidebar-links');
+                
+                if (!toggle || !links) return;
+                
+                toggle.addEventListener('click', function() {
+                    var isCollapsed = this.classList.contains('collapsed');
+                    
+                    if (isCollapsed) {
+                        this.classList.remove('collapsed');
+                        links.classList.remove('collapsed');
+                        this.setAttribute('aria-expanded', 'true');
+                    } else {
+                        this.classList.add('collapsed');
+                        links.classList.add('collapsed');
+                        this.setAttribute('aria-expanded', 'false');
+                    }
+                });
+                
+                var linkElements = links.querySelectorAll('a');
+                linkElements.forEach(function(link) {
+                    link.addEventListener('click', function() {
+                        toggle.classList.add('collapsed');
+                        links.classList.add('collapsed');
+                        toggle.setAttribute('aria-expanded', 'false');
+                    });
+                });
+                
+                handlersAttached = true;
+            }
+            
+            // Set initial visibility
+            updateMobileNavVisibility();
+            
+            // Handle window resize
+            var resizeTimer;
+            window.addEventListener('resize', function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(updateMobileNavVisibility, 250);
+            });
+        }
+        
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initMobileSidebar);
+        } else {
+            initMobileSidebar();
+        }
+    })();
     </script>
 </body>
 </html>

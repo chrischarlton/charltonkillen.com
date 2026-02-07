@@ -1,0 +1,479 @@
+/* ==========================================================================
+   Project Page Styles - A Better Budget
+   ========================================================================== */
+
+/* Project Context Banner
+   ========================================================================== */
+.project-context {
+    background: #e8f5e9;
+    border-bottom: 1px solid #c8e6c9;
+    padding: 0.75rem 0;
+}
+
+.project-context-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.2rem;
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.project-context-link {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.project-context-link:hover {
+    text-decoration: underline;
+}
+
+.project-context-separator {
+    color: var(--color-border);
+}
+
+/* Project Hero
+   ========================================================================== */
+.project-hero {
+    background: var(--color-primary);
+    color: white;
+    padding: 4rem 0 3rem;
+    margin-bottom: 3rem;
+}
+
+.project-hero-content {
+    max-width: 800px;
+}
+
+.project-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.project-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    max-width: 60ch;
+    line-height: 1.4;
+    margin-bottom: 0;
+}
+
+/* Project Content Width & Typography
+   ========================================================================== */
+.project-content {
+    max-width: 800px;
+}
+
+.project-content p {
+    font-size: var(--text-base);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    max-width: 70ch;
+}
+
+.project-intro {
+    max-width: 800px;
+    margin-bottom: 3rem;
+}
+
+.project-intro .lead {
+    font-size: var(--text-lead);
+    color: var(--color-secondary);
+    margin-bottom: 1.5rem;
+}
+
+/* Lists - Proper Indentation and Spacing
+   ========================================================================== */
+article.project-content ul,
+article.project-content ol {
+    margin-left: 2rem !important;
+    margin-bottom: 2rem !important;
+    max-width: 70ch;
+}
+
+article.project-content ul {
+    list-style-type: disc !important;
+}
+
+article.project-content li {
+    margin-bottom: 0.5rem !important;
+    padding-left: 0.5rem !important;
+}
+
+article.project-content ul ul,
+article.project-content ol ol,
+article.project-content ul ol,
+article.project-content ol ul {
+    margin-top: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+}
+
+/* Tables - Styling with Borders and Alignment
+   ========================================================================== */
+article.project-content table {
+    width: 100% !important;
+    max-width: 70ch;
+    border-collapse: collapse !important;
+    margin: 2rem 0 !important;
+    font-size: var(--text-base);
+}
+
+article.project-content th {
+    background: var(--color-primary) !important;
+    color: white !important;
+    padding: 0.75rem 1rem !important;
+    text-align: left !important;
+    font-weight: 700 !important;
+    border: 1px solid var(--color-primary) !important;
+}
+
+article.project-content td {
+    padding: 0.75rem 1rem !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+article.project-content tr:nth-child(even) {
+    background: #f8f8f8 !important;
+}
+
+/* Right-align numeric columns in tables */
+article.project-content table td:nth-child(2),
+article.project-content table th:nth-child(2) {
+    text-align: right !important;
+}
+
+article.project-content table td:nth-child(3),
+article.project-content table th:nth-child(3) {
+    text-align: right !important;
+}
+
+/* But keep first column left-aligned always */
+article.project-content table td:first-child,
+article.project-content table th:first-child {
+    text-align: left !important;
+}
+
+/* And last column of descriptive text tables */
+article.project-content table td:last-child:not(:nth-child(2)):not(:nth-child(3)),
+article.project-content table th:last-child:not(:nth-child(2)):not(:nth-child(3)) {
+    text-align: left !important;
+}
+
+/* Headings Spacing
+   ========================================================================== */
+.project-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Episode Grid
+   ========================================================================== */
+.episodes-section {
+    margin: 3rem 0;
+}
+
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: var(--heading-2);
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.section-intro {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    max-width: 70ch;
+}
+
+.episodes-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Episode Card
+   ========================================================================== */
+.episode-card {
+    display: block;
+    background: white;
+    border: 2px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.episode-card:hover {
+    border-color: var(--color-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.episode-card.coming-soon {
+    border-color: var(--color-border);
+    opacity: 0.7;
+}
+
+.episode-card.coming-soon:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.episode-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.episode-number {
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.episode-card.coming-soon .episode-number {
+    color: var(--color-secondary);
+}
+
+.episode-title {
+    font-size: clamp(1.3rem, 3vw, 1.5rem);
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.3;
+    margin: 0;
+}
+
+.episode-description {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    line-height: 1.5;
+    margin: 0.75rem 0 0 0;
+}
+
+.episode-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.episode-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.episode-status.available {
+    background: var(--color-primary);
+    color: white;
+}
+
+.episode-status.coming-soon {
+    background: var(--color-border);
+    color: var(--color-text);
+}
+
+.episode-artefacts {
+    font-size: 0.95rem;
+    color: var(--color-secondary);
+    font-style: italic;
+}
+
+/* Artefact Links
+   ========================================================================== */
+.artefacts-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+.artefacts-list li {
+    margin-bottom: 1rem;
+}
+
+.artefacts-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.artefacts-list a:hover {
+    text-decoration: underline;
+}
+
+.artefacts-list a::before {
+    content: "→";
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* Project Footer Section
+   ========================================================================== */
+.project-footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px solid var(--color-border);
+    max-width: 70ch;
+}
+
+.project-footer h2 {
+    font-size: var(--heading-3);
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.project-footer p {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.contact-links {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.contact-links a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.contact-links a:hover {
+    border-bottom-color: var(--color-link);
+}
+
+/* Responsive Adjustments
+   ========================================================================== */
+@media (max-width: 768px) {
+    .project-hero {
+        padding: 3rem 0 2rem;
+    }
+    
+    .episode-header {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: flex-start;
+    }
+    
+    .contact-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}
+
+/* Projects Index Page - Large Cards
+   ========================================================================== */
+.projects-grid {
+    display: grid;
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.project-card {
+    display: block;
+    background: white;
+    border: 3px solid var(--color-primary);
+    border-radius: 8px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    border-color: var(--color-secondary);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.project-card-header {
+    margin-bottom: 1.5rem;
+}
+
+.project-card-title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.project-card-subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    color: var(--color-secondary);
+    font-weight: 500;
+    margin: 0;
+}
+
+.project-card-content p {
+    font-size: var(--text-base);
+    color: var(--color-text);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-card-highlights {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem 0;
+}
+
+.project-card-highlights li {
+    font-size: var(--text-base);
+    color: var(--color-secondary);
+    margin-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-card-highlights li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.project-card-footer {
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-border);
+}
+
+.project-card-cta {
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+.project-card:hover .project-card-cta {
+    text-decoration: underline;
+}

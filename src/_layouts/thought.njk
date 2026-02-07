@@ -25,10 +25,39 @@ layout: page.njk
     </div>
 </div>
 
-<!-- Article content after hero -->
+<!-- Article content after hero - with optional sidebar layout -->
+{% if hasSidebar %}
+<div class="article-layout">
+    <div class="article-main">
+        <div class="article-content">
+            {{ content | safe }}
+        </div>
+    </div>
+    
+    <aside class="article-sidebar">
+        <div class="links-box">
+            <ul>
+                {% for link in sidebarLinks %}
+                <li>
+                    {% if link.url %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% else %}
+                    <span class="sidebar-title">{{ link.title }}</span>
+                    {% endif %}
+                    {% if link.description %}
+                    <div class="link-description">{{ link.description }}</div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+</div>
+{% else %}
 <div class="article-content">
     {{ content | safe }}
 </div>
+{% endif %}
 
 
 <footer class="article-footer">
@@ -48,12 +77,60 @@ layout: page.njk
     {% endif %}
 </header>
 
+{% if hasSidebar %}
+<div class="article-layout">
+    <div class="article-main">
+        <div class="article-content">
+            {{ content | safe }}
+        </div>
+    </div>
+    
+    <aside class="article-sidebar">
+        <div class="links-box">
+            <ul>
+                {% for link in sidebarLinks %}
+                <li>
+                    {% if link.url %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% else %}
+                    <span class="sidebar-title">{{ link.title }}</span>
+                    {% endif %}
+                    {% if link.description %}
+                    <div class="link-description">{{ link.description }}</div>
+                    {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
+</div>
+{% else %}
 <div class="article-content">
     {{ content | safe }}
 </div>
+{% endif %}
 
 <footer class="article-footer">
     <a href="{{ pathPrefix }}/thoughts/" class="back-to-thoughts">← Back to all thoughts</a>
 </footer>
+
+{% endif %}
+
+{% if hasSidebar and sidebarLinks %}
+<div class="mobile-sidebar-nav">
+    <button class="mobile-sidebar-toggle collapsed" 
+            aria-expanded="false" 
+            aria-controls="mobile-sidebar-links">
+        <span>Budget details</span>
+    </button>
+    <div id="mobile-sidebar-links" class="mobile-sidebar-links collapsed">
+        {% for link in sidebarLinks %}
+        <a href="{{ pathPrefix }}{{ link.url }}">
+            <span class="mobile-sidebar-link-title">{{ link.title }}</span>
+            <span class="mobile-sidebar-link-desc">{{ link.description }}</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
 
 {% endif %}
