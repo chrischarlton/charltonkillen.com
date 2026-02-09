@@ -526,6 +526,35 @@ h2 a,
     line-height: 1.4;
 }
 
+/* FIX for article-layout width issue */
+
+/* Remove the max-width constraint from page-content when it contains article-layout */
+.page-content:has(.article-layout) {
+    max-width: none;
+}
+
+/* Make article-layout use the full container width */
+.article-layout {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Keep article-main at a good reading width but allow it to flex */
+.article-main {
+    flex: 1 1 auto;
+    max-width: 800px;
+    min-width: 0; /* Important for flex shrinking */
+}
+
+.article-sidebar {
+    flex: 0 0 300px;
+    position: sticky;
+    top: 1rem;
+}
 
 /* Content Blocks and Cards
    ========================================================================== */
