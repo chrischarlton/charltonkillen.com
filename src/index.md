@@ -1,11 +1,11 @@
 ---
 layout: base.njk
 title: Home
-description: Technology, leadership and learning
+description: Systems, leadership and learning
 ---
 
 <div class="lead">
-Growing good businesses by using technology to <strong>improve the lives of colleagues and customers</strong>.
+Into planning, politics, and amateur economics. Trying to understand how we make life better while taking the climate seriously.
 </div>
 
 My main focus today is my role as Technology Director of [One+All]({{ pathPrefix }}/experiences/oneandall/), a 100% employee-owned B Corp. I previously co-founded [Human]({{ pathPrefix }}/experiences/human), a software development agency where I learned invaluable lessons about leadership, failure, and the real challenges of implementing change.
@@ -20,8 +20,8 @@ My main focus today is my role as Technology Director of [One+All]({{ pathPrefix
   </div>
 
   <div class="card">
-    <h3>Agile Made Easy</h3>
-    <p>A practical guide to setting up minimum viable agile in real business environments. Informed by over twenty years of project implementation experience. Helping those who ask for work and those actually doing it to become one team and find their flow together.</p>
+    <h3>Writing</h3>
+    <p>I've been writing something — starting with the UK tax system and following the logic wherever it leads. It's taken longer and gone further than I expected. I'll share more here when it's ready.</p>
   </div>
   
 </div>
@@ -29,11 +29,7 @@ My main focus today is my role as Technology Director of [One+All]({{ pathPrefix
 
 ## Recently
 
-**Speaking:** At the British Retail Consortium's Summer School alongside [Erinch Sahan](https://www.doughnuteconomics.org/erinch-sahan) of the Doughnut Economics Action Lab, discussing One+All's real world achievements and challenges in relation to the theory.
-
-**Reading:** [The Righteous Mind](https://www.worldofbooks.com/en-gb/products/righteous-mind-book-jonathan-haidt-9780141039169) by Jonathan Haidt. A fascinating account of evolutionary psycology. How groups are selected for their characteristics just like individuals and why the left is struggling to connect with voters.
-
-**Thinking about:** How AI tools probably will change everything, just as happened with the web. But we still need to [start with why](https://www.worldofbooks.com/en-gb/products/start-with-why-book-simon-sinek-9780241958223) to make sure we know what we want for the colleagues and customers before we get carried away with the shiny new toys.
+**Reading:** [Natural Capitalism]() by Paul Hawken, Amory Lovins, and Hunter Lovins. The case that treating natural resources with the same intelligence we apply to financial capital would transform the economy from the ground up. A 1999 book that still reads like something we haven't finished.
 
 ---
 
