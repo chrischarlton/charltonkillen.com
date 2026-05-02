@@ -1,12 +1,12 @@
 ---
 layout: page.njk
 title: About
-description: Technology Director, strategist, and digital transformation leader focused on human-centred change
+description: Technology Director and systems thinker focused on how we make things genuinely better
 ---
 
 # About me
 
-I'm a strategist and digital transformation leader driven by a desire to make things work better and a deep interest in how people find meaning in their work.
+I'm interested in systems: economic, organisational, technological. And in the gap between how they work and how they could. Closing that gap has been the thread running through most of what I've done.
 
 ![Christopher at home]({{ pathPrefix }}/images/cck.jpg)
 
@@ -18,15 +18,17 @@ Coming to One+All was also a turning point that prompted me to reflect hard on t
 
 That experience taught me some difficult, necessary lessons about leadership: about the importance of structure, sustainability, and creating space for others to succeed.
 
-## My approach
+## How I got here
 
-A student of [management science]({{ pathPrefix }}/experiences/bsc-management/), with experience in [branding and communications]({{ pathPrefix }}/experiences/designbridge/), I've always believed that transformation depends on clear thinking, human-centred design, and technology that evolves from real needs, not wishful thinking. I try to bring just enough structure through agile methods to make progress inevitable, while leaving room for the craft, care, and creativity that make it meaningful.
+Before Human, I spent six years as a brand strategist at [Design Bridge]({{ pathPrefix }}/experiences/designbridge/), working with major clients across London and Amsterdam. That work, helping organisations find and tell their authentic stories, shaped how I think about strategy and culture more than almost anything else in my career. Alongside it, I co-founded [PagePlay]({{ pathPrefix }}/experiences/pageplay/), one of the first SaaS platforms for website management, which taught me to think in products and systems rather than projects.
 
-Digital transformation isn't about tools or trends: it's about people understanding what they need and then establishing the practices needed to keep realising and revising that vision.
+A [student of management science]({{ pathPrefix }}/experiences/bsc-management/) (my dissertation was on social change and sustainability, back in 2005), I've always believed that transformation depends on clear thinking, human-centred design, and technology that evolves from real needs, not wishful thinking. I try to bring just enough structure through agile methods to make progress inevitable, while leaving room for the craft, care, and creativity that make it meaningful.
 
 ## Beyond technology
 
-My passion for well-designed systems extends far beyond software. I'm fascinated by transport infrastructure, especially railways, and how these systems can enrich communities and power good growth. I love modern architecture and design. Time and again I'm drawn back to the work of [Margaret Calvert](https://en.wikipedia.org/wiki/Margaret_Calvert), the clarity of [gov.uk's design principles](https://www.gov.uk/guidance/government-design-principles), and brands like the BBC that make complex things beautifully simple. I love it when form follows function and the design creates space for people to live and find their own meaning, rather than a style to indulge the designer.
+My interest in how systems work extends well beyond software. I read widely across economics and public policy, drawn to the same question in different guises: why do systems that were supposed to serve people so often end up extracting from them instead, and what would it take to change that?
+
+I'm fascinated by transport infrastructure, especially railways, and how well-designed systems can enrich communities and power good growth. I love modern architecture and design. Time and again I'm drawn back to the work of [Margaret Calvert](https://en.wikipedia.org/wiki/Margaret_Calvert), the clarity of [gov.uk's design principles](https://www.gov.uk/guidance/government-design-principles), and brands like the BBC that make complex things beautifully simple. I love it when form follows function and the design creates space for people to live and find their own meaning, rather than a style to indulge the designer.
 
 ## Personal
 
@@ -34,10 +36,10 @@ I'm a proud member of the LGBT+ community. I live with my husband Liam and our a
 
 Country life has been an adaptation for me. I grew up in Liverpool and spent most of my adult life in Manchester. So I feel fortunate now to get the best of both worlds, travelling to Manchester for a few days every fortnight to check in with colleagues. It also allows me to keep in touch with my family and my urban family.
 
-For me, the benefits of social media do not outweigh the harms and so for many years I've almost completely disengaged from it. This website is my way of sharing thoughts and connecting with people interested in ethical technology leadership, real-world agile implementation, and learning from failure.
+For me, the benefits of social media do not outweigh the harms and so for many years I've almost completely disengaged from it, although I have recently discovered Substack which feels valuable and different. This website is my main way of sharing thoughts and connecting with people interested in ethical technology, systems thinking, and the question of how we make things genuinely better.
 
 ---
 
 <div class="highlight-box">
-  <p>Want to discuss technology transformation, share experiences about learning from failure, or explore speaking opportunities? <a href="{{ pathPrefix }}/contact/">I'd love to hear from you</a>.</p>
+  <p>Want to discuss technology transformation, economics and public policy, or speaking opportunities? <a href="{{ pathPrefix }}/contact/">I'd love to hear from you</a>.</p>
 </div>
