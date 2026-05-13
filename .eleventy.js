@@ -38,10 +38,13 @@ module.exports = function(eleventyConfig) {
   });
   eleventyConfig.addCollection("experiences", function(collectionApi) {
   return collectionApi.getFilteredByGlob("src/experiences/*.md").sort((a, b) => {
-    // Sort by start date (newest first for timeline display)
     return new Date(b.data.startDate) - new Date(a.data.startDate);
   });
 });
+
+  eleventyConfig.addCollection("redirectedMeasures", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/redirected/measures/*.md");
+  });
   
   // Filters
   eleventyConfig.addFilter("dateFormat", function(date) {

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ description or 'Redirected — a proposal to rebuild the UK economy by taxing extraction more than creation.' }}">
+    <title>{{ title }} | Redirected</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --font-family: 'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: #0b0c0c;
+            background: #ffffff;
+        }
+    </style>
+
+    <link rel="stylesheet" href="{{ pathPrefix }}/css/main.css">
+    <link rel="stylesheet" href="{{ pathPrefix }}/css/redirected.css">
+</head>
+<body class="rd-body">
+
+    <header class="rd-header">
+        <div class="rd-header-inner">
+            <div class="rd-brand">
+                <a href="{{ pathPrefix }}/redirected/" class="rd-wordmark">Redirected</a>
+                <span class="rd-byline">by <a href="{{ pathPrefix }}/">Christopher Charlton-Killen</a></span>
+            </div>
+
+            <nav class="rd-nav" aria-label="Redirected navigation">
+                <button class="rd-nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                    <span>☰</span>
+                </button>
+                <ul class="rd-nav-list">
+                    <li><a href="{{ pathPrefix }}/redirected/manifesto/" class="rd-nav-link">Manifesto</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/the-numbers/" class="rd-nav-link">The Numbers</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/calculator/" class="rd-nav-link">Calculator</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/book/" class="rd-nav-link">The Book</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        {{ content | safe }}
+    </main>
+
+    <footer class="rd-footer">
+        <div class="rd-footer-inner">
+            <div class="rd-footer-brand">
+                <span class="rd-footer-wordmark">Redirected</span>
+                <p>A proposal to rebuild Britain's economy — taxing extraction more than creation.</p>
+            </div>
+            <nav class="rd-footer-nav" aria-label="Footer navigation">
+                <ul>
+                    <li><a href="{{ pathPrefix }}/redirected/">Home</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/manifesto/">Manifesto</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/calculator/">Calculator</a></li>
+                    <li><a href="{{ pathPrefix }}/redirected/book/">The Book</a></li>
+                    <li><a href="{{ pathPrefix }}/">charltonkillen.com</a></li>
+                </ul>
+            </nav>
+            <p class="rd-footer-copy">&copy; Christopher Charlton-Killen, 2026.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var toggle = document.querySelector('.rd-nav-toggle');
+            var list = document.querySelector('.rd-nav-list');
+            if (toggle && list) {
+                toggle.addEventListener('click', function() {
+                    var open = list.classList.contains('rd-nav-open');
+                    list.classList.toggle('rd-nav-open', !open);
+                    toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

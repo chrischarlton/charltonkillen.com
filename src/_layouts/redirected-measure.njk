@@ -1,0 +1,84 @@
+---
+layout: redirected.njk
+---
+<div class="rd-measure-page">
+
+    <section class="rd-measure-hero" data-theme="{{ theme }}">
+        <div class="rd-measure-hero-inner">
+            <div class="rd-measure-hero-text">
+                <span class="rd-tag rd-tag--{{ theme }}">{{ theme | capitalize }}</span>
+                <h1 class="rd-measure-title">{{ title }}</h1>
+                {% if tagline %}<p class="rd-measure-tagline">{{ tagline }}</p>{% endif %}
+            </div>
+            {% if heroStat %}
+            <div class="rd-measure-stat">
+                <span class="rd-stat-number">{{ heroStat }}</span>
+                {% if heroStatLabel %}<span class="rd-stat-label">{{ heroStatLabel }}</span>{% endif %}
+            </div>
+            {% endif %}
+        </div>
+        {% if heroImage %}
+        <div class="rd-measure-hero-image">
+            <img src="{{ pathPrefix }}/images/{{ heroImage }}" alt="{{ heroImageAlt or title }}">
+        </div>
+        {% endif %}
+    </section>
+
+    <div class="rd-measure-body">
+
+        <section class="rd-measure-section rd-measure-explanation">
+            <h2>The measure</h2>
+            {{ content | safe }}
+        </section>
+
+        {% if impact %}
+        <section class="rd-measure-section rd-measure-impact">
+            <h2>Expected impact</h2>
+            <div class="rd-impact-content">{{ impact | safe }}</div>
+        </section>
+        {% endif %}
+
+        {% if cost %}
+        <section class="rd-measure-section rd-measure-cost">
+            <h2>Cost and revenue</h2>
+            <div class="rd-cost-content">{{ cost | safe }}</div>
+        </section>
+        {% endif %}
+
+        {% if evidence %}
+        <section class="rd-measure-section rd-measure-evidence">
+            <h2>Evidence and assumptions</h2>
+            <div class="rd-evidence-content">{{ evidence | safe }}</div>
+        </section>
+        {% endif %}
+
+        {% if stats %}
+        <section class="rd-measure-section rd-measure-stats-grid">
+            <div class="rd-stats-row">
+                {% for stat in stats %}
+                <div class="rd-stat-card">
+                    <span class="rd-stat-number">{{ stat.number }}</span>
+                    <span class="rd-stat-label">{{ stat.label }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+
+        {% if related %}
+        <section class="rd-measure-section rd-measure-related">
+            <h2>Related measures</h2>
+            <ul class="rd-related-list">
+                {% for item in related %}
+                <li><a href="{{ pathPrefix }}/redirected/measures/{{ item.slug }}/">{{ item.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </section>
+        {% endif %}
+
+        <div class="rd-measure-back">
+            <a href="{{ pathPrefix }}/redirected/manifesto/" class="rd-back-link">← Back to the Manifesto</a>
+        </div>
+
+    </div>
+</div>

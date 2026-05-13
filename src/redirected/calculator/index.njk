@@ -1,0 +1,750 @@
+---
+layout: redirected.njk
+title: The Calculator
+description: See how the Redirected tax reform would affect your household — enter your details for a personalised breakdown.
+---
+
+<style>
+    .rd-calc-hero {
+        background: var(--rd-dark);
+        color: var(--rd-white);
+        padding: 3rem var(--rd-gutter) 2.5rem;
+    }
+    .rd-calc-hero-inner {
+        max-width: var(--rd-max-width);
+        margin: 0 auto;
+    }
+    .rd-calc-hero h1 {
+        font-size: var(--rd-heading-1);
+        color: var(--rd-white);
+        line-height: 1.1;
+        margin-bottom: 0.5rem;
+    }
+    .rd-calc-hero-lead {
+        font-size: var(--rd-text-lead);
+        color: rgba(255,255,255,0.8);
+        max-width: 60ch;
+        margin: 0;
+    }
+
+    .rd-calc-body {
+        max-width: var(--rd-max-width);
+        margin: 0 auto;
+        padding: 2.5rem var(--rd-gutter) 4rem;
+    }
+
+    .rd-calc-notice {
+        background: var(--rd-light);
+        border-left: 4px solid var(--rd-green);
+        padding: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
+        font-size: var(--rd-text-base);
+    }
+    .rd-calc-notice p { margin: 0; }
+
+    .rd-calc-presets {
+        display: flex;
+        gap: 0.75rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+    }
+
+    .rd-calc-layout {
+        display: flex;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    .rd-calc-main {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .rd-calc-sidebar {
+        flex: 0 0 280px;
+        position: sticky;
+        top: 1rem;
+    }
+
+    @media (max-width: 900px) {
+        .rd-calc-layout { flex-direction: column; }
+        .rd-calc-sidebar {
+            position: relative;
+            top: 0;
+            width: 100%;
+            order: -1;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .rd-calc-section {
+        margin-bottom: 3rem;
+    }
+
+    .rd-calc-section h2 {
+        font-size: var(--rd-heading-2);
+        color: var(--rd-dark);
+        border-top: 2px solid var(--rd-border);
+        padding-top: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 1.5rem;
+    }
+    .rd-calc-section h2:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+    .rd-form-group {
+        margin-bottom: 1.25rem;
+    }
+    .rd-form-group label {
+        display: block;
+        font-weight: 700;
+        font-size: var(--rd-text-base);
+        margin-bottom: 0.25rem;
+        color: var(--rd-dark);
+    }
+    .rd-form-group .rd-hint {
+        display: block;
+        color: var(--rd-mid);
+        font-size: var(--rd-text-base);
+        margin-bottom: 0.5rem;
+    }
+    .rd-form-group input,
+    .rd-form-group select {
+        width: 100%;
+        padding: 0.6rem 0.75rem;
+        border: 2px solid var(--rd-dark);
+        font-family: inherit;
+        font-size: var(--rd-text-base);
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    .rd-form-group input:focus,
+    .rd-form-group select:focus {
+        outline: 3px solid var(--rd-yellow);
+        outline-offset: 0;
+    }
+    .rd-input-prefix {
+        position: relative;
+    }
+    .rd-input-prefix input {
+        padding-left: 2rem;
+    }
+    .rd-input-prefix::before {
+        content: '£';
+        position: absolute;
+        left: 0.75rem;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 700;
+        color: var(--rd-dark);
+        font-size: var(--rd-text-base);
+    }
+
+    /* Summary box */
+    .rd-calc-summary {
+        background: var(--rd-dark);
+        color: var(--rd-white);
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+    .rd-calc-summary.worse-off { border-top: 4px solid #d4351c; }
+    .rd-calc-summary.better-off { border-top: 4px solid var(--rd-yellow); }
+    .rd-calc-summary.neutral { border-top: 4px solid var(--rd-border); }
+    .rd-calc-summary-label {
+        font-size: var(--rd-text-base);
+        color: rgba(255,255,255,0.7);
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        margin-bottom: 0.5rem;
+    }
+    .rd-calc-summary-number {
+        font-size: var(--rd-stat-medium);
+        font-weight: 700;
+        line-height: 1;
+        margin-bottom: 0.75rem;
+    }
+    .rd-calc-summary-number.positive { color: var(--rd-yellow); }
+    .rd-calc-summary-number.negative { color: #f47738; }
+    .rd-calc-summary-text {
+        font-size: var(--rd-text-base);
+        color: rgba(255,255,255,0.8);
+        line-height: 1.4;
+    }
+
+    /* Breakdown tables */
+    .rd-breakdown-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 2rem;
+        font-size: var(--rd-text-base);
+    }
+    .rd-breakdown-table th {
+        background: var(--rd-light);
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: 700;
+        border-bottom: 2px solid var(--rd-dark);
+    }
+    .rd-breakdown-table th.amount { text-align: right; }
+    .rd-breakdown-table td {
+        padding: 0.75rem;
+        border-bottom: 1px solid var(--rd-border);
+        vertical-align: top;
+    }
+    .rd-breakdown-table tr:last-child td {
+        border-bottom: 2px solid var(--rd-dark);
+        font-weight: 700;
+    }
+    .rd-breakdown-table .amount { text-align: right; font-weight: 700; white-space: nowrap; }
+    .rd-breakdown-table .positive { color: var(--rd-green); }
+    .rd-breakdown-table .negative { color: #d4351c; }
+    .rd-breakdown-table .neutral { color: var(--rd-mid); }
+
+    .rd-calc-detail {
+        background: #f8f8f8;
+        padding: 0.75rem 1rem;
+        margin-top: 0.5rem;
+        border-left: 3px solid var(--rd-border);
+        font-size: var(--rd-text-base);
+        color: var(--rd-mid);
+        line-height: 1.5;
+    }
+
+    .rd-calc-actions {
+        display: none;
+        margin-top: 2rem;
+        padding: 1.5rem;
+        background: #e8f5e9;
+        border-left: 5px solid var(--rd-green);
+        border-radius: 0 8px 8px 0;
+    }
+    .rd-calc-actions h3 {
+        margin-top: 0;
+        color: var(--rd-green);
+        font-size: var(--rd-heading-3);
+    }
+    .rd-calc-actions p { font-size: var(--rd-text-base); }
+</style>
+
+<div class="rd-calc-hero">
+    <div class="rd-calc-hero-inner">
+        <h1>The Calculator</h1>
+        <p class="rd-calc-hero-lead">Enter your household details to see how the reformed tax system would affect you. All calculations happen in your browser — nothing is saved or sent anywhere.</p>
+    </div>
+</div>
+
+<div class="rd-calc-body">
+
+    <div class="rd-calc-notice">
+        <p><strong>Important:</strong> These are illustrative calculations based on typical scenarios. Your actual position would depend on specific circumstances. This is not financial advice.</p>
+    </div>
+
+    <div class="rd-calc-presets">
+        <button class="rd-btn rd-btn--primary" onclick="loadPreset('workingFamily')">Working Family</button>
+        <button class="rd-btn rd-btn--primary" onclick="loadPreset('pensioner')">Asset-Rich Pensioner</button>
+        <button class="rd-btn rd-btn--primary" onclick="loadPreset('landlord')">Wealthy Landlord</button>
+        <button class="rd-btn" style="background: var(--rd-light); color: var(--rd-dark); font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; border: none; cursor: pointer; font-family: inherit; font-size: var(--rd-text-base);" onclick="loadPreset('reset')">Reset</button>
+    </div>
+
+    <div class="rd-calc-layout">
+
+        <div class="rd-calc-main">
+
+            <div class="rd-calc-section">
+                <h2>Your Household Details</h2>
+
+                <div class="rd-form-group">
+                    <label for="salary1">Adult 1 — Gross Salary</label>
+                    <span class="rd-hint">Annual employment income before tax</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="salary1" value="0" min="0" step="1000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="salary2">Adult 2 — Gross Salary</label>
+                    <span class="rd-hint">Annual employment income before tax (leave at 0 for single adult)</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="salary2" value="0" min="0" step="1000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="otherIncome">Other Income</label>
+                    <span class="rd-hint">Rental income, dividends, interest, pension drawdown, etc.</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="otherIncome" value="0" min="0" step="1000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="houseValue">Value of Your Home</label>
+                    <span class="rd-hint">Current market value (or £0 if renting)</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="houseValue" value="0" min="0" step="10000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="mortgage">Outstanding Mortgage</label>
+                    <span class="rd-hint">Amount still owed on your home</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="mortgage" value="0" min="0" step="10000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="otherAssets">Other Assets</label>
+                    <span class="rd-hint">Savings, investments, second properties — not pensions</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="otherAssets" value="0" min="0" step="10000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="pensionValue">Value of Pensions</label>
+                    <span class="rd-hint">Total pension pot value — exempt from Wealth Tax</span>
+                    <div class="rd-input-prefix">
+                        <input type="number" id="pensionValue" value="0" min="0" step="10000" oninput="calculate()">
+                    </div>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="milesPerYear">Miles Driven Per Year</label>
+                    <span class="rd-hint">Total household mileage</span>
+                    <input type="number" id="milesPerYear" value="0" min="0" step="1000" oninput="calculate()">
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="carType">Primary Vehicle</label>
+                    <select id="carType" onchange="calculate()">
+                        <option value="none">No car</option>
+                        <option value="electric">Electric</option>
+                        <option value="petrol">Petrol / Diesel</option>
+                    </select>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="heatingSource">Household Heating</label>
+                    <select id="heatingSource" onchange="calculate()">
+                        <option value="gas">Gas</option>
+                        <option value="electric">Electric</option>
+                        <option value="oil">Heating Oil</option>
+                        <option value="heatpump">Heat Pump</option>
+                    </select>
+                </div>
+
+                <div class="rd-form-group">
+                    <label for="flights">Flights Per Year</label>
+                    <span class="rd-hint">Outside the Common Travel Area. Return flights count as 2.</span>
+                    <input type="number" id="flights" value="0" min="0" max="50" oninput="calculate()">
+                </div>
+            </div>
+
+            <div class="rd-calc-section">
+                <h2>What You'd Save</h2>
+                <table class="rd-breakdown-table">
+                    <thead>
+                        <tr>
+                            <th>Current Tax</th>
+                            <th class="amount">Annual Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Employee National Insurance
+                                <div class="rd-calc-detail" id="niCalc"></div>
+                            </td>
+                            <td class="amount positive" id="niSaving">£0</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Income Tax (current system)
+                                <div class="rd-calc-detail" id="incomeTaxOldCalc"></div>
+                            </td>
+                            <td class="amount positive" id="incomeTaxOldAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td>Council Tax (estimated)</td>
+                            <td class="amount positive" id="councilTaxSaving">£0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total abolished taxes</strong></td>
+                            <td class="amount positive" id="totalCurrentTax">£0</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>What You'd Pay Instead</h2>
+                <table class="rd-breakdown-table">
+                    <thead>
+                        <tr>
+                            <th>New Tax</th>
+                            <th class="amount">Annual Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Unified Income Tax
+                                <div class="rd-calc-detail" id="incomeTaxNewCalc"></div>
+                            </td>
+                            <td class="amount negative" id="incomeTaxNewAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Annual Wealth Tax
+                                <div class="rd-calc-detail" id="wealthTaxCalc"></div>
+                            </td>
+                            <td class="amount negative" id="wealthTaxAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Land Value Tax
+                                <div class="rd-calc-detail" id="landTaxCalc"></div>
+                            </td>
+                            <td class="amount negative" id="landTaxAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Road Pricing
+                                <div class="rd-calc-detail" id="roadPricingCalc"></div>
+                            </td>
+                            <td class="amount negative" id="roadPricingAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Carbon Tax (heating &amp; travel)
+                                <div class="rd-calc-detail" id="carbonTaxCalc"></div>
+                            </td>
+                            <td class="amount negative" id="carbonTaxAmount">£0</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Total new taxes</strong></td>
+                            <td class="amount negative" id="totalNewTax">£0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="actionsSection" class="rd-calc-actions">
+                <h3>Good for the planet and your pocket</h3>
+                <div id="actionsContent"></div>
+            </div>
+
+        </div>
+
+        <div class="rd-calc-sidebar">
+            <div id="summaryBox" class="rd-calc-summary neutral">
+                <div class="rd-calc-summary-label">Net Annual Change</div>
+                <div id="summaryNumber" class="rd-calc-summary-number">£0</div>
+                <div id="summaryText" class="rd-calc-summary-text">Enter your details to see your impact</div>
+            </div>
+        </div>
+
+    </div>
+
+    <nav style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid var(--rd-border);">
+        <a href="{{ pathPrefix }}/redirected/manifesto/" class="rd-back-link">← Back to the Manifesto</a>
+    </nav>
+
+</div>
+
+<script>
+const presets = {
+    workingFamily: { salary1: 30000, salary2: 25000, otherIncome: 0, houseValue: 0, mortgage: 0, otherAssets: 0, pensionValue: 0, milesPerYear: 8000, carType: 'petrol', heatingSource: 'gas', flights: 0 },
+    pensioner: { salary1: 0, salary2: 0, otherIncome: 15000, houseValue: 400000, mortgage: 0, otherAssets: 80000, pensionValue: 0, milesPerYear: 3000, carType: 'petrol', heatingSource: 'gas', flights: 0 },
+    landlord: { salary1: 0, salary2: 0, otherIncome: 60000, houseValue: 600000, mortgage: 0, otherAssets: 1400000, pensionValue: 0, milesPerYear: 12000, carType: 'petrol', heatingSource: 'gas', flights: 4 },
+    reset: { salary1: 0, salary2: 0, otherIncome: 0, houseValue: 0, mortgage: 0, otherAssets: 0, pensionValue: 0, milesPerYear: 0, carType: 'none', heatingSource: 'gas', flights: 0 }
+};
+
+function loadPreset(name) {
+    const p = presets[name];
+    ['salary1','salary2','otherIncome','houseValue','mortgage','otherAssets','pensionValue','milesPerYear','flights'].forEach(id => {
+        document.getElementById(id).value = p[id];
+    });
+    document.getElementById('carType').value = p.carType;
+    document.getElementById('heatingSource').value = p.heatingSource;
+    calculate();
+}
+
+function formatCurrency(amount) {
+    const abs = Math.abs(Math.round(amount));
+    if (abs >= 1000000) {
+        const m = abs / 1000000;
+        return '£' + (m === Math.floor(m) ? m : m.toFixed(1)) + 'm';
+    } else if (abs >= 1000 && abs % 1000 === 0) {
+        return '£' + (abs / 1000) + 'k';
+    }
+    return '£' + abs.toLocaleString();
+}
+
+function formatNum(amount) {
+    const abs = Math.abs(Math.round(amount));
+    if (abs >= 1000000) {
+        const m = abs / 1000000;
+        return (m === Math.floor(m) ? m : m.toFixed(1)) + 'm';
+    } else if (abs >= 1000 && abs % 1000 === 0) {
+        return (abs / 1000) + 'k';
+    }
+    return abs.toLocaleString();
+}
+
+function calculate() {
+    const salary1 = parseFloat(document.getElementById('salary1').value) || 0;
+    const salary2 = parseFloat(document.getElementById('salary2').value) || 0;
+    const otherIncome = parseFloat(document.getElementById('otherIncome').value) || 0;
+    const houseValue = parseFloat(document.getElementById('houseValue').value) || 0;
+    const mortgage = parseFloat(document.getElementById('mortgage').value) || 0;
+    const otherAssets = parseFloat(document.getElementById('otherAssets').value) || 0;
+    const pensionValue = parseFloat(document.getElementById('pensionValue').value) || 0;
+    const milesPerYear = parseFloat(document.getElementById('milesPerYear').value) || 0;
+    const carType = document.getElementById('carType').value;
+    const heatingSource = document.getElementById('heatingSource').value;
+    const flights = parseFloat(document.getElementById('flights').value) || 0;
+
+    const totalIncome = salary1 + salary2 + otherIncome;
+    const propertyEquity = Math.max(0, houseValue - mortgage);
+    const netWealth = propertyEquity + otherAssets;
+
+    // --- CURRENT SYSTEM ---
+
+    // National Insurance
+    let ni1 = 0, ni1Detail = '';
+    if (salary1 > 12570) {
+        const b1 = Math.min(salary1 - 12570, 50270 - 12570);
+        ni1 += b1 * 0.12;
+        ni1Detail = `Adult 1: £12,570–${formatCurrency(Math.min(salary1, 50270))}: ${formatCurrency(b1)} × 12% = ${formatCurrency(b1 * 0.12)}`;
+        if (salary1 > 50270) { const b2 = salary1 - 50270; ni1 += b2 * 0.02; ni1Detail += `<br>Over £50,270: ${formatCurrency(b2)} × 2% = ${formatCurrency(b2 * 0.02)}`; }
+        ni1Detail += `<br><strong>Total: ${formatCurrency(ni1)}</strong>`;
+    } else if (salary1 > 0) { ni1Detail = `Adult 1: ${formatCurrency(salary1)} (below £12,570 threshold)`; }
+
+    let ni2 = 0, ni2Detail = '';
+    if (salary2 > 12570) {
+        const b1 = Math.min(salary2 - 12570, 50270 - 12570);
+        ni2 += b1 * 0.12;
+        ni2Detail = `Adult 2: £12,570–${formatCurrency(Math.min(salary2, 50270))}: ${formatCurrency(b1)} × 12% = ${formatCurrency(b1 * 0.12)}`;
+        if (salary2 > 50270) { const b2 = salary2 - 50270; ni2 += b2 * 0.02; ni2Detail += `<br>Over £50,270: ${formatCurrency(b2)} × 2% = ${formatCurrency(b2 * 0.02)}`; }
+        ni2Detail += `<br><strong>Total: ${formatCurrency(ni2)}</strong>`;
+    } else if (salary2 > 0) { ni2Detail = `Adult 2: ${formatCurrency(salary2)} (below £12,570 threshold)`; }
+
+    const totalNI = ni1 + ni2;
+    const niDetail = [ni1Detail, ni2Detail].filter(d => d).join('<br><br>');
+
+    // Income Tax (current)
+    function calcOldIT(income, label) {
+        if (income <= 0) return { tax: 0, detail: '' };
+        const taxable = Math.max(0, income - 12570);
+        if (taxable === 0) return { tax: 0, detail: `${label}: ${formatCurrency(income)} (below £12,570 allowance) — Tax: £0` };
+        let tax = 0, detail = `${label}: ${formatCurrency(income)}, taxable: ${formatCurrency(taxable)}<br>`;
+        const b1 = Math.min(taxable, 37700); tax += b1 * 0.20; detail += `£0–£37,700: ${formatCurrency(b1)} × 20% = ${formatCurrency(b1 * 0.20)}<br>`;
+        if (taxable > 37700) { const b2 = Math.min(taxable - 37700, 74870); tax += b2 * 0.40; detail += `£37,700–£112,570: ${formatCurrency(b2)} × 40% = ${formatCurrency(b2 * 0.40)}<br>`; }
+        if (taxable > 112570) { const b3 = taxable - 112570; tax += b3 * 0.45; detail += `Over £112,570: ${formatCurrency(b3)} × 45% = ${formatCurrency(b3 * 0.45)}<br>`; }
+        detail += `<strong>Tax: ${formatCurrency(tax)}</strong>`;
+        return { tax, detail };
+    }
+
+    const income1Old = salary1 + (salary2 === 0 ? otherIncome : otherIncome / 2);
+    const income2Old = salary2 + (salary2 > 0 ? otherIncome / 2 : 0);
+    const r1Old = calcOldIT(income1Old, 'Adult 1');
+    const r2Old = salary2 > 0 ? calcOldIT(income2Old, 'Adult 2') : { tax: 0, detail: '' };
+    const incomeTaxOld = r1Old.tax + r2Old.tax;
+    const incomeTaxOldDetail = salary2 > 0
+        ? `${r1Old.detail}<br><br>${r2Old.detail}<br><br><strong>Household total: ${formatCurrency(incomeTaxOld)}</strong>`
+        : (r1Old.detail || `Total income ${formatCurrency(totalIncome)} is below the £12,570 personal allowance`);
+
+    // Council Tax
+    let councilTax = 0;
+    if (houseValue > 0) {
+        if (houseValue < 150000) councilTax = 1200;
+        else if (houseValue < 250000) councilTax = 1600;
+        else if (houseValue < 350000) councilTax = 2000;
+        else if (houseValue < 500000) councilTax = 2400;
+        else councilTax = 3000;
+    }
+
+    const totalCurrentTax = totalNI + incomeTaxOld + councilTax;
+
+    // --- NEW SYSTEM ---
+
+    // Unified Income Tax
+    function calcNewIT(income, label) {
+        if (income <= 0) return { tax: 0, detail: '' };
+        const taxable = Math.max(0, income - 25000);
+        if (taxable === 0) return { tax: 0, detail: `${label}: ${formatCurrency(income)} (below £25k allowance) — Tax: £0` };
+        let tax = 0, detail = `${label}: ${formatCurrency(income)}, taxable: ${formatCurrency(taxable)}<br>`;
+        const b1 = Math.min(taxable, 75000); tax += b1 * 0.25; detail += `£25k–£100k: ${formatCurrency(b1)} × 25% = ${formatCurrency(b1 * 0.25)}<br>`;
+        if (taxable > 75000) { const b2 = Math.min(taxable - 75000, 150000); tax += b2 * 0.42; detail += `£100k–£250k: ${formatCurrency(b2)} × 42% = ${formatCurrency(b2 * 0.42)}<br>`; }
+        if (taxable > 225000) { const b3 = taxable - 225000; tax += b3 * 0.47; detail += `Over £250k: ${formatCurrency(b3)} × 47% = ${formatCurrency(b3 * 0.47)}<br>`; }
+        detail += `<strong>Tax: ${formatCurrency(tax)}</strong>`;
+        return { tax, detail };
+    }
+
+    const income1New = salary1 + (salary2 === 0 ? otherIncome : otherIncome / 2);
+    const income2New = salary2 + (salary2 > 0 ? otherIncome / 2 : 0);
+    const r1New = calcNewIT(income1New, 'Adult 1');
+    const r2New = salary2 > 0 ? calcNewIT(income2New, 'Adult 2') : { tax: 0, detail: '' };
+    const incomeTaxNew = r1New.tax + r2New.tax;
+    const incomeTaxNewDetail = salary2 > 0
+        ? `${r1New.detail}<br><br>${r2New.detail}<br><br><strong>Household total: ${formatCurrency(incomeTaxNew)}</strong>`
+        : (r1New.detail || `Total income ${formatCurrency(totalIncome)} is below the £25k personal allowance`);
+
+    // Wealth Tax
+    let wealthTax = 0, wealthTaxDetail = '';
+    if (netWealth <= 100000) {
+        wealthTaxDetail = `Net wealth: ${formatCurrency(netWealth)}<br>Below £100k threshold — no Wealth Tax`;
+    } else {
+        wealthTaxDetail = `Net wealth: ${formatCurrency(netWealth)}<br><br>`;
+        const bands = [[100000,500000,0.008],[500000,1000000,0.010],[1000000,3000000,0.015],[3000000,10000000,0.025],[10000000,25000000,0.040],[25000000,Infinity,0.053]];
+        const labels = ['£100k–£500k','£500k–£1m','£1m–£3m','£3m–£10m','£10m–£25m','Over £25m'];
+        bands.forEach(([lo, hi, rate], i) => {
+            if (netWealth > lo) {
+                const slice = Math.min(netWealth - lo, hi - lo);
+                const t = slice * rate;
+                wealthTax += t;
+                wealthTaxDetail += `${labels[i]}: ${formatCurrency(slice)} × ${(rate*100).toFixed(1)}% = ${formatCurrency(t)}<br>`;
+            }
+        });
+        wealthTaxDetail += `<br><strong>Total: ${formatCurrency(wealthTax)}</strong>`;
+    }
+
+    let deferralEligible = false;
+    if (netWealth > 500000 && totalIncome < 25000) {
+        deferralEligible = true;
+        wealthTaxDetail += `<br><br><strong style="color: var(--rd-green);">Deferral available</strong><br>Wealth over £500k but income under £25k. Tax can be deferred against your property — no immediate payment required.`;
+    }
+
+    // Land Value Tax
+    let landTax = 0, landTaxDetail = '';
+    if (houseValue > 0) {
+        const landValue = houseValue * 0.6;
+        landTax = landValue * 0.02;
+        landTaxDetail = `Property value: ${formatCurrency(houseValue)}<br>Land value (60%): ${formatCurrency(landValue)}<br>Rate: 2%<br><strong>Annual LVT: ${formatCurrency(landTax)}</strong>`;
+        if (deferralEligible) landTaxDetail += `<br><br><strong style="color: var(--rd-green);">Deferral available</strong> — can be deferred against your property.`;
+    } else {
+        landTaxDetail = `No property owned — renting.<br>Landlord pays LVT (may pass some through in rent).`;
+    }
+
+    // Road Pricing
+    let roadPricing = 0, roadPricingDetail = '';
+    if (carType === 'electric') {
+        roadPricing = milesPerYear * 0.02;
+        roadPricingDetail = `Electric: 2p/mile × ${milesPerYear.toLocaleString()} miles<br><strong>Annual cost: ${formatCurrency(roadPricing)}</strong>`;
+    } else if (carType === 'petrol') {
+        roadPricing = milesPerYear * 0.07;
+        roadPricingDetail = `Petrol/diesel: 7p/mile × ${milesPerYear.toLocaleString()} miles<br><strong>Annual cost: ${formatCurrency(roadPricing)}</strong>`;
+    } else {
+        roadPricingDetail = `No vehicle — no road pricing charge`;
+    }
+
+    // Carbon Tax
+    let carbonTax = 0, carbonDetail = '';
+    const heatingEmissions = { gas: 1.9, oil: 5.5, electric: 0.3, heatpump: 0 };
+    const heatingLabels = { gas: 'Gas heating', oil: 'Heating oil', electric: 'Electric heating', heatpump: 'Heat pump' };
+    const hEmit = heatingEmissions[heatingSource];
+    if (hEmit > 0) {
+        const hCost = hEmit * 130;
+        carbonTax += hCost;
+        carbonDetail = `${heatingLabels[heatingSource]}: ${hEmit} tonnes CO₂ × £130 = ${formatCurrency(hCost)}`;
+    } else {
+        carbonDetail = `Heat pump: ~0 tonnes CO₂ = £0`;
+    }
+    if (carType === 'petrol' && milesPerYear > 0) {
+        const litres = milesPerYear / 10;
+        const emit = litres * 0.00237;
+        const cost = emit * 130;
+        carbonTax += cost;
+        carbonDetail += `<br>Petrol: ${Math.round(litres)} litres × 2.37kg CO₂ = ${emit.toFixed(1)} tonnes × £130 = ${formatCurrency(cost)}`;
+    }
+    if (flights > 0) {
+        const emit = flights * 1.5;
+        const cost = emit * 130;
+        carbonTax += cost;
+        carbonDetail += `<br>${flights} flight${flights !== 1 ? 's' : ''} × 1.5 tonnes CO₂ = ${emit} tonnes × £130 = ${formatCurrency(cost)}`;
+    }
+    if (carbonTax > 0) carbonDetail += `<br><br><strong>Total: ${formatCurrency(carbonTax)}</strong>`;
+
+    const totalNewTax = incomeTaxNew + wealthTax + landTax + roadPricing + carbonTax;
+    const netChange = totalCurrentTax - totalNewTax;
+
+    // Update DOM
+    document.getElementById('niSaving').textContent = formatCurrency(totalNI);
+    document.getElementById('niCalc').innerHTML = niDetail || 'No employment income entered';
+    document.getElementById('incomeTaxOldAmount').textContent = formatCurrency(incomeTaxOld);
+    document.getElementById('incomeTaxOldCalc').innerHTML = incomeTaxOldDetail;
+    document.getElementById('councilTaxSaving').textContent = formatCurrency(councilTax);
+    document.getElementById('totalCurrentTax').textContent = formatCurrency(totalCurrentTax);
+    document.getElementById('incomeTaxNewAmount').textContent = formatCurrency(incomeTaxNew);
+    document.getElementById('incomeTaxNewCalc').innerHTML = incomeTaxNewDetail;
+    document.getElementById('wealthTaxAmount').textContent = formatCurrency(wealthTax);
+    document.getElementById('wealthTaxCalc').innerHTML = wealthTaxDetail;
+    document.getElementById('landTaxAmount').textContent = formatCurrency(landTax);
+    document.getElementById('landTaxCalc').innerHTML = landTaxDetail;
+    document.getElementById('roadPricingAmount').textContent = formatCurrency(roadPricing);
+    document.getElementById('roadPricingCalc').innerHTML = roadPricingDetail;
+    document.getElementById('carbonTaxAmount').textContent = formatCurrency(carbonTax);
+    document.getElementById('carbonTaxCalc').innerHTML = carbonDetail;
+    document.getElementById('totalNewTax').textContent = formatCurrency(totalNewTax);
+
+    const summaryBox = document.getElementById('summaryBox');
+    const summaryNumber = document.getElementById('summaryNumber');
+    const summaryText = document.getElementById('summaryText');
+    const monthly = Math.round(Math.abs(netChange) / 12);
+    summaryNumber.textContent = (netChange >= 0 ? '+' : '−') + formatCurrency(Math.abs(netChange));
+    if (netChange > 1000) {
+        summaryBox.className = 'rd-calc-summary better-off';
+        summaryNumber.className = 'rd-calc-summary-number positive';
+        summaryText.textContent = `You'd be better off by ${formatCurrency(netChange)} per year — around £${monthly.toLocaleString()} per month`;
+    } else if (netChange < -1000) {
+        summaryBox.className = 'rd-calc-summary worse-off';
+        summaryNumber.className = 'rd-calc-summary-number negative';
+        summaryText.textContent = `You'd pay ${formatCurrency(Math.abs(netChange))} more per year — around £${monthly.toLocaleString()} per month`;
+    } else {
+        summaryBox.className = 'rd-calc-summary neutral';
+        summaryNumber.className = 'rd-calc-summary-number';
+        summaryText.textContent = `Roughly neutral impact (within £1,000 either way)`;
+    }
+
+    // Actions
+    const actionsSection = document.getElementById('actionsSection');
+    const actionsContent = document.getElementById('actionsContent');
+    let actions = [];
+
+    if (heatingSource !== 'heatpump' && houseValue > 0) {
+        const hCost = Math.round(heatingEmissions[heatingSource] * 130);
+        if (hCost > 50) {
+            actions.push(`<p><strong>Switch to a heat pump:</strong> You're currently on ${heatingLabels[heatingSource].toLowerCase()}. A heat pump would save you around <strong>${formatCurrency(hCost)}/year</strong> in Carbon Tax, and you'd be eligible for a <strong>£15,000 government grant</strong> towards installation.</p>`);
+        }
+    }
+    if (carType === 'petrol' && milesPerYear > 0) {
+        const litres = milesPerYear / 10;
+        const petrolCarbon = litres * 0.00237 * 130;
+        const roadSaving = milesPerYear * (0.07 - 0.02);
+        const totalSaving = Math.round(roadSaving + petrolCarbon);
+        if (totalSaving > 100) {
+            actions.push(`<p><strong>Switch to an electric vehicle:</strong> At ${milesPerYear.toLocaleString()} miles/year, switching to an EV would save you <strong>${formatCurrency(totalSaving)}/year</strong> in Road Pricing and Carbon Tax. EVs are also zero-rated for VAT under this system.</p>`);
+        }
+    }
+    if (otherAssets > 50000 && wealthTax > 500) {
+        const toMove = Math.min(otherAssets, 40000);
+        let taxOnMoved = 0;
+        if (netWealth > 100000) {
+            const rate = netWealth <= 500000 ? 0.008 : netWealth <= 1000000 ? 0.010 : netWealth <= 3000000 ? 0.015 : 0.025;
+            taxOnMoved = toMove * rate;
+        }
+        if (taxOnMoved > 200) {
+            const relief = toMove * 0.25;
+            actions.push(`<p><strong>Move savings into a pension:</strong> Pensions are exempt from Wealth Tax. Contributing ${formatCurrency(toMove)} to a pension would save around <strong>${formatCurrency(taxOnMoved)}/year</strong> in Wealth Tax, plus around ${formatCurrency(relief)} in income tax relief on the contribution.</p>`);
+        }
+    }
+
+    actionsSection.style.display = actions.length > 0 ? 'block' : 'none';
+    actionsContent.innerHTML = actions.join('');
+}
+
+calculate();
+</script>
