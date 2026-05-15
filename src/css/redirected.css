@@ -1432,7 +1432,10 @@
    Fiscal impact tables (measure cost sections + Numbers page)
    ========================================================================== */
 .rd-fiscal-table {
+    display: block;
     width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     border-collapse: collapse;
     margin: 1.5rem 0;
     font-size: var(--rd-text-base);
@@ -1440,16 +1443,17 @@
 .rd-fiscal-table thead th {
     background: var(--rd-dark);
     color: var(--rd-white);
-    padding: 0.7rem 1rem;
+    padding: 0.7rem 0.75rem;
     text-align: left;
     font-size: 0.85em;
     font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 .rd-fiscal-table thead th:last-child { text-align: right; }
 .rd-fiscal-table td {
-    padding: 0.6rem 1rem;
+    padding: 0.6rem 0.75rem;
     border-bottom: 1px solid var(--rd-border);
     font-size: var(--rd-text-base);
 }
