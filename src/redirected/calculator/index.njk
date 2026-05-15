@@ -63,7 +63,7 @@ description: See how the Redirected tax reform would affect your household — e
     .rd-calc-sidebar {
         flex: 0 0 280px;
         position: sticky;
-        top: 1rem;
+        top: 5rem;
     }
 
     @media (max-width: 900px) {
@@ -120,6 +120,8 @@ description: See how the Redirected tax reform would affect your household — e
         border-radius: 4px;
         box-sizing: border-box;
     }
+    .rd-form-group input[type="number"] { max-width: 180px; }
+    .rd-form-group select { max-width: 220px; }
     .rd-form-group input:focus,
     .rd-form-group select:focus {
         outline: 3px solid var(--rd-yellow);
@@ -227,6 +229,55 @@ description: See how the Redirected tax reform would affect your household — e
         font-size: var(--rd-heading-3);
     }
     .rd-calc-actions p { font-size: var(--rd-text-base); }
+
+    .rd-defer-option {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: var(--rd-green);
+        border: 1px solid var(--rd-green);
+        padding: 0.1rem 0.4rem;
+        border-radius: 3px;
+        margin-top: 0.3rem;
+        letter-spacing: 0.02em;
+    }
+    .rd-summary-deferred {
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    .rd-summary-deferred-amount {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--rd-green);
+        line-height: 1;
+        margin: 0.25rem 0;
+    }
+    .rd-summary-deferred-cash-label {
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+        color: rgba(255,255,255,0.6);
+        margin-top: 0.75rem;
+        margin-bottom: 0.15rem;
+    }
+    .rd-summary-deferred-cash-number {
+        font-size: 1.75rem;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--rd-yellow);
+        margin-bottom: 0.2rem;
+    }
+    .rd-summary-deferred-cash-sub {
+        font-size: 0.8rem;
+        color: rgba(255,255,255,0.65);
+    }
+    .rd-summary-deferred-note {
+        font-size: 0.75rem;
+        color: rgba(255,255,255,0.4);
+        margin-top: 0.75rem;
+    }
 </style>
 
 <div class="rd-calc-hero">
@@ -243,9 +294,6 @@ description: See how the Redirected tax reform would affect your household — e
     </div>
 
     <div class="rd-calc-presets">
-        <button class="rd-btn rd-btn--primary" onclick="loadPreset('workingFamily')">Working Family</button>
-        <button class="rd-btn rd-btn--primary" onclick="loadPreset('pensioner')">Asset-Rich Pensioner</button>
-        <button class="rd-btn rd-btn--primary" onclick="loadPreset('landlord')">Wealthy Landlord</button>
         <button class="rd-btn" style="background: var(--rd-light); color: var(--rd-dark); font-weight: 700; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; border: none; cursor: pointer; font-family: inherit; font-size: var(--rd-text-base);" onclick="loadPreset('reset')">Reset</button>
     </div>
 
@@ -298,7 +346,7 @@ description: See how the Redirected tax reform would affect your household — e
 
                 <div class="rd-form-group">
                     <label for="otherAssets">Other Assets</label>
-                    <span class="rd-hint">Savings, investments, second properties — not pensions</span>
+                    <span class="rd-hint">Savings, investments, second properties — not UK pensions</span>
                     <div class="rd-input-prefix">
                         <input type="number" id="otherAssets" value="0" min="0" step="10000" oninput="calculate()">
                     </div>
@@ -306,7 +354,7 @@ description: See how the Redirected tax reform would affect your household — e
 
                 <div class="rd-form-group">
                     <label for="pensionValue">Value of Pensions</label>
-                    <span class="rd-hint">Total pension pot value — exempt from Wealth Tax</span>
+                    <span class="rd-hint">Total value of UK pension pots (workplace, SIPP, personal) — exempt from Wealth Tax</span>
                     <div class="rd-input-prefix">
                         <input type="number" id="pensionValue" value="0" min="0" step="10000" oninput="calculate()">
                     </div>
@@ -423,8 +471,15 @@ description: See how the Redirected tax reform would affect your household — e
                             </td>
                             <td class="amount negative" id="carbonTaxAmount">£0</td>
                         </tr>
+                        <tr id="deferredRow" style="display:none">
+                            <td>
+                                Deferred against property
+                                <div class="rd-calc-detail" id="deferredCalc"></div>
+                            </td>
+                            <td class="amount neutral" id="deferredRowAmount">£0</td>
+                        </tr>
                         <tr>
-                            <td><strong>Total new taxes</strong></td>
+                            <td><strong id="totalNewTaxLabel">Total new taxes</strong></td>
                             <td class="amount negative" id="totalNewTax">£0</td>
                         </tr>
                     </tbody>
@@ -443,6 +498,14 @@ description: See how the Redirected tax reform would affect your household — e
                 <div class="rd-calc-summary-label">Net Annual Change</div>
                 <div id="summaryNumber" class="rd-calc-summary-number">£0</div>
                 <div id="summaryText" class="rd-calc-summary-text">Enter your details to see your impact</div>
+                <div id="summaryDeferred" class="rd-summary-deferred" style="display:none">
+                    <div class="rd-calc-summary-label">Deferral option</div>
+                    <div id="summaryDeferredAmount" class="rd-summary-deferred-amount"></div>
+                    <div class="rd-summary-deferred-cash-label">If deferred, cash position</div>
+                    <div id="summaryDeferredCashNumber" class="rd-summary-deferred-cash-number"></div>
+                    <div id="summaryDeferredCashSub" class="rd-summary-deferred-cash-sub"></div>
+                    <div class="rd-summary-deferred-note">Wealth Tax and LVT accrue against your property — paid on sale, not now</div>
+                </div>
             </div>
         </div>
 
@@ -456,9 +519,6 @@ description: See how the Redirected tax reform would affect your household — e
 
 <script>
 const presets = {
-    workingFamily: { salary1: 30000, salary2: 25000, otherIncome: 0, houseValue: 0, mortgage: 0, otherAssets: 0, pensionValue: 0, milesPerYear: 8000, carType: 'petrol', heatingSource: 'gas', flights: 0 },
-    pensioner: { salary1: 0, salary2: 0, otherIncome: 15000, houseValue: 400000, mortgage: 0, otherAssets: 80000, pensionValue: 0, milesPerYear: 3000, carType: 'petrol', heatingSource: 'gas', flights: 0 },
-    landlord: { salary1: 0, salary2: 0, otherIncome: 60000, houseValue: 600000, mortgage: 0, otherAssets: 1400000, pensionValue: 0, milesPerYear: 12000, carType: 'petrol', heatingSource: 'gas', flights: 4 },
     reset: { salary1: 0, salary2: 0, otherIncome: 0, houseValue: 0, mortgage: 0, otherAssets: 0, pensionValue: 0, milesPerYear: 0, carType: 'none', heatingSource: 'gas', flights: 0 }
 };
 
@@ -612,11 +672,7 @@ function calculate() {
         wealthTaxDetail += `<br><strong>Total: ${formatCurrency(wealthTax)}</strong>`;
     }
 
-    let deferralEligible = false;
-    if (netWealth > 500000 && totalIncome < 25000) {
-        deferralEligible = true;
-        wealthTaxDetail += `<br><br><strong style="color: var(--rd-green);">Deferral available</strong><br>Wealth over £500k but income under £25k. Tax can be deferred against your property — no immediate payment required.`;
-    }
+    const deferralEligible = netWealth > 500000 && totalIncome < 50000;
 
     // Land Value Tax
     let landTax = 0, landTaxDetail = '';
@@ -624,7 +680,6 @@ function calculate() {
         const landValue = houseValue * 0.6;
         landTax = landValue * 0.02;
         landTaxDetail = `Property value: ${formatCurrency(houseValue)}<br>Land value (60%): ${formatCurrency(landValue)}<br>Rate: 2%<br><strong>Annual LVT: ${formatCurrency(landTax)}</strong>`;
-        if (deferralEligible) landTaxDetail += `<br><br><strong style="color: var(--rd-green);">Deferral available</strong> — can be deferred against your property.`;
     } else {
         landTaxDetail = `No property owned — renting.<br>Landlord pays LVT (may pass some through in rent).`;
     }
@@ -669,7 +724,10 @@ function calculate() {
     if (carbonTax > 0) carbonDetail += `<br><br><strong>Total: ${formatCurrency(carbonTax)}</strong>`;
 
     const totalNewTax = incomeTaxNew + wealthTax + landTax + roadPricing + carbonTax;
+    const deferredTotal = deferralEligible ? wealthTax + landTax : 0;
+    const cashNewTax = totalNewTax - deferredTotal;
     const netChange = totalCurrentTax - totalNewTax;
+    const cashNetChange = totalCurrentTax - cashNewTax;
 
     // Update DOM
     document.getElementById('niSaving').textContent = formatCurrency(totalNI);
@@ -680,19 +738,32 @@ function calculate() {
     document.getElementById('totalCurrentTax').textContent = formatCurrency(totalCurrentTax);
     document.getElementById('incomeTaxNewAmount').textContent = formatCurrency(incomeTaxNew);
     document.getElementById('incomeTaxNewCalc').innerHTML = incomeTaxNewDetail;
-    document.getElementById('wealthTaxAmount').textContent = formatCurrency(wealthTax);
-    document.getElementById('wealthTaxCalc').innerHTML = wealthTaxDetail;
-    document.getElementById('landTaxAmount').textContent = formatCurrency(landTax);
-    document.getElementById('landTaxCalc').innerHTML = landTaxDetail;
     document.getElementById('roadPricingAmount').textContent = formatCurrency(roadPricing);
     document.getElementById('roadPricingCalc').innerHTML = roadPricingDetail;
     document.getElementById('carbonTaxAmount').textContent = formatCurrency(carbonTax);
     document.getElementById('carbonTaxCalc').innerHTML = carbonDetail;
+
+    const wealthEl = document.getElementById('wealthTaxAmount');
+    const landEl = document.getElementById('landTaxAmount');
+    document.getElementById('deferredRow').style.display = 'none';
+    if (deferralEligible) {
+        wealthEl.innerHTML = `${formatCurrency(wealthTax)}<br><span class="rd-defer-option">Option to defer</span>`;
+        landEl.innerHTML = `${formatCurrency(landTax)}<br><span class="rd-defer-option">Option to defer</span>`;
+    } else {
+        wealthEl.textContent = formatCurrency(wealthTax);
+        landEl.textContent = formatCurrency(landTax);
+    }
+    wealthEl.className = 'amount negative';
+    landEl.className = 'amount negative';
+    document.getElementById('wealthTaxCalc').innerHTML = wealthTaxDetail;
+    document.getElementById('landTaxCalc').innerHTML = landTaxDetail;
+    document.getElementById('totalNewTaxLabel').textContent = 'Total new taxes';
     document.getElementById('totalNewTax').textContent = formatCurrency(totalNewTax);
 
     const summaryBox = document.getElementById('summaryBox');
     const summaryNumber = document.getElementById('summaryNumber');
     const summaryText = document.getElementById('summaryText');
+    const summaryDeferred = document.getElementById('summaryDeferred');
     const monthly = Math.round(Math.abs(netChange) / 12);
     summaryNumber.textContent = (netChange >= 0 ? '+' : '−') + formatCurrency(Math.abs(netChange));
     if (netChange > 1000) {
@@ -707,6 +778,16 @@ function calculate() {
         summaryBox.className = 'rd-calc-summary neutral';
         summaryNumber.className = 'rd-calc-summary-number';
         summaryText.textContent = `Roughly neutral impact (within £1,000 either way)`;
+    }
+    if (deferralEligible && deferredTotal > 0) {
+        summaryDeferred.style.display = '';
+        document.getElementById('summaryDeferredAmount').textContent = formatCurrency(deferredTotal) + '/yr eligible to defer';
+        const cashMonthly = Math.round(Math.abs(cashNetChange) / 12);
+        const cashSign = cashNetChange >= 0 ? '+' : '−';
+        document.getElementById('summaryDeferredCashNumber').textContent = cashSign + formatCurrency(Math.abs(cashNetChange));
+        document.getElementById('summaryDeferredCashSub').textContent = `per year — £${cashMonthly.toLocaleString()} per month`;
+    } else {
+        summaryDeferred.style.display = 'none';
     }
 
     // Actions
@@ -738,7 +819,7 @@ function calculate() {
         }
         if (taxOnMoved > 200) {
             const relief = toMove * 0.25;
-            actions.push(`<p><strong>Move savings into a pension:</strong> Pensions are exempt from Wealth Tax. Contributing ${formatCurrency(toMove)} to a pension would save around <strong>${formatCurrency(taxOnMoved)}/year</strong> in Wealth Tax, plus around ${formatCurrency(relief)} in income tax relief on the contribution.</p>`);
+            actions.push(`<p><strong>Move savings into a UK pension:</strong> UK pension pots are exempt from Wealth Tax. Contributing ${formatCurrency(toMove)} to a UK pension would save around <strong>${formatCurrency(taxOnMoved)}/year</strong> in Wealth Tax, plus around ${formatCurrency(relief)} in income tax relief on the contribution.</p>`);
         }
     }
 

@@ -10,11 +10,15 @@ heroImageAlt: A petrol station forecourt
 
 impact: |
   <ul>
-    <li>Green choices become relatively cheaper — without banning anything</li>
-    <li>Emissions fall as price signals do the work that regulation can't</li>
+    <li>Increase in heat pump installations</li>
+    <li>Increase in EV purchases</li>
+    <li>Petrol and diesel vehicles retiring in large numbers</li>
+    <li>Pressure on scrap yards and recycling facilities</li>
+    <li>Almost every household is installing or waiting to install solar and batteries</li>
+    <li>High demand for installers, a jobs boom but also a skills gap to fill</li>
+    <li>Noticeable improvement in urban air quality</li>
+    <li>Smart meters and dynamic pricing means most people pay less for home energy</li>
     <li>The UK hits 22% fewer emissions by 2030</li>
-    <li>Electricity is cheaper when the grid is green</li>
-    <li>For most households, the additional cost is more than offset elsewhere in the reform</li>
   </ul>
 
 cost: |
@@ -35,12 +39,11 @@ cost: |
       <tr class="rd-fiscal-row--neutral"><td>Total transition package</td><td>£38bn over 5 years</td></tr>
     </tbody>
   </table>
-  <p>A price cap of £300 per tonne prevents the rate rising indefinitely. Beyond that ceiling, the system transitions to permit trading. The declining revenue as emissions fall is not a fiscal problem: a tax that reduces its own base is doing its job.</p>
 
 evidence: |
-  <p>The case for carbon pricing is not ideological; it is the straightforward application of a principle: when something has a cost that is not reflected in its price, it will be overconsumed. The atmosphere has been a free dump for two centuries. Carbon pricing ends the subsidy.</p>
-  <p>British Columbia's Carbon Tax Act of 2008 is the model that works: visible at the pump, returned to households through tax cuts, designed so the costs and benefits are legible. The Canadian federal scheme is the cautionary tale: economically sound but politically destroyed because costs were visible at the point of transaction and rebates arrived invisibly months later. Experience is the design, not a layer on top of it.</p>
-  <p>The plastic bag levy is proof at small scale. A 5p charge changed behaviour dramatically, not because 5p matters, but because it makes the cost visible at the moment of decision. The carbon tax applies the same principle at the scale of the whole economy.</p>
+  <p>The case for carbon pricing is clear: when something has a cost that is not reflected in its price, it will be overconsumed. The atmosphere has been a free dump for two centuries. Carbon pricing ends the subsidy.</p>
+  <p>British Columbia's Carbon Tax Act of 2008 was a model that worked: visible at the pump, returned to households through tax cuts, designed so the costs and benefits are obvious.</p>
+  <p>The plastic bag levy showed this at small scale. A tiny 5p charge changed behaviour dramatically because it makes the cost visible at the moment of decision. The Carbon Tax applies the same principle to the biggest challenge we face.</p>
 
 stats:
   - number: "22%"
@@ -61,9 +64,31 @@ related:
     title: Abolish National Insurance
 ---
 
-Carbon pricing is the policy equivalent of going with the grain. It does not ask people to want less, to care more, or to become different from who they are. It changes the price. And when the price changes, behaviour follows, not because of heroic self-sacrifice but because of the ordinary human instinct to do what makes economic sense.
+> A tax on direct production of CO<sub>2</sub> through purchase of petrol, diesel, gas and heating oil. 
+> 
+> Applied to electricity bills based on percentage coming from renewable sources, with customers able to buy from better suppliers or at better times through smart meters and dynamic pricing.
+> 
+> Replaces Air Passenger Duty as fairer reflection of emissions. A direct incentive for sustainable aviation development.
 
-The price is set to decline 2% per year in real terms as emissions fall — but if emissions fall faster, the price per tonne rises to maintain the signal. The rate is not fixed; it tracks behaviour. A £300 per tonne cap (inflation-indexed) is the ceiling; beyond that, the system transitions to permit trading.
+The Carbon Tax is honest and yet it goes with the grain of our nature. It does not ask us to want less and it doesn’t ban anything. It simply changes the price. 
+
+We know that when consequences are priced in and, crucially, when alternatives are available, most of us make the sensible switch.
+
+## Less Exposed to Oil Volatility
+
+Moving off fossils means global shocks affect our bills less.
+
+The current fuel duty on petrol and diesel increases when prices rise, which means households dependent on their cars face a double whammy.
+
+Switching to a Carbon Tax instead removes this jeopardy. Regardless of what a litre of unleaded costs, it’s the amount of CO<sub>2</sub> we tax at the current agreed carbon price.
+
+## The Disappearing Tax
+
+As we buy less fossil fuel over the months and years, government revenue will fall.
+
+As this happens, the price per tonne will increase making the case more and more compelling for those still undecided.
+
+Eventually the price will reach our cap of £300 per tonne and we’ll switch to emissions permits which can be traded. 
 
 <table class="rd-fiscal-table">
   <thead>
@@ -78,8 +103,4 @@ The price is set to decline 2% per year in real terms as emissions fall — but 
   </tbody>
 </table>
 
-Revenue falling as the decades pass is not a fiscal problem. A tax that shrinks its own base is doing its job.
-
-The objection that carbon taxes are regressive is worth taking seriously. A uniform charge on energy is a larger proportion of a low-income household's budget than a high-income one. This is real. The answer is not to abandon carbon pricing but to design it properly, returning revenue through the abolition of council tax and NI, which together represent a far larger gain for most households than the additional carbon costs.
-
-The household numbers are unambiguous: for three-quarters of UK households, the combination of NI abolition, the doubled personal allowance, and council tax abolition dwarfs the carbon costs by a factor of five to eight. The net effect for most people is strongly positive. The transition is funded by those who can most afford it, and the people who benefit most immediately are those who earn rather than accumulate.
+The Carbon Tax fits into our principle of give and take. The new bargain between the state and the people. The costs of this new tax are more than offset by historic reductions in [income tax](/redirected/measures/income-tax-reform/) and [national insurance](/redirected/measures/abolish-national-insurance). Weaning ourselves off fossil fuels will comes at a price now, but will save every household a fortune over time.

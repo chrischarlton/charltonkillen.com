@@ -23,7 +23,7 @@ cost: |
     </thead>
     <tbody>
       <tr><td>Progressive wealth tax (0.8–5.3% on net wealth above £100,000)</td><td>+£84.75bn</td></tr>
-      <tr><td>Exit tax (25% on net wealth over £1m for emigrants)</td><td>+£3bn</td></tr>
+      <tr><td>Exit Tax (25% on net wealth over £1m for emigrants)</td><td>+£3bn</td></tr>
       <tr class="rd-fiscal-row--out"><td>Agricultural land exemption (foregone revenue)</td><td>−£1.25bn</td></tr>
       <tr class="rd-fiscal-row--net"><td>Net new revenue</td><td>+£86.5bn/year</td></tr>
     </tbody>
@@ -31,9 +31,9 @@ cost: |
   <p>The deferral mechanisms reduce short-term revenue by less than £2bn annually. Deferred amounts are recovered when assets are sold, so long-term yield is not significantly affected.</p>
 
 evidence: |
-  <p>Piketty's central observation — that when returns to capital exceed the growth rate of the economy, wealth concentrates — describes the UK's last four decades precisely. The wealth tax does not reverse that entirely. But it slows it, and it redirects the revenue toward the things a growing economy actually needs.</p>
-  <p>The "but I already paid tax on it" objection misses the point. Wealth that appreciates in value is not being taxed twice. The original purchase was taxed. The subsequent appreciation — driven by population growth, infrastructure investment, planning decisions, and the general functioning of society — has not been. The wealth tax applies to that appreciation.</p>
-  <p>Agricultural land is exempt because working farms depend on land they cannot easily sell and receive no passive income from holding it. The exemption mirrors current Inheritance Tax agricultural property relief and costs £1.25bn in foregone revenue — 1.4% of the total yield. Other business assets are not blanket-exempt, but active business owners benefit from performance-based deferral if those assets are not appreciating.</p>
+  <p>When returns to capital exceed the growth rate of the economy, wealth concentrates. The wealth tax does not reverse decades of decline entirely. But it slows it, and it redirects the revenue toward the things a growing economy actually needs.</p>
+  <p>Wealth that appreciates in value is not being taxed twice. Appreciation is the result of scarcity, population growth, infrastructure investment, planning decisions and the general functioning of society. The tax applies to that appreciation.</p>
+  <p>Agricultural land is exempt because working farms depend on land they cannot easily sell and receive no passive income from holding it. The exemption mirrors current Inheritance Tax agricultural property relief and costs £1.25bn in foregone revenue — 1.4% of the total yield.</p>
 
 stats:
   - number: "£100k"
@@ -56,7 +56,7 @@ related:
     title: Empower Young Workers
 ---
 
-The sweets analogy is the clearest way to put it. You buy a bag of sweets and discover the bag has grown while sitting on the shelf. The wealth tax is not a charge on the sweets you bought; it is a modest charge on the growth that happened without any effort on your part.
+> Net assets are valued each year and Wealth Tax is charged according to one of seven bands. The tax can be paid in monthly instalments over the following year. UK-invested pension savings are completely exempt.
 
 The seven bands:
 
@@ -75,6 +75,10 @@ The seven bands:
   </tbody>
 </table>
 
-What this means in practice: someone with £200,000 in savings and a modest pension pays roughly £800 per year. A retired teacher with a £400,000 house and limited income qualifies for asset-rich income-poor deferral — nothing is due until the property is sold. The genuinely wealthy pay rates that remain well below the effective rates on income for most workers.
+Taxing wealth more than work is the right thing to do, so even those with modest wealth pay a modest amount.
 
-Self-declaration is required, with severe penalties for undervaluation. Annual wealth statements are required above £500,000. Professional valuations are required every five years above £2 million.
+In practice: someone with £200k in savings and a modest UK pension would pay £800 per year, or £67 a month.
+
+A pensioner with a valuable house and limited income qualifies for Wealth Tax Deferral. This means nothing is due until the property is sold.
+
+Well managed wealth grows. It’s like having a bag of 100 sweets. If you put the bag in the right place, each year you might find another 6 or 7 sweets in there, without you needing to do anything. The Wealth Tax leaves most people with most of this bonus, but takes one or two to build and maintain the country which made that wealth possible. Nothing could be fairer.

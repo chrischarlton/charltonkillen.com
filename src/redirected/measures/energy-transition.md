@@ -20,8 +20,8 @@ stats:
 
 impact: |
   <ul>
-    <li>Heat pumps become affordable for most households, not just the well-off</li>
-    <li>EVs cost less to buy and dramatically less to run than petrol cars</li>
+    <li>Heat pumps affordable for most households, not just the well-off</li>
+    <li>EVs cost less to buy and run than petrol or diesel cars</li>
     <li>Charging becomes practical with 300,000 public points by 2030</li>
     <li>3.5 million households have heat pumps by 2030</li>
     <li>Public transport becomes more frequent, more reliable, and more useful</li>
@@ -38,10 +38,10 @@ cost: |
       <tr class="rd-fiscal-row--out"><td>Public transport investment (bus, rail, electrification)</td><td>£8bn</td></tr>
       <tr class="rd-fiscal-row--out"><td>Home insulation for lower-income households</td><td>£10bn</td></tr>
       <tr class="rd-fiscal-row--out"><td>Fossil fuel worker retraining</td><td>£5bn</td></tr>
-      <tr class="rd-fiscal-row--net"><td>Total transition package</td><td>£45bn over 5 years</td></tr>
+      <tr class="rd-fiscal-row--net-cost"><td>Total revenue cost</td><td>£45bn over 5 years</td></tr>
     </tbody>
   </table>
-  <p>Funded by <a href="/redirected/measures/carbon-tax/">carbon tax</a> revenue (net new: +£29.5bn/year in Year 1) and the reform's overall £34bn surplus. As emissions fall, carbon tax revenue falls, and fewer households need the transition grants because more have already made the switch. The package is designed to become less necessary as it succeeds.</p>
+  <p>Funded in part by the <a href="/redirected/measures/carbon-tax/">Carbon Tax</a>. As emissions fall, Carbon Tax revenue falls. Fewer households need the transition grants because more have already made the switch. The package is becomes less necessary as it succeeds.</p>
 
 related:
   - slug: carbon-tax
@@ -50,6 +50,12 @@ related:
     title: VAT for the Planet
 ---
 
-The energy transition is not held back by technology. Heat pumps work. Electric vehicles work. The barriers are upfront cost and uncertain payback: exactly the barriers that grants, VAT reform, and road pricing discounts address.
+> Investing now to save in the future.
+>  
+> Incentivising choices which lock in cheaper and cleaner energy for households.
+> 
+> Building better public transport while pricing roads dynamically.
 
-The transition support is funded by the carbon tax revenue. In effect, the polluters fund the transition. As emissions fall, carbon tax revenue falls, and the transition investment requirement falls too, because more households have already made the switch. The system is designed to become less necessary as it succeeds.
+The energy transition is not held back by technology. Heat pumps work. Electric vehicles work. The barriers are upfront cost and uncertain payback.
+
+These are the barriers that grants, VAT reform and road pricing discounts address.

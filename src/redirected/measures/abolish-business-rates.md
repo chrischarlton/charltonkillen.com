@@ -2,9 +2,9 @@
 layout: redirected-measure.njk
 title: Abolish Business Rates
 theme: profit
-tagline: "£26bn removed from the cost of doing business, replaced by a Land Value Tax on the land itself — not the business built on it."
+tagline: "£26bn removed from the cost of doing business, replaced by a tax on land which incentivises growth and development."
 heroStat: "£26bn"
-heroStatLabel: off the cost of occupying premises from day one
+heroStatLabel: "off the cost of occupying premises from day one"
 heroImage: high-street.png
 heroImageAlt: A British high street with a mix of occupied shops and empty units
 
@@ -32,7 +32,7 @@ cost: |
 
 evidence: |
   <p>Business rates have been identified by virtually every business organisation in the UK as a major structural obstacle, particularly for smaller businesses and the high street. They create a cliff edge that discourages expansion and favour online retailers — who use less rateable space per pound of revenue — over physical ones.</p>
-  <p>The Land Value Tax alternative cannot be gamed. Land value is objectively assessable. It cannot be disguised as intellectual property or shifted to Dublin. The land is there, it has a value, and the owner either uses it or pays for it.</p>
+  <p>The Land Value Tax alternative cannot be gamed. Land value is objectively assessable. It cannot be disguised as intellectual property or shifted to a lower tax jurisdiction. The land is there, it has a value, and the owner must use it well so that it’s an asset rather than a liability.</p>
 
 stats:
   - number: "–44%"
@@ -53,9 +53,9 @@ related:
     title: The Best Place in the World to Employ People
 ---
 
-The irony of business rates is complete. A tax intended to fund local services has become a mechanism that punishes businesses for occupying and improving premises, while exempting the landowners who benefit most from public infrastructure investment.
+> Abolish Business Rates and instead use Land Value Tax with different rates for different types of businesses and land use.
 
-The Business Land Value Tax replaces it with four rates, tiered by use:
+Four rates, tiered by use:
 
 <table class="rd-fiscal-table">
   <thead>

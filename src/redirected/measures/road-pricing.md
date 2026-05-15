@@ -2,19 +2,19 @@
 layout: redirected-measure.njk
 title: Road Pricing
 theme: planet
-tagline: GPS-based distance charging replaces Vehicle Excise Duty. Revenue-neutral for the average driver. A 70% discount for EVs.
+tagline: GPS-based distance charging replaces road tax (VED). Revenue-neutral for the average driver. A 70% discount for EVs.
 heroStat: "2p"
-heroStatLabel: per mile for electric vehicles — 70% below the standard rate
+heroStatLabel: per mile for electric vehicles (7p for petrol & diesel)
 heroImage: motorway.png
 heroImageAlt: A British motorway viewed from a gantry, multiple lanes of traffic
 
 impact: |
   <ul>
     <li>Rural drivers pay less than they do today</li>
-    <li>City-centre peak commuters pay more — and some switch to public transport</li>
+    <li>City-centre peak commuters pay more, encouraging the switch to public transport</li>
     <li>EV drivers pay a fraction of what petrol drivers pay</li>
     <li>Congestion falls as peak-hour pricing changes behaviour</li>
-    <li>No route data stored — only distance and charge</li>
+    <li>School runs become more walking-friendly with massive benefits for communities and child respiratory health</li>
   </ul>
 
 cost: |
@@ -28,7 +28,7 @@ cost: |
       <tr class="rd-fiscal-row--net"><td>Net new revenue</td><td>+£21bn/year</td></tr>
     </tbody>
   </table>
-  <p>Fuel duty is replaced separately by the <a href="/redirected/measures/carbon-tax/">carbon tax</a>, which prices the emissions directly rather than the distance driven.</p>
+  <p>Fuel Duty is also replaced by the <a href="/redirected/measures/carbon-tax/">Carbon Tax</a>, which prices the emissions from the most polluting vehicles.</p>
 
 evidence: |
   <p>VED is a blunt instrument. It charges the same whether you drive 1,000 miles or 30,000. Fuel duty is better — it correlates with use — but it cannot distinguish between a rural driver with no alternative and an urban commuter choosing to drive at peak hour when the road is already congested.</p>
@@ -53,7 +53,9 @@ related:
     title: VAT for the Planet
 ---
 
-Road pricing replaces two taxes — Vehicle Excise Duty and a portion of fuel duty — with a single charge based on actual road use. The base rates:
+> Replace Vehicle Excise Duty (commonly known as ‘road tax’) and a portion of fuel duty with dynamic **Road Pricing**.
+
+Road use is tracked via an independent GPS system which strict privacy regulations, public oversight and accountability. Only the data needed to charge accurately is gathered.
 
 <table class="rd-fiscal-table">
   <thead>
@@ -94,4 +96,4 @@ What this means in practice for three different drivers — all of whom currentl
   </tbody>
 </table>
 
-In each case, the driver who imposes the most cost on the system pays the most. The driver who imposes the least pays the least.
+Once you pay annual road tax (VED) it makes sense to drive as much as possible to spread the cost. When you only pay per mile and when the type of miles you drive are charged at different rates, you are empowered to make different choices.

@@ -1,10 +1,10 @@
 ---
 layout: redirected-measure.njk
-title: Cut Corporation Tax to 20%
+title: Cut Corporation Tax
 theme: profit
-tagline: "Down from 25%, competitive with Germany, and combined with no employer NI, uniquely attractive."
+tagline: "Down from 25%, competitive with the US and below most of Western Europe."
 heroStat: "20%"
-heroStatLabel: "corporation tax: down from 25%"
+heroStatLabel: "corporation tax"
 heroImage: industrial-estate.png
 heroImageAlt: A British industrial estate with occupied units
 
@@ -49,6 +49,14 @@ related:
     title: Abolish National Insurance
 ---
 
-A corporation tax cut in isolation is easy to criticise: it benefits shareholders and the already-profitable. In isolation, that criticism is fair. In the context of this reform, it is part of a package that makes the UK genuinely and distinctively attractive for businesses that employ people.
+> Cut the tax on profits by a fifth to 20%
 
-The test is not the corporation tax rate in isolation. It is the total cost of building a business, employing people, and operating premises in the UK versus the alternatives. On that combined measure (no [employer NI](/redirected/measures/abolish-national-insurance/), 20% corporation tax, no [business rates](/redirected/measures/abolish-business-rates/)) the UK becomes uniquely competitive.
+A Corporation Tax cut might feel counterintuitive and in isolation, hard to defend.
+
+In the context of this reform however, it is part of a package that makes the UK genuinely and distinctively attractive for businesses that employ people.
+
+We are also [taxing accumulated wealth](/redirected/measures/wealth-tax/) which means excessive profits are addressed downstream. Reinvestment or putting profits into UK pension funds is encouraged driving further growth and improved living standards.
+
+We want the total cost of building a business, employing people and operating premises in the UK to be low.
+
+We want Britain to become uniquely competitive again.
