@@ -27,11 +27,11 @@ cost: |
       <tr class="rd-fiscal-row--net-cost"><td>Total revenue cost</td><td>−£200.6bn</td></tr>
     </tbody>
   </table>
-  <p>The £200.6bn removed from employment costs is replaced by new revenues from the <a href="/redirected/measures/wealth-tax/">progressive wealth tax</a>, <a href="/redirected/measures/housing-revolution/">Land Value Tax</a>, and <a href="/redirected/measures/carbon-tax/">carbon tax</a>. The reform is revenue-neutral overall. The shift is not from one pocket to another: it moves the burden from taxing work to taxing accumulated wealth and pollution.</p>
+  <p>The £200.6bn removed from employment costs is replaced by new revenues from the <a href="/redirected/measures/wealth-tax/">progressive wealth tax</a>, <a href="/redirected/measures/housing-revolution/">Land Value Tax</a>, and <a href="/redirected/measures/carbon-tax/">carbon tax</a>. The reform is revenue-neutral overall. The burden moves from taxing work to taxing accumulated wealth and pollution.</p>
 
 evidence: |
   <p>Employer NI creates a direct cost to hiring. Every marginal hire must generate enough revenue to justify not just the wage but the 13.8% levy on top of it. The effect is most acute for small businesses considering their first or second hire, and for roles at the lower end of the wage scale where margins are tightest.</p>
-  <p>It’s partly replaced by, a <a href="/redirected/measures/wealth-tax/">progressive wealth tax</a>, which raises revenue from wealth that has accumulated over a lifetime (or been inherited) rather than from the act of working.</p>
+  <p>It’s partly replaced by a <a href="/redirected/measures/wealth-tax/">progressive wealth tax</a>, which raises revenue from wealth that has accumulated over a lifetime (or been inherited) rather than from the act of working.</p>
 
 stats:
   - number: "£3,800"

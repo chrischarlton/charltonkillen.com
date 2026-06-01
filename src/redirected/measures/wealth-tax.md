@@ -32,7 +32,7 @@ cost: |
 
 evidence: |
   <p>When returns to capital exceed the growth rate of the economy, wealth concentrates. The wealth tax does not reverse decades of decline entirely. But it slows it, and it redirects the revenue toward the things a growing economy actually needs.</p>
-  <p>Wealth that appreciates in value is not being taxed twice. Appreciation is the result of scarcity, population growth, infrastructure investment, planning decisions and the general functioning of society. The tax applies to that appreciation.</p>
+  <p>Appreciation is the result of scarcity, population growth, infrastructure investment, planning decisions and the general functioning of society. The tax applies to that appreciation — a fair share of something never entirely privately generated.</p>
   <p>Agricultural land is exempt because working farms depend on land they cannot easily sell and receive no passive income from holding it. The exemption mirrors current Inheritance Tax agricultural property relief and costs £1.25bn in foregone revenue — 1.4% of the total yield.</p>
 
 stats:
