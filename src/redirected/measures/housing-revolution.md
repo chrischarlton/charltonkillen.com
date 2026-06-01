@@ -64,6 +64,6 @@ A developer who owns land with planning permission and does nothing pays a fract
 
 Residential Land Value Tax is at 2%. Land value is initially calculated as 60% of total property value. So a £300,000 house has a land value of £180,000. The annual charge is £3,600 - replacing a council tax bill that was typically £1,200–2,500. Although LVT is higher, most households will gain significantly from things like [higher Income Tax thresholds](/redirected/measures/income-tax-reform/) and [National Insurance abolition](/redirected/measures/abolish-national-insurance/) and are much better off overall.
 
-A young person buying a home today pays 3-4 times what their parents did in real terms. This is not the result of natural market forces, but of tax and planning policy. And decades of decisions that treated housing as an asset class rather than infrastructure.
+A young person buying a home today pays 3-4 times what their parents did in real terms. Tax and planning policy created this. Markets followed the incentives they were given. Decades of decisions treated housing as an asset class rather than infrastructure.
 
 Land Value Tax won’t fix all of this immediately. But it does create the incentives for a lasting solution to develop.

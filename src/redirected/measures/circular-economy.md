@@ -85,7 +85,7 @@ Polluting products carry higher rates:
 
 The decision to buy a new gas or oil boiler is a critical moment. One individual choice which might lock in 15 years of additional CO<sub>2</sub> production for a household. We want the choice in this moment to feel clear.
 
-These are not bans. A gas boiler is still available. It simply carries a VAT rate that reflects the deeper cost. This makes the heat pump look considerably more attractive at the point of purchase.
+A gas boiler is still available. It simply carries a VAT rate that reflects the deeper cost. This makes the heat pump considerably more attractive at the point of purchase.
 
 ## Bring Back the Milk Bottle
 

@@ -18,7 +18,7 @@ impact: |
   </ul>
 
 evidence: |
-  <p>Property developers are not the bad guys. In fact we need their skills and energy more than ever. But they follow the incentives of the current system and find legitimate advantage in practices such as land banking: holding undeveloped land until the optimal moment. Sometimes that moment follows public investment in local infrastructure (a new school, or tram line raises nearby land values; the landowner, not the public, captures the gain). Sometimes it is driven purely by scarcity value. Either way, the result is slow development at low density and rising prices.</p>
+  <p>Property developers follow the incentives of the current system. Those incentives are the problem, not the people who respond to them. They find legitimate advantage in practices such as land banking: holding undeveloped land until the optimal moment. Sometimes that moment follows public investment in local infrastructure (a new school, or tram line raises nearby land values; the landowner, not the public, captures the gain). Sometimes it is driven purely by scarcity value. Either way, the result is slow development at low density and rising prices.</p>
   <p>The Land Value Tax changes the calculation at its root. Holding idle land or developing it inefficiently now carries a significant extra cost.</p>
 
 related:

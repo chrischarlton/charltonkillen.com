@@ -19,9 +19,11 @@ My main focus today is my role as Technology Director of [One+All]({{ pathPrefix
     <p>A profitable business making an incredible social impact. A team of amazing people who look after customers so well that the business keeps growing. But legacy technology is letting them down. So I'm leading a complete human-first digital transformation which aims to boost scalability as well as enabling even more social and environmental benefit.</p>
   </div>
 
-  <div class="card">
-    <h3>Writing</h3>
-    <p>I've been writing something — starting with the UK tax system and following the logic wherever it leads. It's taken longer and gone further than I expected. I'll share more here when it's ready.</p>
+  <div class="card card--redirected">
+    <span class="card-eyebrow">A project in progress</span>
+    <h3>Redirected</h3>
+    <p>An argument for a fundamental reorientation of the UK economy. Built from first principles, stress-tested with AI. Eight chapters, a manifesto, a household calculator, and a revenue-neutral tax system that leaves 75–80% of households better off.</p>
+    <a href="{{ pathPrefix }}/redirected/" class="card-cta">Explore the project →</a>
   </div>
   
 </div>

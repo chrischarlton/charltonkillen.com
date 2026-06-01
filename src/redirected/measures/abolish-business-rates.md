@@ -31,7 +31,7 @@ cost: |
   <p>The additional £5.5bn above current business rates comes from previously untaxed vacant and underdeveloped land that currently pays nothing under the rates system.</p>
 
 evidence: |
-  <p>Business rates have been identified by virtually every business organisation in the UK as a major structural obstacle, particularly for smaller businesses and the high street. They create a cliff edge that discourages expansion and favour online retailers — who use less rateable space per pound of revenue — over physical ones.</p>
+  <p>Business rates have been identified by virtually every business organisation in the UK as a major structural obstacle, particularly for smaller businesses and the high street. They create a cliff edge that discourages expansion and favour online retailers, who use less rateable space per pound of revenue, over physical ones.</p>
   <p>The Land Value Tax alternative cannot be gamed. Land value is objectively assessable. It cannot be disguised as intellectual property or shifted to a lower tax jurisdiction. The land is there, it has a value, and the owner must use it well so that it’s an asset rather than a liability.</p>
 
 stats:
@@ -69,4 +69,4 @@ Four rates, tiered by use:
   </tbody>
 </table>
 
-The Land Value Tax reversal is not ideological; it is the straightforward application of the principle that you should tax what you want less of (land sitting idle) rather than what you want more of (businesses operating, employing, and creating value).
+Land Value Tax applies the principle directly: tax what you want less of. Land sitting idle pays. Businesses operating, employing and creating value pay less.

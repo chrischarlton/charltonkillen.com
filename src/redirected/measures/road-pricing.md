@@ -32,7 +32,7 @@ cost: |
 
 evidence: |
   <p>VED is a blunt instrument. It charges the same whether you drive 1,000 miles or 30,000. Fuel duty is better — it correlates with use — but it cannot distinguish between a rural driver with no alternative and an urban commuter choosing to drive at peak hour when the road is already congested.</p>
-  <p>Road pricing charges for actual use of a shared resource, with the price reflecting the actual cost imposed: congestion at peak times, wear on urban roads, emissions from the journey. Stockholm's congestion pricing reduced traffic by 22% and cut emissions by 14% — and was rejected in a referendum, then re-introduced by the same population that rejected it, once the effects were visible. The design lesson: make the benefits as visible as the cost.</p>
+  <p>Road pricing charges for actual use of a shared resource, with the price reflecting the actual cost imposed: congestion at peak times, wear on urban roads, emissions from the journey. Stockholm's congestion pricing reduced traffic by 22% and cut emissions by 14%, was rejected in a referendum, then re-introduced by the same population that rejected it once the effects were visible. The design lesson: make the benefits as visible as the cost.</p>
 
 stats:
   - number: "2p"

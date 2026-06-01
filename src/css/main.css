@@ -576,6 +576,51 @@ h2 a,
     line-height: 1.5;
 }
 
+.card--redirected {
+    background: #0d1a12;
+    border-left: none;
+    border-top: 4px solid var(--color-accent);
+    display: flex;
+    flex-direction: column;
+}
+
+.card--redirected .card-eyebrow {
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-accent);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.card--redirected h3 {
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+}
+
+.card--redirected p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.card--redirected .card-cta {
+    display: inline-block;
+    color: #0d1a12;
+    background: var(--color-accent);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    align-self: flex-start;
+    transition: background 0.2s ease;
+}
+
+.card--redirected .card-cta:hover {
+    background: #fff;
+}
+
 .highlight-box {
     background: var(--color-accent);
     padding: 1.5rem;
